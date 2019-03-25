@@ -1,0 +1,124 @@
+.content-info {
+	background: color('white');
+	position: absolute;
+	bottom: 0;
+	z-index: 13;
+	width: 100%;
+	text-align: left;
+	border-top: 1px solid color('black', 30);
+
+	.intro-design-logo {
+		padding: .4em .8em;
+		width: 100%;
+		background: color('white');
+		position: absolute;
+		display: block;
+		font-size: 80%;
+	}
+
+	.confidential-mark {
+		font-size: 50%;
+		padding: 1.3em 2em;
+		font-weight: 200;
+		margin-bottom: 0;
+		color: color('gray', 30);
+	}
+}
+
+p.quoteright {
+	text-align: right;
+	border-right: 10px solid #df2424;
+	padding-right: 20px;
+	margin: 100px 0;
+	line-height: 1.6em; }
+
+html, body { height: 100%; padding: 0; margin: 0; }
+#div1 { width: 50%; height: 50%; float: left}
+#div2 { width: 50%; height: 50%; float: left}
+#div3 { width: 50%; height: 50%; float: left}
+#div4 { width: 50%; height: 50%; float: left}
+
+#div1l { width: 50%; height: 50%; float: left; display: flex; flex-direction: column; justify-content: left; text-align: left}
+#div2r { width: 50%; height: 50%; float: left; display: flex; flex-direction: column; justify-content: right; text-align: right}
+#div3l { width: 50%; height: 50%; float: left; display: flex; flex-direction: column; justify-content: left; text-align: left}
+#div4r { width: 50%; height: 50%; float: left; display: flex; flex-direction: column; justify-content: right; text-align: right}
+
+#divl { width: 75%; height: 100%; float: left; display: flex; flex-direction: column; justify-content: left; text-align: left}
+#divr { width: 25%; height: 100%; float: left; display: flex; flex-direction: column; justify-content: right; text-align: right}
+
+#div65l { width: 65%; height: 100%; float: left; display: flex; flex-direction: column; justify-content: left; text-align: left}
+#div35r { width: 35%; height: 100%; float: left; display: flex; flex-direction: column; justify-content: right; text-align: right}
+
+.reveal table {
+	margin: auto;
+	border-collapse: collapse;
+	border-spacing: 0; }
+  
+  .reveal table th {
+	font-weight: bold; }
+  
+  .reveal table th,
+  .reveal table td {
+	text-align: left;
+	padding: 0.2em 0.5em 0.2em 0.5em;
+	border-bottom: 1px solid; }
+  
+  .reveal table th[align="center"],
+  .reveal table td[align="center"] {
+	text-align: center; }
+  
+  .reveal table th[align="right"],
+  .reveal table td[align="right"] {
+	text-align: right; }
+  
+  .reveal table tbody tr:last-child th,
+  .reveal table tbody tr:last-child td {
+	border-bottom: none; }
+  
+	.reveal .footer {
+		position: relative;
+		font-size: 0.5em;
+		margin-top: 2em;
+		line-height: 1.5em;
+	  }
+	
+	  th.quote {
+		text-align: left;
+		border-left: 10px solid #df2424;
+		padding-left: 20px;
+		margin: 100px 0;
+		line-height: 1.6em; }
+
+/*********************************************
+ * HEADERS
+ *********************************************/
+
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+	-webkit-hyphens: auto;
+	   -moz-hyphens: auto;
+	        hyphens: auto;
+
+	word-wrap: break-word;
+	line-height: 1;
+}
+
+.reveal h1 { font-size: 3.77em; }
+.reveal h2 { font-size: 2.11em;	}
+.reveal h3 { font-size: 1.55em;	}
+.reveal h4 { font-size: 1em;	}
+.reveal small { font-size: 0.75em; }
+
+.reveal li {
+  text-align: left;
+  border-left: 10px solid #df2424;
+  padding-left: 20px;
+  margin: 25px 0;
+	line-height: 1.6em;
+	list-style: none;
+}
+
