@@ -14,14 +14,6 @@
    <link rel="stylesheet" href="css/admin.css" id="theme">
    <link rel="stylesheet" href="css/custom.css">
 
-   <!-- Printing and PDF exports -->
-   <script>
-      var link = document.createElement('link');
-      link.rel = 'stylesheet';
-      link.type = 'text/css';
-      link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
-      document.getElementsByTagName('head')[0].appendChild(link);
-   </script>
    <!--[if lt IE 9]>
       <script src="lib/js/html5shiv.js"></script>
       <![endif]-->
@@ -120,60 +112,6 @@
          theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
          transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
 
-         chart: {
-            defaults: {
-               global: {
-                  title: {
-                     fontColor: "#000"
-                  },
-                  legend: {
-                     position: "bottom",
-                     labels: {
-                        fontColor: "#000",
-                        fontSize: 20
-                     },
-                  },
-                  tooltips: {
-                     labels: {
-                        fontColor: "#000"
-                     },
-                  },
-               },
-               scale: {
-                  scaleLabel: {
-                     fontColor: "#000"
-                  },
-                  gridLines: {
-                     color: "#000",
-                     zeroLineColor: "#000"
-                  },
-                  ticks: {
-                     fontColor: "#000",
-                     fontSize: 20
-                  }
-               }
-            },
-            line: {
-               borderColor: ["rgba(20,220,220,.8)", "rgba(220,120,120,.8)", "rgba(20,120,220,.8)"],
-               "borderDash": [
-                  [5, 10],
-                  [0, 0]
-               ]
-            },
-            bar: {
-               backgroundColor: ["rgba(20,220,220,.8)", "rgba(220,120,120,.8)", "rgba(20,120,220,.8)"]
-            },
-            pie: {
-               backgroundColor: [
-                  ["rgba(0,0,0,.8)", "rgba(220,20,20,.8)", "rgba(20,220,20,.8)", "rgba(220,220,20,.8)",
-                     "rgba(20,20,220,.8)"
-                  ]
-               ]
-            },
-            radar: {
-               borderColor: ["rgba(20,220,220,.8)", "rgba(220,120,120,.8)", "rgba(20,120,220,.8)"]
-            },
-         },
 
          // Optional libraries used to extend on reveal.js
 
