@@ -2,16 +2,16 @@
             {
               "State": "Leadership",
               "values": [
-                {"value": 74, "type": "Talent Developers", "significant" : true},
+                {"value": 74, "type": "Talent Developers", "significant" : false},
                 {"value": 66, "type": "Managers", "significant" : false},
-                {"value": 65, "type": "Executives", "significant" : true}
+                {"value": 65, "type": "Executives", "significant" : false}
               ]
             },
             {
               "State": "Communication",
               "values": [
-                {"value": 66, "type": "Talent Developers", "significant" : true},
-                {"value": 66, "type": "Managers", "significant" : true},
+                {"value": 66, "type": "Talent Developers", "significant" : false},
+                {"value": 66, "type": "Managers", "significant" : false},
                 {"value": 64, "type": "Executives", "significant" : false}
               ]
             },
@@ -19,8 +19,8 @@
               "State": "Collaboration",
               "values": [
                 {"value": 50, "type": "Talent Developers", "significant" : false},
-                {"value": 50, "type": "Managers", "significant" : true},
-                {"value": 55, "type": "Executives", "significant" : true}
+                {"value": 50, "type": "Managers", "significant" : false},
+                {"value": 55, "type": "Executives", "significant" : false}
               ]
             },
             {

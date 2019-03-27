@@ -113,7 +113,7 @@ var y = d3.scaleLinear()
 var z = d3.scaleOrdinal()
     .range(["#37A3D6", "#FF9400", "#ff0000"]);
 
-var clinicalCutOffValue = 65;
+var clinicalCutOffValue = 0;
 
 d3.json("skillsbardata.json", function(error, data) {
   if (error) throw error;
@@ -124,7 +124,7 @@ d3.json("skillsbardata.json", function(error, data) {
   x0.domain(categoriesNames);
   x1.domain(rateNames).rangeRound([0, x0.bandwidth()]);
 //   y.domain([60, d3.max(data, function(categorie) { return d3.max(categorie.values, function(d) { return d.value; }); }) * 1.2]);
-  y.domain([60, 85]);
+  y.domain([40, 75]);
   
   var legend = g.append("g")
     	.attr("class", "legend");
