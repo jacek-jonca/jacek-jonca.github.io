@@ -91,7 +91,7 @@ text {
 
 </style>
 <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet">
-<svg width="730" height="375"></svg>
+<svg width="800" height="500"></svg>
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <script>
 var svg = d3.select("svg"),
@@ -194,7 +194,7 @@ d3.json("skillsbardata.json", function(error, data) {
       .attr("width", x1.bandwidth())
         .transition()
         .delay(function (d,i){ return 750;}) // this is to do left then right bars
-        .duration(250)
+        .duration(500)
         .attr('height', function( d ) { 
     				if (d.value > 0) { return (height / 1.75); }
     				else {return 0}
