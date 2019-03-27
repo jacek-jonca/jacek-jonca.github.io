@@ -225,8 +225,10 @@ d3.json("skillsbardata.json", function(error, data) {
       .call(d3.axisBottom(x0))
       .selectAll("text")	
     	.style("text-anchor", "end")
-    	.attr("dx", "-.8em")
-    	.attr("dy", ".15em")
+//    	.attr("dx", "-.8em")
+    	.attr("dx", "0em")
+//    	.attr("dy", ".15em")
+    	.attr("dy", "1em")
 //    	.attr("transform", "rotate(-65)")
     	.text(function (d) {
     		if(d.length > 14) { return d.substring(0,14)+'...'; } 
