@@ -223,14 +223,14 @@ d3.json("skillsbardata.json", function(error, data) {
       .attr("transform", "translate(0," + (height / 1.4) + ")")
       .call(d3.axisBottom(x0))
       .selectAll("text")	
-    	.style("text-anchor", "end")
+    	.style("text-anchor", "middle")
 //    	.attr("dx", "-.8em")
     	.attr("dx", "2em")
 //    	.attr("dy", ".15em")
     	.attr("dy", "1em")
 //    	.attr("transform", "rotate(-65)")
     	.text(function (d) {
-    		if(d.length > 14) { return d.substring(0,14)+'...'; } 
+    		if(d.length > 14) { return d; } 
     		else { return d; }
   		});
 
