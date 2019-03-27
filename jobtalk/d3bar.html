@@ -125,7 +125,7 @@ d3.json("skillsbardata.json", function(error, data) {
 //   y.domain([60, d3.max(data, function(categorie) { return d3.max(categorie.values, function(d) { return d.value; }); }) * 1.2]);
   y.domain([40, 75]);
   
-  var legend = g.append("g")
+  var legend = g.append("g") // add g element it will be the container for our legend
     	.attr("class", "legend");
   
   var legenG = legend.selectAll("g")
@@ -134,7 +134,7 @@ d3.json("skillsbardata.json", function(error, data) {
     .append("g")
       .attr("transform", function(d, i) { return "translate(" + i * (width / (rateNames.length + 1)) + ", 0)"; });
 
-  legenG.append("rect")
+  legenG.append("rect") // legend rectangle (rect)
       .attr("x", 0)
       .attr("width", 20)
       .attr("height", 20)
