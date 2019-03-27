@@ -115,7 +115,7 @@ var z = d3.scaleOrdinal()
 
 var clinicalCutOffValue = 65;
 
-d3.json("d3bardata.json", function(error, data) {
+d3.json("skillsbardata.json", function(error, data) {
   if (error) throw error;
 
   var categoriesNames = data.map(function(d) { return d.State; });
