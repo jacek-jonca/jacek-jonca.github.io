@@ -147,21 +147,21 @@ d3.json("skillsbardata.json", function(error, data) {
       .attr("dy", "0.32em")
       .text(function(d) { return d; });
 
-  var cliniciallySignificantLegend = legend.append("g")
-      .attr("transform", function(d, i) { 
-    		return "translate(" + width / (rateNames.length + 1) + ", 0)"; 
-  		});
-  cliniciallySignificantLegend
-    .append("rect")
-      .attr("x", (width / 2))
-      .attr("width", 20)
-      .attr("height", 20)
-      .attr("class", "bars-container-middle clinically-significant-pulsing-rect");
-  cliniciallySignificantLegend.append("text")
-      .attr("x", (width / 2) + 25)
-      .attr("y", 9.5)
-      .attr("dy", "0.32em")
-      .text("Clinicially Significant");
+//  var cliniciallySignificantLegend = legend.append("g")
+//      .attr("transform", function(d, i) { 
+//    		return "translate(" + width / (rateNames.length + 1) + ", 0)"; 
+//  		});
+//  cliniciallySignificantLegend
+//    .append("rect")
+//      .attr("x", (width / 2))
+//      .attr("width", 20)
+//      .attr("height", 20)
+//      .attr("class", "bars-container-middle clinically-significant-pulsing-rect");
+//  cliniciallySignificantLegend.append("text")
+//      .attr("x", (width / 2) + 25)
+//      .attr("y", 9.5)
+//      .attr("dy", "0.32em")
+//      .text("Clinicially Significant");
 
   // add the Y gridlines
   g.append("g")			
@@ -227,7 +227,7 @@ d3.json("skillsbardata.json", function(error, data) {
     	.style("text-anchor", "end")
     	.attr("dx", "-.8em")
     	.attr("dy", ".15em")
-    	.attr("transform", "rotate(-65)")
+//    	.attr("transform", "rotate(-65)")
     	.text(function (d) {
     		if(d.length > 14) { return d.substring(0,14)+'...'; } 
     		else { return d; }
