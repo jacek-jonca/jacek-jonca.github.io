@@ -82,9 +82,12 @@ width:90%;
 /* Audio Player Styles
 ================================================== */
 
-#audiowrap,
+#audiowrap {
+    margin: 0 auto;
+}
+
 #plwrap {
-margin: -10px auto;
+margin: 50px auto;
 }
 
 #tracks {
