@@ -272,18 +272,18 @@ color:rgba(0,0,0,.1);
 
     			/* reposition left/right arrows */
 			.arrows {
-				position:absolute;
-				margin-top: 50%;
-				width:100%;
+				position: relative;
+				margin: 0 auto;
+				width: 100%;
 			}
 			.arrow-left {
 				left: 0;
-				top: -17px;
+				top: -50px;
 			}
 
 			.arrow-right {
 				right: 0;
-				top: -17px;
+				top: -50px;
 			}
 
 }
