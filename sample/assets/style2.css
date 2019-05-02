@@ -270,8 +270,8 @@ color:rgba(0,0,0,.1);
     			/* reposition left/right arrows */
 			.arrows {
 				position:absolute;
-				margin: 0 auto;
-				width:96px;
+				margin: 50% auto;
+				width:100%;
 			}
 			.arrow-left {
 				left: 0;
