@@ -273,7 +273,7 @@ color:rgba(0,0,0,.1);
     			/* reposition left/right arrows */
 			.arrows {
 				position:absolute;
-				margin: 50% auto;
+				margin-top: 50%;
 				width:100%;
 			}
 			.arrow-left {
