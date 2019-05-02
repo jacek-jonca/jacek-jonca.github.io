@@ -223,9 +223,9 @@ color:rgba(0,0,0,.1);
 
 
 .arrows {
-    position:absolute;
+    position:relative;
     width: 100%;
-    margin-top: -120px;
+/*    margin-top: -120px; */
 }
 
 .arrow-left {
