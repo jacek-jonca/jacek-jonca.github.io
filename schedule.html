@@ -13,9 +13,6 @@
 <!-- JQuery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js" integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://static-cdn.kloudless.com/p/platform/sdk/kloudless.scheduler.css">
-  <style>
-      body {background: #505f70; margin: 0;}
-  </style>
   </head>
   <body onload="if (typeof initialize == 'function') {initialize();}">
   <div id="kloudless-meeting-scheduler"></div>
@@ -25,5 +22,9 @@
     var launchOptions = JSON.parse('{"appId": "oi1qN_nS_4cPL2iFoHBCRmH9EA_wdrLJoJ2Y09x4_wvogYPR", "mode": "attach", "element": "#kloudless-meeting-scheduler"}');
     scheduler.launch(launchOptions);
   </script>
+
+<button onclick="launch('setup')" class="launch">Launch Setup View</button>
+<button onclick="launch('schedule')" class="launch">Launch Schedule View</button>
+
 </body>
 </html>
