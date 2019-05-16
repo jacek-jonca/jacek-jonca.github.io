@@ -278,12 +278,12 @@ color:rgba(0,0,0,.1);
 			}
 			.arrow-left {
 				left: 0;
-				top: -60px;
+				top: 50%;
 			}
 
 			.arrow-right {
 				right: 0;
-				top: -60px;
+				top: 50%;
 			}
 
 }
