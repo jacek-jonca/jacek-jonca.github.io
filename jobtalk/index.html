@@ -783,13 +783,13 @@
    "datasets":[
     {
        "data":[
-          67800,
-          66000,
-          108400,
-          186600
+          66500,
+          64800,
+          106400,
+          183200
        ],
        "label":"Student Debt in US Dollars",
-       "backgroundColor":"rgba(20,220,220,.8)"
+       "backgroundColor":["rgba(233, 30, 99,.8)", "rgba(3, 169, 244,.8)", "rgba(76, 175, 80,.8)", "rgba(121, 85, 72,.8)"]
     }
    ]
    },
@@ -831,36 +831,303 @@
    }
    }
    -->
-                  </canvas>
-                  <h4>Debt amounts in US Dollars</h4>
-               </section>
+</canvas>
+</p>
+<div class='footer'>
+   <p>Data source: U.S. Department of Education, National Center for Education Statistics, 2015-16 National Postsecondary Student Aid Study.</p>
+</div>
+</section>
+
                <section>
-                  <h3>Average cumulative student loan balance</h3>
-                  <p>
-                     <img src="./img/debt-by-level.png" class="plain">
+                  <h4>Average cumulative graduate loans</h4>
+                  <canvas data-chart="line">
+                     <!-- 
+              {
+              "data":{
+              "labels":[
+              "2000",
+              "2004",
+              "2008",
+              "2012",
+              "2016"
+              ],
+              "datasets":[
+              {
+              "data":[
+              21400,
+              20900,
+              31400,
+              44200,
+              54100
+              ],
+              "label":"Postbac",
+              "backgroundColor":"rgba(233, 30, 99,.8)",
+              "borderColor":"rgba(233, 30, 99,.8)",
+              "fill":false
+              },
+              {
+              "data":[
+              23500,
+              29100,
+              34300,
+              45100,
+              50300
+              ],
+              "label":"Master's",
+              "backgroundColor":"rgba(3, 169, 244,.8)",
+              "borderColor":"rgba(3, 169, 244,.8)",
+              "fill":false
+              },
+              {
+              "data":[
+              34600,
+              52000,
+              62700,
+              77600,
+              101500
+              ],
+              "label":"Doctoral",
+              "backgroundColor":"rgba(76, 175, 80,.8)",
+              "borderColor":"rgba(76, 175, 80,.8)",
+              "fill":false
+              },
+              {
+              "data":[
+              61900,
+              78800,
+              91500,
+              132600,
+              171700
+              ],
+              "label":"Professional",
+              "backgroundColor":"rgba(121, 85, 72,.8)",
+              "borderColor":"rgba(121, 85, 72,.8)",
+              "fill":false
+              }
+              ]
+              },
+              "options":{
+              "responsive":true,
+              "animation":{
+              "duration":4000
+              },
+              "legend": {
+              "labels": {
+              "fontColor": "black",
+              "fontSize": 23
+              }
+              },
+              "title":{
+              "display":true
+              },
+              "tooltips":{
+              "mode":"index",
+              "intersect":false
+              },
+              "hover":{
+              "mode":"nearest",
+              "intersect":"true"
+              },
+              "scales":{
+              "xAxes":[
+              {
+              "display":true,
+                 "ticks":{
+              "fontSize":25,
+              "fontColor":"#000"
+              },
+              "gridLines":{
+              "display":"true"
+              },
+              "pointLabels":{
+              "fontSize":20
+              },
+              "scaleLabel":{
+              "display":true,
+              "labelString":"Year",
+              "fontColor": "#000",
+              "fontSize": "20"
+              }
+              }
+              ],
+              "yAxes":[
+              {
+              "display":true,
+              "ticks":{
+              "fontSize":25,
+              "fontColor":"#000"
+              },
+              "gridLines":{
+              "display":"true"
+              },
+              "pointLabels":{
+              "fontSize":20
+              },
+              "scaleLabel":{
+              "display":true,
+              "labelString":"Average debt in current U.S. dollars",
+              "fontColor": "#000",
+              "fontSize": "20"
+              }
+              }
+              ]
+              }
+              }
+              }
+              -->
+                  </canvas>
                   </p>
                   <div class='footer'>
                      <!--<p style="color:black;">Average cumulative student loan balance for graduate school completers, by degree type: Selected years, 1999–2000 through 2015–16.</p>-->
-                     <p>McFarland, J., Hussar, B., Wang, X., Zhang, J., Wang, K., Rathbun, A.,
-                        Barmer, A., Forrest Cataldi, E., and Bullock
-                        Mann, F. (2018). The Condition of Education 2018 (NCES 2018-144). U.S. Department of Education.
-                        Washington,
-                        DC: National Center for Education Statistics.</p>
+                     <p>Data source: U.S. Department of Education, National Center for Education Statistics, 1999-2000, 2003-04, 2007-08, 2011-12, and 2015-16 National Postsecondary Student Aid Study.</p>
                   </div>
                </section>
-   
-<!--               <section>
-                  <h3>Credit Card Debt vs. Student Loan Debt</h3>
-                  <p>
-                     <img src="./img/cc-vs-student.png" class="plain">
-                  </p>
-                  <p>&nbsp;<br /></p>
-                  <div class='footer'>
-                     <p>John Gill, Times Higher Education panel at SXSW EDU 2018. Higher education: a
-                        rapidly changing world.</p>
-                  </div>
-               </section>
--->
+
+               <section>
+                  <h4>Average combined graduate and<br />undergraduate loan balances</h4>
+                  <canvas data-chart="line">
+                     <!-- 
+              {
+              "data":{
+              "labels":[
+              "2000",
+              "2004",
+              "2008",
+              "2012",
+              "2016"
+              ],
+              "datasets":[
+              {
+              "data":[
+              25500, 
+              29900, 
+              38600, 
+              60800, 
+              66500
+              ],
+              "label":"Postbac",
+              "backgroundColor":"rgba(233, 30, 99,.8)",
+              "borderColor":"rgba(233, 30, 99,.8)",
+              "fill":false
+              },
+              {
+              "data":[
+              29400,
+              35200,
+              43900,
+              60000,
+              64800
+              ],
+              "label":"Master's",
+              "backgroundColor":"rgba(3, 169, 244,.8)",
+              "borderColor":"rgba(3, 169, 244,.8)",
+              "fill":false
+              },
+              {
+              "data":[
+              37300,
+              56200,
+              65200,
+              80300,
+              106400
+              ],
+              "label":"Doctoral",
+              "backgroundColor":"rgba(76, 175, 80,.8)",
+              "borderColor":"rgba(76, 175, 80,.8)",
+              "fill":false
+              },
+              {
+              "data":[
+              68500,
+              90600,
+              102600,
+              150100,
+              183200
+              ],
+              "label":"Professional",
+              "backgroundColor":"rgba(121, 85, 72,.8)",
+              "borderColor":"rgba(121, 85, 72,.8)",
+              "fill":false
+              }
+              ]
+              },
+              "options":{
+              "responsive":true,
+              "animation":{
+              "duration":4000
+              },
+              "legend": {
+              "labels": {
+              "fontColor": "black",
+              "fontSize": 23
+              }
+              },
+              "title":{
+              "display":true
+              },
+              "tooltips":{
+              "mode":"index",
+              "intersect":false
+              },
+              "hover":{
+              "mode":"nearest",
+              "intersect":"true"
+              },
+              "scales":{
+              "xAxes":[
+              {
+              "display":true,
+                 "ticks":{
+              "fontSize":25,
+              "fontColor":"#000"
+              },
+              "gridLines":{
+              "display":"true"
+              },
+              "pointLabels":{
+              "fontSize":20
+              },
+              "scaleLabel":{
+              "display":true,
+              "labelString":"Year",
+              "fontColor": "#000",
+              "fontSize": "20"
+              }
+              }
+              ],
+              "yAxes":[
+              {
+              "display":true,
+              "ticks":{
+              "fontSize":25,
+              "fontColor":"#000"
+              },
+              "gridLines":{
+              "display":"true"
+              },
+              "pointLabels":{
+              "fontSize":20
+              },
+              "scaleLabel":{
+              "display":true,
+              "labelString":"Average debt in current U.S. dollars",
+              "fontColor": "#000",
+              "fontSize": "20"
+              }
+              }
+              ]
+              }
+              }
+              }
+              -->
+              </canvas>
+              </p>
+              <div class='footer'>
+                 <!--<p style="color:black;">Average cumulative student loan balance for graduate school completers, by degree type: Selected years, 1999–2000 through 2015–16.</p>-->
+                 <p>Data source: U.S. Department of Education, National Center for Education Statistics, 1999-2000, 2003-04, 2007-08, 2011-12, and 2015-16 National Postsecondary Student Aid Study.</p>
+              </div>
+              </section>
+
                <section>
                   <h3>Credit Card Debt vs. Student Loan Debt</h3>
               <canvas data-chart="line">
