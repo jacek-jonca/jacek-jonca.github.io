@@ -1016,28 +1016,30 @@
    {
    "data":{
    "labels":[
-    "1989",
-    "1992",
-    "1995",
-    "1998",
-    "2001",
-    "2004",
-    "2007",
-    "2010",
-    "2013"
+"1989",
+"1992",
+"1995",
+"1998",
+"2001",
+"2004",
+"2007",
+"2010",
+"2013",
+"2016"
    ],
    "datasets":[
     {
        "data":[
-          13862,
-          12552,
-          20145,
-          29458,
-          28880,
-          27100,
-          27145,
-          25864,
-          31644
+14309,
+12956,
+20784,
+30405,
+29796,
+27949,
+27996,
+26676,
+32628,
+32602
        ],
        "label":"32–37",
        "backgroundColor":"rgba(233, 30, 99,.8)",
@@ -1046,15 +1048,16 @@
     },
     {
        "data":[
-          30741,
-          22920,
-          33510,
-          48084,
-          52843,
-          54205,
-          54527,
-          48472,
-          67270
+31732,
+23658,
+34572,
+49629,
+54518,
+55904,
+56238,
+49994,
+69363,
+61933
        ],
        "label":"38–43",
        "backgroundColor":"rgba(3, 169, 244,.8)",
@@ -1063,15 +1066,16 @@
     },
     {
        "data":[
-          40463,
-          44749,
-          60882,
-          64166,
-          91243,
-          81818,
-          91237,
-          85454,
-          81347
+41768,
+46190,
+62813,
+66228,
+94136,
+84381,
+94099,
+88136,
+83877,
+113370
        ],
        "label":"44–49",
        "backgroundColor":"rgba(76, 175, 80,.8)",
@@ -1080,15 +1084,16 @@
     },
     {
        "data":[
-          52778,
-          75678,
-          85352,
-          91373,
-          129938,
-          128848,
-          135384,
-          138713,
-          124831
+54480,
+78114,
+88059,
+94309,
+134058,
+132885,
+139631,
+143066,
+128714,
+133626
        ],
        "label":"50–55",
        "backgroundColor":"rgba(121, 85, 72,.8)",
@@ -1097,15 +1102,16 @@
     },
     {
        "data":[
-          58585,
-          68060,
-          80255,
-          114907,
-          155371,
-          158827,
-          211885,
-          175696,
-          163577
+60474,
+70251,
+82800,
+118600,
+160296,
+163804,
+218532,
+181210,
+168665,
+243559
        ],
        "label":"56–61",
        "backgroundColor":"rgba(156, 39, 176,.8)",
@@ -1114,15 +1120,16 @@
     },
     {
        "data":[
-          35492,
-          39257,
-          50475,
-          64982,
-          86187,
-          87818,
-          101548,
-          96882,
-          95776
+36637,
+40521,
+52075,
+67071,
+88920,
+90570,
+104734,
+99922,
+98755,
+120809
        ],
        "label":"Working-age (32–61)",
        "backgroundColor":"rgba(255,165,0,.8)",
@@ -1204,7 +1211,197 @@
                   </p>
                   <div class='footer'>
                      <!--<p style="color:black;">Average cumulative student loan balance for graduate school completers, by degree type: Selected years, 1999–2000 through 2015–16.</p>-->
-                     <p>Source: EPI analysis of Survey of Consumer Finance data, 2013.</p>
+                     <p>Source: EPI Survey of Consumer Finance Data, 2016.</p>
+                     <!-- https://www.epi.org/publication/the-state-of-american-retirement-savings/ -->
+                  </div>
+               </section>
+
+               <section>
+                  <h3>Median retirement account savings of families by age</h3>
+                  <canvas data-chart="line">
+                     <!-- 
+   {
+   "data":{
+   "labels":[
+"1989",
+"1992",
+"1995",
+"1998",
+"2001",
+"2004",
+"2007",
+"2010",
+"2013",
+"2016"
+   ],
+   "datasets":[
+    {
+       "data":[
+0,
+0,
+392,
+2213,
+1355,
+1272,
+1158,
+298,
+495,
+1000
+       ],
+       "label":"32–37",
+       "backgroundColor":"rgba(233, 30, 99,.8)",
+       "borderColor":"rgba(233, 30, 99,.8)",
+       "fill":false
+    },
+    {
+       "data":[
+560,
+839,
+2506,
+7377,
+6774,
+3815,
+6137,
+1990,
+4331,
+5000
+       ],
+       "label":"38–43",
+       "backgroundColor":"rgba(3, 169, 244,.8)",
+       "borderColor":"rgba(3, 169, 244,.8)",
+       "fill":false
+    },
+    {
+       "data":[
+0,
+839,
+3915,
+9295,
+13007,
+9666,
+15633,
+10501,
+6393,
+13000
+       ],
+       "label":"44–49",
+       "backgroundColor":"rgba(76, 175, 80,.8)",
+       "borderColor":"rgba(76, 175, 80,.8)",
+       "fill":false
+    },
+    {
+       "data":[
+1866,
+2348,
+7830,
+8558,
+14903,
+12718,
+27213,
+14369,
+8249,
+11000
+       ],
+       "label":"50–55",
+       "backgroundColor":"rgba(121, 85, 72,.8)",
+       "borderColor":"rgba(121, 85, 72,.8)",
+       "fill":false
+    },
+    {
+       "data":[
+1866,
+1057,
+5011,
+13279,
+16258,
+22256,
+37056,
+7848,
+17529,
+21000
+       ],
+       "label":"56–61",
+       "backgroundColor":"rgba(156, 39, 176,.8)",
+       "borderColor":"rgba(156, 39, 176,.8)",
+       "fill":false
+    }
+   ]
+   },
+   "options":{
+   "responsive":true,
+    "animation":{
+    "duration":4000
+   },
+   "legend": {
+   "labels": {
+    "fontColor": "black",
+   "fontSize": 23
+   }
+   },
+   "title":{
+    "display":true
+   },
+   "tooltips":{
+    "mode":"index",
+    "intersect":false
+   },
+   "hover":{
+    "mode":"nearest",
+    "intersect":"true"
+   },
+   "scales":{
+    "xAxes":[
+       {
+          "display":true,
+                 "ticks":{
+     "fontSize":25,
+     "fontColor":"#000"
+         },
+          "gridLines":{
+             "display":"true"
+          },
+          "pointLabels":{
+             "fontSize":20
+          },
+          "scaleLabel":{
+             "display":true,
+             "labelString":"Year",
+             "fontColor": "#000",
+             "fontSize": "20"
+          }
+       }
+    ],
+    "yAxes":[
+       {
+          "display":true,
+        "ticks":{
+     "fontSize":25,
+     "fontColor":"#000"
+         },
+          "gridLines":{
+             "display":"true"
+          },
+          "pointLabels":{
+             "fontSize":20
+          },
+          "scaleLabel":{
+             "display":true,
+             "labelString":"Value in USD",
+       "fontColor": "#000",
+      "fontSize": "20"
+          }
+       }
+    ]
+   }
+   }
+   }
+   -->
+                  </canvas>
+                  </p>
+                  <div class='footer'>
+                     <!--<p style="color:black;">Median cumulative student loan balance for graduate school completers, by degree type: Selected years, 1999–2000 through 2015–16.</p>-->
+                     <p>Source: EPI Survey of Consumer Finance Data, 2016.</p>
+                     <!-- https://www.epi.org/publication/the-state-of-american-retirement-savings/ -->
                   </div>
                </section>
             </section>
