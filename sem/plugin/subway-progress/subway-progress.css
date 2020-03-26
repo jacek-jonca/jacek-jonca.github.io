@@ -1,0 +1,57 @@
+.reveal .navigation-list {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+.reveal .navigation-list .navigation-list-element {
+  display: table-cell;
+  text-align: center;
+  vertical-align: top;
+  overflow: visible;
+  position: relative;
+  font-size: 14px;
+  color: #d3d0d5;
+  font-weight: bold;
+}
+.reveal .navigation-list .navigation-list-element:not(:last-child):before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 37px;
+  background-color: #fff;
+  height: 6px;
+  width: 100%;
+}
+.reveal .navigation-list .navigation-list-element .node {
+  display: inline-block;
+  border: 6px solid #d3d0d5;
+  background-color: #5dc6cb;
+  border-radius: 18px;
+  height: 18px;
+  width: 18px;
+  position: absolute;
+  top: 25px;
+  left: 50%;
+  margin-left: -18px;
+}
+.reveal .navigation-list .navigation-list-element.complete:before {
+  background-color: #d3d0d5;
+}
+.reveal .navigation-list .navigation-list-element.complete .node {
+  border-color: #d3d0d5;
+  background-color: #5dc6cb;
+}
+.reveal .navigation-list .navigation-list-element.active:before {
+  background-color: #d3d0d5;
+}
+.reveal .navigation-list .navigation-list-element.active .node {
+  border-color: #d3d0d5;
+  background-color: #ed1c24;
+}
+.reveal .navigation-list .navigation-list-element.future:before {
+  background: #d3d0d5;
+}
+.reveal .navigation-list .navigation-list-element.future .node {
+  border-color: #d3d0d5;
+}
