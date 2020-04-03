@@ -17,6 +17,9 @@
       <link rel="stylesheet" href="css/admin.css" id="theme">
       <link rel="stylesheet" href="css/custom.css">
 
+      <!-- Simple menu css
+      <link rel="stylesheet" href="../reveal.js-plugins/simplemenu/assets/css/theme/simplemenu.css">
+      -->
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="../revealjs/lib/css/monokai.css">
 
@@ -2051,11 +2054,20 @@
    <section data-menu-title="Grad Government" data-background-video="video/gsac-elections.mp4"> 
    </section>
 </section>
+      </div> <!-- end of slides div -->
 
-
-
+<!-- Simplemenu Chapter list on slides
+      <div class="menubar">
+         <ul class="menu">
+            <a href="#/firstchapter">First chapter</a>
+            <a href="#/secondchapter">Second chapter</a>
+            <a href="#/thirdchapter">Third chapter</a>
+         </ul>
       </div>
-   </div>
+-->
+
+   </div> <!-- end of revealjs div -->
+
    <script src="../revealjs/js/reveal.js"></script>
    <script>
       // Full list of configuration options available here:
@@ -2166,6 +2178,7 @@ dependencies: [
                { src: '../reveal.js-plugins/broadcast/RTCMultiConnection/socket.io.js'},
                { src: '../reveal.js-plugins/broadcast/bCrypt.js'},
                { src: '../reveal.js-plugins/broadcast/broadcast.js'},
+//               { src: '../reveal.js-plugins/simplemenu/assets/js/revealjs/plugin/simplemenu/simplemenu.js', async: false },
                { src: '../reveal.js-plugins/menu/menu.js' }
          ]
       });
