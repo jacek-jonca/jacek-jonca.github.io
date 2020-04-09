@@ -2191,26 +2191,35 @@
                            socketURL: 'https://joncartc.herokuapp.com:443/'
                         },
                      },
+         multiplex: {
+                        url: 'https://mpx.now.sh/',
+                        id: '17ea43f9b9beb17a',
+                        secret: Reveal.getQueryHash().s || null
+                     },
          // Optional libraries used to extend on reveal.js
 
-dependencies: [
-					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: '../revealjs/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: '../revealjs/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-//					{ src: '../revealjs/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: '../revealjs/plugin/search/search.js', async: true },
-					{ src: '../revealjs/plugin/zoom-js/zoom.js', async: true },
-					{ src: '../revealjs/plugin/notes/notes.js', async: true },
-               { src: '../reveal.js-plugins/chart/Chart.min.js' },
-               { src: '../reveal.js-plugins/chart/csv2chart.js' },
-               { src: '../reveal.js-plugins/broadcast/RTCMultiConnection/RTCMultiConnection.min.js'},
-               { src: '../reveal.js-plugins/broadcast/RTCMultiConnection/adapter.js'},
-               { src: '../reveal.js-plugins/broadcast/RTCMultiConnection/socket.io.js'},
-               { src: '../reveal.js-plugins/broadcast/bCrypt.js'},
-               { src: '../reveal.js-plugins/broadcast/broadcast.js'},
-//               { src: '../reveal.js-plugins/simplemenu/assets/js/revealjs/plugin/simplemenu/simplemenu.js', async: false },
-               { src: '../reveal.js-plugins/menu/menu.js' }
-         ]
+         dependencies: [
+                           { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                           { src: '../revealjs/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                           { src: '../revealjs/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+            //					{ src: '../revealjs/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                           { src: '../revealjs/plugin/search/search.js', async: true },
+                           { src: '../revealjs/plugin/zoom-js/zoom.js', async: true },
+                           { src: '../revealjs/plugin/notes/notes.js', async: true },
+                           { src: '../reveal.js-plugins/chart/Chart.min.js' },
+                           { src: '../reveal.js-plugins/chart/csv2chart.js' },
+                           { src: 'https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js', async: true },
+                           { src: Reveal.getQueryHash().s ?
+                                 'plugin/multiplex/master.js' :
+                                 'plugin/multiplex/client.js', async: true }
+                           { src: '../reveal.js-plugins/broadcast/RTCMultiConnection/RTCMultiConnection.min.js'},
+                           { src: '../reveal.js-plugins/broadcast/RTCMultiConnection/adapter.js'},
+                           { src: '../reveal.js-plugins/broadcast/RTCMultiConnection/socket.io.js'},
+                           { src: '../reveal.js-plugins/broadcast/bCrypt.js'},
+                           { src: '../reveal.js-plugins/broadcast/broadcast.js'},
+            //               { src: '../reveal.js-plugins/simplemenu/assets/js/revealjs/plugin/simplemenu/simplemenu.js', async: false },
+                           { src: '../reveal.js-plugins/menu/menu.js' }
+                        ]
       });
    </script>
    		<script src="lib/js/text-animation.js"></script>
