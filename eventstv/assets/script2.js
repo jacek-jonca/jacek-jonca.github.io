@@ -27,36 +27,30 @@ jQuery(function ($) {
             lessons = [
                 {
                 "track": 1,
-                "name" : "Graduate Center",
-                "duration" : "1:28",
-                "file" : "grad-center"
-                },
-                {
-                "track": 2,
                 "name" : "Graduate Bash",
                 "duration" : "1:59",
                 "file" : "grad-bash"
                 },
                 {
-                "track": 3,
+                "track": 2,
                 "name" : "Cricket Tournament",
                 "duration" : "1:13",
                 "file" : "cricket-tournament"
                 },
                 {
-                "track": 4,
+                "track": 3,
                 "name" : "Food Pantry on Fox34",
                 "duration" : "1:56",
                 "file" : "food-pantry-fox"
                 },
                 {
-                "track": 5,
+                "track": 4,
                 "name" : "Food Pantry on KCBD",
                 "duration" : "1:20",
                 "file" : "food-pantry-kcbd"
                 },
                 {
-                "track": 6,
+                "track": 5,
                 "name" : "Graduate Government Elections",
                 "duration" : "1:04",
                 "file" : "grad-elections"
