@@ -2104,6 +2104,11 @@
    </div> <!-- end of revealjs div -->
 
    <script src="../revealjs/dist/reveal.js"></script>
+   <script src="../revealjs/plugin/notes/notes.js"></script>
+   <script src="../revealjs/plugin/markdown/markdown.js"></script>
+   <script src="../revealjs/plugin/highlight/highlight.js"></script>
+   <script src="../revealjs/plugin/search/search.js"></script>
+   <script src="../revealjs/plugin/zoom-js/zoom.js"></script>
    <script>
       // Full list of configuration options available here:
       // https://github.com/hakimel/reveal.js#configuration
@@ -2202,18 +2207,19 @@
 //                        secret: Reveal.getQueryHash().s || null
 //                     },
          // Optional libraries used to extend on reveal.js
-
+         plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealSearch, RevealZoom ],
          dependencies: [
                            { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-                           { src: '../revealjs/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-                           { src: '../revealjs/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-            //					{ src: '../revealjs/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-                           { src: '../revealjs/plugin/search/search.js', async: true },
-                           { src: '../revealjs/plugin/zoom-js/zoom.js', async: true },
-                           { src: '../revealjs/plugin/notes/notes.js', async: true },
+//                           { src: '../revealjs/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+//                           { src: '../revealjs/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+//            			        { src: '../revealjs/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+//                           { src: '../revealjs/plugin/search/search.js', async: true },
+//                           { src: '../revealjs/plugin/zoom-js/zoom.js', async: true },
+//                           { src: '../revealjs/plugin/notes/notes.js', async: true },
                            { src: '../reveal.js-plugins/chart/Chart.min.js' },
                            { src: '../reveal.js-plugins/chart/csv2chart.js' },
-                           { src: 'https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js', async: true },
+// Multiplex dependencies
+//                           { src: 'https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js', async: true },
 //                           { src: Reveal.getQueryHash().s ?
 //                                 'plugin/multiplex/master.js' :
 //                                 'plugin/multiplex/client.js', async: true },
