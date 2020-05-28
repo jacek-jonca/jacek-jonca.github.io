@@ -1,0 +1,6 @@
+@font-face {
+    font-family: 'SztyletBold';
+        src: url('/plugins/sztylet/SztyletBold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+      }

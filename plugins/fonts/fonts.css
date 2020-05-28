@@ -1,0 +1,27 @@
+@font-face {
+    font-family: 'League Spartan Variable';
+    src: url('LeagueSpartanVariable.woff2') format('woff2-variations');
+    font-display: swap;
+    font-weight: 500 800;
+  }
+
+  /* libre-baskerville-regular - latin-ext_latin */
+@font-face {
+    font-family: 'Libre Baskerville';
+    font-style: normal;
+    font-display: swap;
+    font-weight: 400;
+    src: local('Libre Baskerville'), local('LibreBaskerville-Regular'),
+         url('libre-baskerville-v7-latin-ext_latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('libre-baskerville-v7-latin-ext_latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* libre-baskerville-italic - latin-ext_latin */
+  @font-face {
+    font-family: 'Libre Baskerville';
+    font-style: italic;
+    font-display: swap;
+    font-weight: 400;
+    src: local('Libre Baskerville Italic'), local('LibreBaskerville-Italic'),
+         url('libre-baskerville-v7-latin-ext_latin-italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('libre-baskerville-v7-latin-ext_latin-italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
