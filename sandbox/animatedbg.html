@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html class="sl-root decks show " data-account="default">
+
+<head>
+    <meta charset="utf-8" />
+
+    <title>Confront 2018</title>
+
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="msapplication-tap-highlight" content="no" />
+
+    <link rel="manifest" href="/manifest.json">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet"
+        type="text/css" data-application-font="inter">
+
+    <link rel="stylesheet" media="all"
+        href="https://assets.slid.es/assets/slides/slides-5463dbbad1a68c6e9a85872698fd43e74078271bfd42f08aadf3e7324137e99c.css" />
+    <link rel="stylesheet" media="all"
+        href="https://assets.slid.es/assets/application-d713fa84344a69fbbf471b3fc50b868a2035acf929b265bd29aa5128966b4987.css" />
+    <link rel="stylesheet" media="all"
+        href="https://assets.slid.es/assets/deck-v2-1cecf066e2d1907a63d1e73dd8f79764851f4f52c5f5515f5a592bc1041d9d85.css" />
+
+    <style id="global-css-output" type="text/css"></style>
+
+    <style id="theme-css-output" type="text/css">
+        .reveal .square-outer {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            overflow: hidden;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .reveal .square-inner {
+            width: 100%;
+            height: 100%;
+            transform-origin: 50% 50%;
+        }
+
+        .reveal .square {
+            position: absolute;
+            width: 300%;
+            height: 200%;
+            left: -100%;
+        }
+
+        .reveal .square-1 {
+            bottom: 50%;
+        }
+
+        .reveal .square-2 {
+            top: 50%;
+        }
+
+        .reveal .square-outer.initialized .square-inner,
+        .reveal .square-outer.initialized .square {
+            transition: all 0.7s cubic-bezier(0.86, 0, 0.07, 1);
+        }
+
+        .reveal .sl-block-content[data-animation-type] {
+            transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        .reveal section .fragment {
+            transition-duration: 0.4s !important;
+            transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1) !important;
+        }
+
+        .reveal section .fragment-slow {
+            transition-duration: 0.7s !important;
+        }
+
+        .reveal .deck-header {
+            position: absolute;
+            right: 0.5em;
+            top: 0.5em;
+            z-index: 2;
+            font-size: 0.8em;
+        }
+
+        .reveal .deck-header a {
+            color: #fff;
+        }
+
+        @media screen and (max-width: 800px) {
+            .reveal .deck-header {
+                font-size: 0.8em;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .reveal .deck-header {
+                font-size: 0.6em;
+            }
+        }
+    </style>
+
+    <style id="user-css-output" type="text/css">
+        @import url("https://s3.amazonaws.com/static.slid.es/fonts/league/league_gothic-pdf.css");
+
+        .reveal {}
+
+        .reveal .progress {
+            display: none !important;
+        }
+
+        .reveal .controls button {
+            color: #fff;
+        }
+
+        .reveal .fragment.fade-up-fixed:not(.visible) {
+            transform: translateY(30px);
+        }
+
+        .reveal .fragment.fade-up-fixed:not(.current-fragment).visible {
+            opacity: 0.5;
+        }
+
+        .reveal .slides {
+            font-size: 38px;
+        }
+
+        .reveal .slides h1 {
+            font-size: 2.2em;
+            line-height: 1.2;
+        }
+
+        .reveal .slides h2 {
+            font-size: 1.5em;
+        }
+
+        .reveal .fragment.slide-up {
+            -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+        }
+
+        .reveal .fragment.slide-up.visible {
+            -webkit-transform: none;
+            transform: none;
+        }
+
+        .reveal .slides .reveal-title h1 {
+            font-family: 'League Gothic', Impact, 'Overpass', 'sans-serif';
+            font-weight: normal;
+            letter-spacing: 3px;
+            text-shadow: 0 1px 0 #cccccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbbbbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaaaaa, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 20px 20px rgba(0, 0, 0, 0.15);
+            color: #fff;
+        }
+
+        .reveal .slides .reveal-title h1 a {
+            color: #fff;
+        }
+
+        .reveal .slides pre code {
+            padding: 20px;
+            background-color: #222;
+        }
+
+        .reveal .slides .blend-blocks .sl-block {
+            mix-blend-mode: hard-light;
+        }
+
+        .reveal .slides section[data-background-iframe] {
+            pointer-events: none;
+        }
+
+        .reveal .slides section.has-iframe.present>* {
+            opacity: 0;
+            transform: scale(4);
+            transition: transform 0.4s ease 2.5s,
+                opacity 0.3s ease 2.5s;
+        }
+
+        .reveal .slide-background.has-iframe iframe {
+            opacity: 0;
+            background: #fff;
+        }
+
+        .reveal .slide-background.has-iframe.present iframe {
+            opacity: 1;
+            transition: opacity 0.6s ease 2.5s;
+        }
+
+        .reveal .slides .fade-bullets .fragment {
+            opacity: 0.2;
+            visibility: visible;
+        }
+
+        .reveal .slides .fade-bullets .fragment.visible {
+            opacity: 1;
+        }
+
+        .reveal .iframe-white-bg {
+            background-color: #fff;
+        }
+
+        .reveal .slides .hard-text-shadow {
+            text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.3);
+        }
+
+        .reveal .the-end h1 {
+            font-family: Times;
+            text-transform: none;
+            font-weight: normal;
+        }
+
+        @keyframes thanks-anim {
+            0% {
+                opacity: 0;
+                transform: translate(0px, -100px);
+            }
+
+            20%,
+            80% {
+                opacity: 1;
+                transform: translate(0px, 0px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translate(-240px, 0);
+            }
+        }
+
+        .reveal section.present .thanks-anim {
+            opacity: 0;
+            animation: thanks-anim 3s cubic-bezier(0.23, 1, 0.32, 1) forwards 0.4s;
+        }
+    </style>
+
+    <meta name="csrf-param" content="authenticity_token" />
+    <meta name="csrf-token"
+        content="+/Lhckq38S4kcdOvpcRtZcCZ8pRbyXuE0ZDHM7KduWmqbwML7C9OgSI8H3X46mzZliILVF8IhqlKWXH5tcTxdw==" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+</head>
+
+<body>
+
+    <div id="container" class="container">
+
+        <div id="main" class="main " role="main">
+            <div class="marquee">
+
+                <div class="reveal-frame">
+                    <div class="reveal-viewport theme-font-overpass2 theme-color-black-blue">
+                        <div class="reveal">
+                            <div class="slides">
+                                <section data-background-color="#59078f" class="has-dark-background present"
+                                    style="display: block;">
+                                    <div class="sl-block" data-block-type="text"
+                                        style="width: 891px; left: 67px; top: 184px; height: auto;">
+                                        <div class="sl-block-content" data-placeholder-tag="h1"
+                                            data-placeholder-text="Title Text"
+                                            style="font-size: 180%; z-index: 10; text-align: center; color: rgb(255, 255, 255); border-style: solid; border-width: 16px; padding: 20px;">
+                                            <h1>CANVAS</h1>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section data-background-color="#4f3a4b" data-bg-color1="#e5e456" angle="30" y="50" data-bg-angle="4" data-bg-y="0.3">
+                                    <div class="sl-block" data-block-type="text"
+                                        style="width: 939px; left: 60px; top: 465px; height: auto;">
+                                        <div class="sl-block-style" style="z-index: 11;">
+                                            <div class="sl-block-content" data-placeholder-tag="h1"
+                                                data-placeholder-text="Title Text"
+                                                style="text-align: left; z-index: 11; color: rgb(255, 255, 255); letter-spacing: 0.05em; transition-duration: 0.6s; transition-delay: 0.3s;"
+                                                data-has-letter-spacing="" data-animation-type="slide-down">
+                                                <h2>Hakim El Hattab / hakim.se</h2>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="sl-block" data-block-type="text"
+                                        style="width: 926px; left: 58px; top: 65px; height: auto;">
+                                        <div class="sl-block-style" style="z-index: 12;">
+                                            <div class="sl-block-content" data-placeholder-tag="h1"
+                                                data-placeholder-text="Title Text"
+                                                style="text-align: left; z-index: 12; color: rgb(79, 58, 75); font-size: 128%; border-width: 1px; transition-duration: 0.6s; transition-delay: 0.2s;"
+                                                dir="ui" data-animation-type="slide-down">
+                                                <h1>MAKING BETTER PRESENTATIONS</h1>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </section>
+                                <section data-background-color="#4f3a4b" data-id="22916edd241cceb4a79dbfc73a4b01a1"
+                                    data-bg-color1="#e5e456" data-bg-angle="10" data-bg-y="-0.5">
+                                    <div class="sl-block" data-block-type="text"
+                                        style="width: 687px; left: 129px; top: 181px; height: auto;">
+                                        <div class="sl-block-content fragment semi-fade-out" data-placeholder-tag="h1"
+                                            data-placeholder-text="Title Text"
+                                            style="text-align: left; z-index: 11; color: rgb(229, 228, 86);" dir="ui"
+                                            data-fragment-index="0">
+                                            <h2>Dev/design</h2>
+                                        </div>
+                                    </div>
+                                    <div class="sl-block" data-block-type="text"
+                                        style="width: 687px; left: 129px; top: 275px; height: auto;">
+                                        <div class="sl-block-content fragment fade-up-fixed" data-placeholder-tag="h1"
+                                            data-placeholder-text="Title Text"
+                                            style="text-align: left; z-index: 12; color: rgb(229, 228, 86);" dir="ui"
+                                            data-fragment-index="0">
+                                            <h2>Startups</h2>
+                                        </div>
+                                    </div>
+                                    <div class="sl-block" data-block-type="text"
+                                        style="width: 687px; left: 129px; top: 369px; height: auto;">
+                                        <div class="sl-block-content fragment fade-up-fixed" data-placeholder-tag="h1"
+                                            data-placeholder-text="Title Text"
+                                            style="text-align: left; z-index: 13; color: rgb(229, 228, 86);" dir="ui"
+                                            data-fragment-index="1">
+                                            <h2>SIDE PROJECTS</h2>
+                                        </div>
+                                    </div>
+
+                                    <div class="sl-block" data-block-type="shape"
+                                        style="min-width: 4px; min-height: 4px; width: 48px; height: 9px; left: 60px; top: 214px;">
+                                        <div class="sl-block-content fragment semi-fade-out" data-shape-type="rect"
+                                            data-shape-fill-color="rgb(229, 228, 86)" data-shape-stretch="true"
+                                            style="z-index: 14;" data-fragment-index="0"><svg
+                                                xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%"
+                                                height="100%" preserveaspectratio="none" viewbox="0 0 48 9">
+                                                <rect width="48" height="9" class="shape-element"
+                                                    fill="rgb(229, 228, 86)"></rect>
+                                            </svg></div>
+                                    </div>
+                                    <div class="sl-block" data-block-type="shape"
+                                        style="min-width: 4px; min-height: 4px; width: 48px; height: 9px; left: 60px; top: 308px;">
+                                        <div class="sl-block-content fragment fade-up-fixed" data-shape-type="rect"
+                                            data-shape-fill-color="rgb(229, 228, 86)" data-shape-stretch="true"
+                                            style="z-index: 15;" data-fragment-index="0"><svg
+                                                xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%"
+                                                height="100%" preserveaspectratio="none" viewbox="0 0 48 9">
+                                                <rect width="48" height="9" class="shape-element"
+                                                    fill="rgb(229, 228, 86)"></rect>
+                                            </svg></div>
+                                    </div>
+                                    <div class="sl-block" data-block-type="shape"
+                                        style="min-width: 4px; min-height: 4px; width: 48px; height: 9px; left: 60px; top: 402px;">
+                                        <div class="sl-block-content fragment fade-up-fixed" data-shape-type="rect"
+                                            data-shape-fill-color="rgb(229, 228, 86)" data-shape-stretch="true"
+                                            style="z-index: 16;" data-fragment-index="1"><svg
+                                                xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%"
+                                                height="100%" preserveaspectratio="none" viewbox="0 0 48 9">
+                                                <rect width="48" height="9" class="shape-element"
+                                                    fill="rgb(229, 228, 86)"></rect>
+                                            </svg></div>
+                                    </div>
+                                    <div class="sl-block" data-block-type="text"
+                                        style="width: 687px; left: 129px; top: 463px; height: auto;">
+                                        <div class="sl-block-content fragment fade-up-fixed" data-placeholder-tag="h1"
+                                            data-placeholder-text="Title Text"
+                                            style="text-align: left; z-index: 17; color: rgb(229, 228, 86);" dir="ui"
+                                            data-fragment-index="2">
+                                            <h2>SLIDES.com</h2>
+                                        </div>
+                                    </div>
+                                    <div class="sl-block" data-block-type="shape"
+                                        style="min-width: 4px; min-height: 4px; width: 48px; height: 9px; left: 60px; top: 496px;">
+                                        <div class="sl-block-content fragment fade-up-fixed" data-shape-type="rect"
+                                            data-shape-fill-color="rgb(229, 228, 86)" data-shape-stretch="true"
+                                            style="z-index: 18;" data-fragment-index="2"><svg
+                                                xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%"
+                                                height="100%" preserveaspectratio="none" viewbox="0 0 48 9">
+                                                <rect width="48" height="9" class="shape-element"
+                                                    fill="rgb(229, 228, 86)"></rect>
+                                            </svg></div>
+                                    </div>
+                                </section>
+                                <section data-bg-color1="#e5e456" data-bg-angle="-4" data-bg-y="0.8" data-background-color="#4f3a4b">
+                                    <div class="sl-block" data-block-type="text"
+                                        style="width: 185px; left: 578px; top: 50px; height: auto;">
+                                        <div class="sl-block-content" data-placeholder-tag="h1"
+                                            data-placeholder-text="Title Text"
+                                            style="font-size: 500%; z-index: 12; color: rgb(79, 58, 75); transition-duration: 0.6s; transition-delay: 0.5s;"
+                                            data-animation-type="slide-down">
+                                            <h1>I</h1>
+                                        </div>
+                                    </div>
+                                    <div class="sl-block" data-block-type="text"
+                                        style="width: 366px; left: 258px; top: 50px; height: auto;">
+                                        <div class="sl-block-content" data-placeholder-tag="h1"
+                                            data-placeholder-text="Title Text"
+                                            style="font-size: 500%; z-index: 13; color: rgb(79, 58, 75); transition-duration: 0.7s; transition-delay: 0.4s;"
+                                            data-animation-type="slide-down">
+                                            <h1>U</h1>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section data-background-color="#4f3a4b" data-id="ff89b3a7984f5cbf597da7de1e0b83a8"
+                                    data-bg-color1="#e5e456" data-bg-color2="#e5e456" data-bg-angle="0" data-bg-y="2">
+                                </section>
+                                <section data-background-color="#e5e456">
+                                    <div class="sl-block" data-block-type="text"
+                                        style="width: 1000px; left: 12px; top: 240px; height: auto;">
+                                        <div class="sl-block-content fade-out" data-placeholder-tag="h1"
+                                            data-placeholder-text="Title Text"
+                                            style="z-index: 11; color: rgb(79, 58, 75); font-size: 190%; transition-duration: 0.6s;"
+                                            dir="ui" data-animation-type="fade-in">
+                                            <h2>FOKUS</h2>
+                                        </div>
+                                    </div>
+                                </section>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <!--! end of #container -->
+
+                    <script>
+                        var SLConfig = { };
+                    </script>
+
+                    <script
+                        src="https://assets.slid.es/assets/application-a3d9f018bffb5b45948c78faeeea21ac24f2ed41e607b4ba472c26896b927a24.js"
+                        defer="defer"></script>
+                    <script
+                        src="https://assets.slid.es/assets/deck-753c9e3d80aaf830b59e73960bf943f109cf5585c772f95e0fbce14b130a586e.js"
+                        defer="defer"></script>
+
+                    <script id="theme-js-output" type="text/javascript">
+                        var AnimatedBackground = (function () {
+
+                            var slideScale = 1;
+                            var slideHeight,
+                                slideWidth;
+
+                            var width,
+                                height;
+
+                            var squareOuter,
+                                squareInner,
+                                square1,
+                                square2;
+
+                            var defaultProperties = {
+                                color1: 'rgba(0,0,0,0)',
+                                color2: 'rgba(0,0,0,0)',
+                                x: 0,
+                                y: 0,
+                                tx: 50,
+                                ty: 50,
+                                angle: 0
+                            };
+
+                            var currentProperties = {};
+
+                            function init() {
+
+                                squareOuter = document.createElement('div');
+                                squareOuter.className = "square-outer";
+                                document.querySelector('.reveal').appendChild(squareOuter);
+
+                                squareInner = document.createElement('div');
+                                squareInner.className = "square-inner";
+                                squareOuter.appendChild(squareInner);
+
+                                square1 = document.createElement('div');
+                                square1.className = "square square-1";
+                                squareInner.appendChild(square1);
+
+                                square2 = document.createElement('div');
+                                square2.className = "square square-2";
+                                squareInner.appendChild(square2);
+
+                                window.addEventListener('resize', layout.bind(this));
+
+                                layout();
+                                syncWithReveal();
+
+                                setTimeout(function () {
+                                    squareOuter.classList.add('initialized');
+                                }, 100);
+
+                                if (window.Reveal) {
+                                    window.Reveal.addEventListener('slidechanged', syncWithReveal);
+
+                                    if (/\/edit/.test(window.location.pathname)) {
+                                        setInterval(setupObservers, 4000);
+                                        setupObservers();
+                                    }
+
+                                    window.Reveal.addEventListener('fragmentshown', syncFragmentIndex);
+                                    window.Reveal.addEventListener('fragmenthidden', syncFragmentIndex);
+                                    window.Reveal.addEventListener('slidechanged', syncFragmentIndex);
+                                }
+
+                            }
+
+                            function setupObservers() {
+
+                                [].slice.call(document.querySelectorAll('.reveal section')).forEach(function (
+                                    slide) {
+
+                                    if (slide._observer) return;
+
+                                    slide._observer = new MutationObserver(syncWithReveal);
+                                    slide._observer.observe(slide, {
+                                        attributes: true
+                                    });
+
+                                });
+
+                            }
+
+                            function layout() {
+
+                                width = window.innerWidth;
+                                height = window.innerHeight;
+
+                                slideScale = window.Reveal ? window.Reveal.getScale() : 1;
+                                slideWidth = Reveal.getConfig().width * slideScale;
+                                slideHeight = Reveal.getConfig().height * slideScale;
+
+                                set(currentProperties);
+
+                            }
+
+                            function set(properties) {
+
+                                for (var property in defaultProperties) {
+                                    if (typeof properties[property] === 'undefined' || properties[property] ===
+                                        null || (typeof properties[property] === 'number' && isNaN(properties[
+                                            property]))) {
+                                        properties[property] = defaultProperties[property];
+                                    }
+                                }
+
+                                currentProperties = properties;
+
+                                square1.style.backgroundColor = properties.color1;
+                                square2.style.backgroundColor = properties.color2;
+
+                                var wrapperTransform = [];
+                                wrapperTransform.push('rotate(' + properties.angle + 'deg)');
+                                wrapperTransform = wrapperTransform.join(' ');
+
+                                squareInner.style.transform = wrapperTransform;
+                                squareInner.style.transformOrigin = properties.tx + '% ' + properties.ty + '%';
+
+                                var y = 0;
+                                var x = 0;
+
+                                if (properties.x === '0%') {
+                                    x = '-25%';
+                                } else if (properties.y === '100%') {
+                                    x = '25%';
+                                } else {
+                                    x = (slideWidth * 0.5 * (parseFloat(properties.x) || 0)) + 'px';
+                                }
+
+                                if (properties.y === '0%') {
+                                    y = '-25%';
+                                } else if (properties.y === '100%') {
+                                    y = '25%';
+                                } else {
+                                    y = (slideHeight * 0.5 * (parseFloat(properties.y) || 0)) + 'px';
+                                }
+
+                                var squareTransform = [];
+                                squareTransform.push('translate(' + x + ',' + y + ')');
+                                squareTransform = squareTransform.join('');
+
+                                square1.style.transform = squareTransform;
+                                square2.style.transform = squareTransform;
+
+                            }
+
+                            function syncWithReveal() {
+
+                                if (window.Reveal && window.Reveal.getCurrentSlide()) {
+
+                                    var slide = window.Reveal.getCurrentSlide();
+                                    var indices = window.Reveal.getIndices();
+
+                                    var color1 = slide.getAttribute('data-bg-color1'),
+                                        color2 = slide.getAttribute('data-bg-color2'),
+                                        angle = parseInt(slide.getAttribute('data-bg-angle'), 10),
+                                        x = slide.getAttribute('data-bg-x'),
+                                        y = slide.getAttribute('data-bg-y'),
+                                        tx = parseInt(slide.getAttribute('data-bg-tx'), 10),
+                                        ty = parseInt(slide.getAttribute('data-bg-ty'), 10);
+
+                                    if (typeof angle === 'number' && !isNaN(angle)) {
+                                        set({
+                                            color1: color1,
+                                            color2: color2,
+                                            angle: angle,
+                                            y: y,
+                                            x: x,
+                                            tx: tx,
+                                            ty: ty
+                                        });
+                                    } else {
+                                        set({
+                                            color1: defaultProperties.color1,
+                                            color2: defaultProperties.color2,
+                                            angle: currentProperties.angle,
+                                            y: currentProperties.y
+                                        });
+                                    }
+
+                                }
+
+                            }
+
+                            function syncFragmentIndex() {
+                                Reveal.getCurrentSlide().setAttribute('data-fragment', Reveal.getIndices().f);
+                            }
+
+                            return {
+
+                                init: init
+
+                            }
+
+                        })();
+
+
+                        var backgroundInitInterval = setInterval(function () {
+                            if (window.Reveal && window.Reveal.isReady()) {
+                                clearInterval(backgroundInitInterval);
+                                AnimatedBackground.init();
+                            }
+                        }, 100);
+                    </script>
+
+
+</body>
+
+</html>
