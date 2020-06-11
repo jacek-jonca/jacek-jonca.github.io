@@ -11,12 +11,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet"
         type="text/css" data-application-font="inter">
 
-    <link rel="stylesheet" media="all"
-        href="https://assets.slid.es/assets/slides/slides-5463dbbad1a68c6e9a85872698fd43e74078271bfd42f08aadf3e7324137e99c.css" />
-    <link rel="stylesheet" media="all"
-        href="https://assets.slid.es/assets/application-d713fa84344a69fbbf471b3fc50b868a2035acf929b265bd29aa5128966b4987.css" />
-    <link rel="stylesheet" media="all"
-        href="https://assets.slid.es/assets/deck-v2-1cecf066e2d1907a63d1e73dd8f79764851f4f52c5f5515f5a592bc1041d9d85.css" />
+    <link rel="stylesheet" media="all" href="slides.mwe.css" />
+    <link rel="stylesheet" media="all" href="application.mwe.css" />
+    <link rel="stylesheet" media="all" href="deck.mwe.css" />
 
     <style id="global-css-output" type="text/css"></style>
 
@@ -29,203 +26,200 @@
             left: 0;
             overflow: hidden;
             z-index: 0;
-            pointer-events: none;
+            pointer-events: none
         }
 
         .reveal .square-inner {
             width: 100%;
             height: 100%;
-            transform-origin: 50% 50%;
+            transform-origin: 50% 50%
         }
 
         .reveal .square {
             position: absolute;
             width: 300%;
             height: 200%;
-            left: -100%;
+            left: -100%
         }
 
         .reveal .square-1 {
-            bottom: 50%;
+            bottom: 50%
         }
 
         .reveal .square-2 {
-            top: 50%;
+            top: 50%
         }
 
-        .reveal .square-outer.initialized .square-inner,
-        .reveal .square-outer.initialized .square {
-            transition: all 0.7s cubic-bezier(0.86, 0, 0.07, 1);
+        .reveal .square-outer.initialized .square,
+        .reveal .square-outer.initialized .square-inner {
+            transition: all .7s cubic-bezier(.86, 0, .07, 1)
         }
 
         .reveal .sl-block-content[data-animation-type] {
-            transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+            transition-timing-function: cubic-bezier(.23, 1, .32, 1)
         }
 
         .reveal section .fragment {
-            transition-duration: 0.4s !important;
-            transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1) !important;
+            transition-duration: .4s !important;
+            transition-timing-function: cubic-bezier(.23, 1, .32, 1) !important
         }
 
         .reveal section .fragment-slow {
-            transition-duration: 0.7s !important;
+            transition-duration: .7s !important
         }
 
         .reveal .deck-header {
             position: absolute;
-            right: 0.5em;
-            top: 0.5em;
+            right: .5em;
+            top: .5em;
             z-index: 2;
-            font-size: 0.8em;
+            font-size: .8em
         }
 
         .reveal .deck-header a {
-            color: #fff;
+            color: #fff
         }
 
-        @media screen and (max-width: 800px) {
+        @media screen and (max-width:800px) {
             .reveal .deck-header {
-                font-size: 0.8em;
+                font-size: .8em
             }
         }
 
-        @media screen and (max-width: 600px) {
+        @media screen and (max-width:600px) {
             .reveal .deck-header {
-                font-size: 0.6em;
+                font-size: .6em
             }
         }
     </style>
 
     <style id="user-css-output" type="text/css">
-        @import url("https://s3.amazonaws.com/static.slid.es/fonts/league/league_gothic-pdf.css");
-
-        .reveal {}
+        @import url(https://s3.amazonaws.com/static.slid.es/fonts/league/league_gothic-pdf.css);
 
         .reveal .progress {
-            display: none !important;
+            display: none !important
         }
 
         .reveal .controls button {
-            color: #fff;
+            color: #fff
         }
 
         .reveal .fragment.fade-up-fixed:not(.visible) {
-            transform: translateY(30px);
+            transform: translateY(30px)
         }
 
         .reveal .fragment.fade-up-fixed:not(.current-fragment).visible {
-            opacity: 0.5;
+            opacity: .5
         }
 
         .reveal .slides {
-            font-size: 38px;
+            font-size: 38px
         }
 
         .reveal .slides h1 {
             font-size: 2.2em;
-            line-height: 1.2;
+            line-height: 1.2
         }
 
         .reveal .slides h2 {
-            font-size: 1.5em;
+            font-size: 1.5em
         }
 
         .reveal .fragment.slide-up {
             -webkit-transform: translateY(20px);
-            transform: translateY(20px);
+            transform: translateY(20px)
         }
 
         .reveal .fragment.slide-up.visible {
             -webkit-transform: none;
-            transform: none;
+            transform: none
         }
 
         .reveal .slides .reveal-title h1 {
-            font-family: 'League Gothic', Impact, 'Overpass', 'sans-serif';
-            font-weight: normal;
+            font-family: 'League Gothic', Impact, Overpass, sans-serif;
+            font-weight: 400;
             letter-spacing: 3px;
-            text-shadow: 0 1px 0 #cccccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbbbbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaaaaa, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 20px 20px rgba(0, 0, 0, 0.15);
-            color: #fff;
+            text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 20px 20px rgba(0, 0, 0, .15);
+            color: #fff
         }
 
         .reveal .slides .reveal-title h1 a {
-            color: #fff;
+            color: #fff
         }
 
         .reveal .slides pre code {
             padding: 20px;
-            background-color: #222;
+            background-color: #222
         }
 
         .reveal .slides .blend-blocks .sl-block {
-            mix-blend-mode: hard-light;
+            mix-blend-mode: hard-light
         }
 
         .reveal .slides section[data-background-iframe] {
-            pointer-events: none;
+            pointer-events: none
         }
 
         .reveal .slides section.has-iframe.present>* {
             opacity: 0;
             transform: scale(4);
-            transition: transform 0.4s ease 2.5s,
-                opacity 0.3s ease 2.5s;
+            transition: transform .4s ease 2.5s, opacity .3s ease 2.5s
         }
 
         .reveal .slide-background.has-iframe iframe {
             opacity: 0;
-            background: #fff;
+            background: #fff
         }
 
         .reveal .slide-background.has-iframe.present iframe {
             opacity: 1;
-            transition: opacity 0.6s ease 2.5s;
+            transition: opacity .6s ease 2.5s
         }
 
         .reveal .slides .fade-bullets .fragment {
-            opacity: 0.2;
-            visibility: visible;
+            opacity: .2;
+            visibility: visible
         }
 
         .reveal .slides .fade-bullets .fragment.visible {
-            opacity: 1;
+            opacity: 1
         }
 
         .reveal .iframe-white-bg {
-            background-color: #fff;
+            background-color: #fff
         }
 
         .reveal .slides .hard-text-shadow {
-            text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.3);
+            text-shadow: 2px 2px 0 rgba(0, 0, 0, .3)
         }
 
         .reveal .the-end h1 {
             font-family: Times;
             text-transform: none;
-            font-weight: normal;
+            font-weight: 400
         }
 
         @keyframes thanks-anim {
             0% {
                 opacity: 0;
-                transform: translate(0px, -100px);
+                transform: translate(0, -100px)
             }
 
             20%,
             80% {
                 opacity: 1;
-                transform: translate(0px, 0px);
+                transform: translate(0, 0)
             }
 
             100% {
                 opacity: 1;
-                transform: translate(-240px, 0);
+                transform: translate(-240px, 0)
             }
         }
 
         .reveal section.present .thanks-anim {
             opacity: 0;
-            animation: thanks-anim 3s cubic-bezier(0.23, 1, 0.32, 1) forwards 0.4s;
+            animation: thanks-anim 3s cubic-bezier(.23, 1, .32, 1) forwards .4s
         }
     </style>
 
