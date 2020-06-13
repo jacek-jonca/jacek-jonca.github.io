@@ -358,40 +358,40 @@ template {
 
 @font-face {
     font-family: 'GrowthComicBasic';
-    src: url("growth-comic-basic-v2.2-bold_italic.eot");
-    src: url("growth-comic-basic-v2.2-bold_italic.eot?#iefix") format("embedded-opentype"), url("growth-comic-basic-v2.2-bold_italic.woff2") format("woff2"), url("growth-comic-basic-v2.2-bold_italic.woff") format("woff"), url("growth-comic-basic-v2.2-bold_italic.ttf") format("truetype");
+    src: url("../font/growth-comic-basic-v2.2-bold_italic.eot");
+    src: url("../font/growth-comic-basic-v2.2-bold_italic.eot?#iefix") format("embedded-opentype"), url("../font/growth-comic-basic-v2.2-bold_italic.woff2") format("woff2"), url("../font/growth-comic-basic-v2.2-bold_italic.woff") format("woff"), url("../font/growth-comic-basic-v2.2-bold_italic.ttf") format("truetype");
     font-weight: bold;
     font-style: italic
 }
 
 @font-face {
     font-family: 'GrowthComicSad';
-    src: url("growth-comic-sad-regular.eot");
-    src: url("growth-comic-sad-regular.eot?#iefix") format("embedded-opentype"), url("growth-comic-sad-regular.woff2") format("woff2"), url("growth-comic-sad-regular.woff") format("woff"), url("growth-comic-sad-regular.ttf") format("truetype");
+    src: url("../font/growth-comic-sad-regular.eot");
+    src: url("../font/growth-comic-sad-regular.eot?#iefix") format("embedded-opentype"), url("../font/growth-comic-sad-regular.woff2") format("woff2"), url("../font/growth-comic-sad-regular.woff") format("woff"), url("../font/growth-comic-sad-regular.ttf") format("truetype");
     font-weight: normal;
     font-style: normal
 }
 
 @font-face {
     font-family: 'GrowthComicSad';
-    src: url("growth-comic-sad-bold.eot");
-    src: url("growth-comic-sad-bold.eot?#iefix") format("embedded-opentype"), url("growth-comic-sad-bold.woff2") format("woff2"), url("growth-comic-sad-bold.woff") format("woff"), url("growth-comic-sad-bold.ttf") format("truetype");
+    src: url("../font/growth-comic-sad-bold.eot");
+    src: url("../font/growth-comic-sad-bold.eot?#iefix") format("embedded-opentype"), url("../font/growth-comic-sad-bold.woff2") format("woff2"), url("../font/growth-comic-sad-bold.woff") format("woff"), url("../font/growth-comic-sad-bold.ttf") format("truetype");
     font-weight: bold;
     font-style: normal
 }
 
 @font-face {
     font-family: 'GrowthComicSad';
-    src: url("growth-comic-sad-italic.eot");
-    src: url("growth-comic-sad-italic.eot?#iefix") format("embedded-opentype"), url("growth-comic-sad-italic.woff2") format("woff2"), url("growth-comic-sad-italic.woff") format("woff"), url("growth-comic-sad-italic.ttf") format("truetype");
+    src: url("../font/growth-comic-sad-italic.eot");
+    src: url("../font/growth-comic-sad-italic.eot?#iefix") format("embedded-opentype"), url("../font/growth-comic-sad-italic.woff2") format("woff2"), url("../font/growth-comic-sad-italic.woff") format("woff"), url("../font/growth-comic-sad-italic.ttf") format("truetype");
     font-weight: normal;
     font-style: italic
 }
 
 @font-face {
     font-family: 'GrowthComicPow';
-    src: url("growth-comic-pow-regular.eot");
-    src: url("growth-comic-pow-regular.eot?#iefix") format("embedded-opentype"), url("growth-comic-pow-regular.woff2") format("woff2"), url("growth-comic-pow-regular.woff") format("woff"), url("growth-comic-pow-regular.ttf") format("truetype");
+    src: url("../font/growth-comic-pow-regular.eot");
+    src: url("../font/growth-comic-pow-regular.eot?#iefix") format("embedded-opentype"), url("../font/growth-comic-pow-regular.woff2") format("woff2"), url("../font/growth-comic-pow-regular.woff") format("woff"), url("../font/growth-comic-pow-regular.ttf") format("truetype");
     font-weight: normal;
     font-style: normal
 }
