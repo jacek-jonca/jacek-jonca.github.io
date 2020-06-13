@@ -334,24 +334,24 @@ template {
 
 @font-face {
     font-family: 'GrowthComicBasic';
-    src: url("growth-comic-basic-v2.4.eot");
-    src: url("growth-comic-basic-v2.4.eot?#iefix") format("embedded-opentype"), url("growth-comic-basic-v2.4.woff2") format("woff2"), url("growth-comic-basic-v2.4.woff") format("woff"), url("growth-comic-basic-v2.4.ttf") format("truetype");
+    src: url("../font/growth-comic-basic-v2.4.eot");
+    src: url("../font/growth-comic-basic-v2.4.eot?#iefix") format("embedded-opentype"), url("growth-comic-basic-v2.4.woff2") format("woff2"), url("growth-comic-basic-v2.4.woff") format("woff"), url("growth-comic-basic-v2.4.ttf") format("truetype");
     font-weight: normal;
     font-style: normal
 }
 
 @font-face {
     font-family: 'GrowthComicBasic';
-    src: url("growth-comic-basic-v2.4-bold_italic.eot");
-    src: url("growth-comic-basic-v2.4-bold_italic.eot?#iefix") format("embedded-opentype"), url("growth-comic-basic-v2.4-bold_italic.woff2") format("woff2"), url("growth-comic-basic-v2.4-bold_italic.woff") format("woff"), url("growth-comic-basic-v2.4-bold_italic.ttf") format("truetype");
+    src: url("../font/growth-comic-basic-v2.4-bold_italic.eot");
+    src: url("../font/growth-comic-basic-v2.4-bold_italic.eot?#iefix") format("embedded-opentype"), url("growth-comic-basic-v2.4-bold_italic.woff2") format("woff2"), url("growth-comic-basic-v2.4-bold_italic.woff") format("woff"), url("growth-comic-basic-v2.4-bold_italic.ttf") format("truetype");
     font-weight: bold;
     font-style: normal
 }
 
 @font-face {
     font-family: 'GrowthComicBasic';
-    src: url("growth-comic-basic-v2.4-italic.eot");
-    src: url("growth-comic-basic-v2.4-italic.eot?#iefix") format("embedded-opentype"), url("growth-comic-basic-v2.4-italic.woff2") format("woff2"), url("growth-comic-basic-v2.4-italic.woff") format("woff"), url("growth-comic-basic-v2.4-italic.ttf") format("truetype");
+    src: url("../font/growth-comic-basic-v2.4-italic.eot");
+    src: url("../font/growth-comic-basic-v2.4-italic.eot?#iefix") format("embedded-opentype"), url("growth-comic-basic-v2.4-italic.woff2") format("woff2"), url("growth-comic-basic-v2.4-italic.woff") format("woff"), url("growth-comic-basic-v2.4-italic.ttf") format("truetype");
     font-weight: normal;
     font-style: italic
 }
