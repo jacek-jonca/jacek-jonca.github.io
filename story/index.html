@@ -4032,9 +4032,9 @@
         var SLConfig = {};
     </script>
     <script
-        src="https://assets.slid.es/assets/application-055efcc133e686dea1bd60d295b03e86c4439e82121afc058c8f7218ec736327.js"
+        src="//assets.slid.es/assets/application-055efcc133e686dea1bd60d295b03e86c4439e82121afc058c8f7218ec736327.js"
         defer="defer"></script>
-    <script src="https://assets.slid.es/assets/deck-753c9e3d80aaf830b59e73960bf943f109cf5585c772f95e0fbce14b130a586e.js"
+    <script src="//assets.slid.es/assets/deck-753c9e3d80aaf830b59e73960bf943f109cf5585c772f95e0fbce14b130a586e.js"
         defer="defer"></script>
     <!--    <script src="https://js.convertflow.co/production/websites/4980.js" async="async"></script>
 -->
@@ -4090,6 +4090,26 @@
             }
             return t
         }
+
+        function cfAutoFocus() {
+            const e =
+                ':not([style*="display:none"]):not([style*="display: none"]) .cf-step:not([style*="display:none"]):not([style*="display: none"]) .cf-form-field[data-visible*="true"] input',
+                o = document.querySelector(".cf-hook" + e),
+                t = document.querySelector(".cf-overlay" + e);
+            o ? o.focus() : t && t.focus()
+        }
+        window.addEventListener("load", (function () {
+            $cf(document).bind("keyup.convertflow_overlay", (function (e) {
+                27 == e.which && $cf(".cf-overlay").is(":visible") && $cf(".cf-overlay").hide()
+            }));
+            var e = document.querySelectorAll("#cta_27799 .cf-survey-choice");
+            e.length > 0 && e.forEach((function (e) {
+                e.style.removeProperty("background-color"), e.style.removeProperty("border")
+            }))
+        })), window.addEventListener("cfReady", (function () {
+            var e, o = removeParam("activecampaign_id", window.location.href);
+            o = removeParam("r", o), history.replaceState(null, "", o)
+        }));
 
         function selectElementInCurrentSlide(a) {
             return document.querySelector("section.present " + a)
@@ -4216,6 +4236,156 @@
             }))
         }
 
+        function updateHud() {
+            var a = getMeterLevel();
+            a && modifyHud(a.total, a.variation, a.avatar)
+        }
+        window.addEventListener("load", function () {
+            function getParentConvertflowData() {
+                if (parent) {
+                    const n = parent && parent.window && parent.window.location && parent.window.location
+                        .hostname && parent.window.location.hostname.includes("growth.design");
+                    if (n) {
+                        const n = parent.window.location.hash;
+                        if (n && "#/" !== n) {
+                            window.location.hash = n;
+                            const o = parent.window.location.pathname + parent.window.location.search;
+                            parent.window.history.replaceState(null, null, o)
+                        }
+                    }
+                    const o = parent && parent.convertflow && parent.convertflow.person && parent.convertflow
+                        .person.email,
+                        t = !!convertflow;
+                    if (n && o && t) {
+                        let n = parent.convertflow.person.email;
+                        return convertflow.identify({
+                            email: n,
+                            override: !1
+                        }), void convertflow.start()
+                    }
+                }
+            }
+            getParentConvertflowData();
+            Reveal.addEventListener('ready', function (event) {
+                Reveal.configure({
+                    keyboard: {
+                        27: null
+                    }
+                });
+                syncAllMeterBarsAriaWithWidth(), avatarJumboExpansionReset();
+
+                function gdGetContentAuthor() {
+                    function e(e) {
+                        return e[Math.floor(Math.random() * e.length)]
+                    }
+
+                    function t(e) {
+                        let t = e;
+                        return t = t.split(/[?#]/)[0], t = t.replace(/(^\w+:|^)\/\//, ""), t = t
+                            .replace(/\/$/, ""), t
+                    }
+                    let n = t(window.location.href);
+                    if (n) {
+                        if (n.indexOf("slides.growth.design") > -1 || n.indexOf(
+                                "growthdesign.slides.com") > -1) {
+                            if (n.indexOf("/louisxavier/") > -1) return "louis";
+                            if (n.indexOf("/danbenoni/") > -1) return "dan"
+                        }
+                        if (n.indexOf("growth.design") > -1) {
+                            let t;
+                            if (document.head.querySelector('[name="twitter:creator"]') && (t = document
+                                    .head.querySelector('[name="twitter:creator"]').content, t)) {
+                                if (t.indexOf("louisxavier") > -1) return "louis";
+                                if (t.indexOf("danbenoni") > -1) return "dan"
+                            }
+                            const n = ["dan", "louis"],
+                                o = e(n);
+                            return o
+                        }
+                    }
+                }
+
+                function updateCfSourceFields() {
+                    let e = [];
+                    e = document.querySelectorAll('input[name="contact[source_url]"]'), e.length > 0 &&
+                        e.forEach((function (e) {
+                            let t = window.location.href.toString().replace(/\?.*\#/, "");
+                            e.value = decodeURI(t)
+                        }))
+                }
+
+                function gdSuperUpdateAuthor() {
+                    if (gbdAuthorFieldValue) {
+                        var e = [];
+                        (e = document.querySelectorAll("#contact_extra_LAST_CONTENT_AUTHOR")).length >
+                            0 && e.forEach((function (e) {
+                                e.value = gbdAuthorFieldValue
+                            }));
+                        var t = [];
+                        (t = document.querySelectorAll(".cf-hook")).length > 0 && t.forEach((function (
+                            e) {
+                            var t = e.querySelectorAll(".cf-profile-img img"),
+                                n = e.querySelectorAll(".cf-profile-name");
+                            if (t.length > 0) {
+                                var o = "https://gravatar.com/avatar/";
+                                t.forEach((function (e) {
+                                    "louis" === gbdAuthorFieldValue && (e.src =
+                                            o +
+                                            "e4dd0d7c00394e36bcf318a780e215fa?s=72"
+                                        ), "dan" === gbdAuthorFieldValue &&
+                                        (e.src = o +
+                                            "ba397e7e4aad8ae82516a3636c936aa7?s=72"
+                                        )
+                                }))
+                            }
+                            n.length > 0 && n.forEach((function (e) {
+                                "louis" === gbdAuthorFieldValue && (e
+                                        .textContent = "Louis-Xavier Lavallee"),
+                                    "dan" === gbdAuthorFieldValue && (e
+                                        .textContent = "Dan Benoni")
+                            }))
+                        }));
+                        var n = "https://img.convertflow.co/production/websites/4980/",
+                            o = document.querySelector(
+                                "#element347662-content .email-confirmation__img");
+                        o && "dan" === gbdAuthorFieldValue && (o.src = n +
+                            "1560926084-email-confirmation__pre-confirmation--dan.png");
+                        var r = document.querySelector(
+                            "#element334298-content .email-confirmation__post-confirmation");
+                        r && "dan" === gbdAuthorFieldValue && (r.src = n +
+                            "1560970351-email-confirmation__post-confirmation--dan.png");
+                        var a = document.querySelector(
+                            "#element334298-content .email-confirmation__post-confirmation");
+                        a && "dan" === gbdAuthorFieldValue && (a.src = n +
+                            "1560970351-email-confirmation__post-confirmation--dan.png");
+                        var i = document.querySelector("#element346171-content img");
+                        i && "dan" === gbdAuthorFieldValue && (i.src = n +
+                            "1560927639-role-confirmation__pre-confirmation--dan.png");
+                        var l = document.querySelector("#element382224-content img");
+                        l && "dan" === gbdAuthorFieldValue && (l.src = n +
+                            "1560928129-dan-wall-wave.png");
+                        var d = document.querySelector("#element382324-content img");
+                        d && "dan" === gbdAuthorFieldValue && (d.src = n +
+                            "1560928129-dan-wall-wave.png");
+                        var c = document.querySelector("#element354345-content img");
+                        c && "dan" === gbdAuthorFieldValue && (c.src = n + "1560962655-dan-voted.png")
+                    }
+                }
+                var gbdAuthorFieldValue = gdGetContentAuthor();
+                let gbdCfEmailFields = [];
+                gbdCfEmailFields = document.querySelectorAll('input[name="contact[email]"]'),
+                    gbdCfEmailFields.length > 0 && gbdCfEmailFields.forEach((function (e) {
+                        e.addEventListener("focus", updateCfSourceFields, !1)
+                    })), gdSuperUpdateAuthor();
+            });
+            Reveal.addEventListener("slidechanged", (function (e) {
+                updateHud(), syncAllMeterBarsAriaWithWidth(), avatarJumboExpansionReset()
+            })), Reveal.addEventListener("fragmentshown", (function (e) {
+                updateHud(), handleJumboAvatarForward()
+            })), Reveal.addEventListener("fragmenthidden", (function (e) {
+                updateHud(), handleJumboAvatarBackward()
+            }));
+        });
     </script>
 </body>
 
