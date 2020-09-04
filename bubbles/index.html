@@ -1,0 +1,1631 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+      <!-- Loading standard RevealJS files from ../revealjs folder -->
+      <link rel="stylesheet" href="../revealjs/dist/reset.css">
+      <link rel="stylesheet" href="../revealjs/dist/reveal.css">
+	
+	  <!-- custom CSS -->
+	  <link rel="stylesheet" href="css/theme.css" id="theme">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+	</head>
+	<body>
+		<div class="theme-font-opensans theme-color-white-blue" style="width: 100%; height: 100%;">
+			<div class="reveal">
+				<div class="slides">
+                    <section data-menu-title="Authenticate">
+                        <h2>Lobby</h2>
+                        <p>Bubbl.es Pitch</p>
+                        <p>&nbsp;</p>
+                        <div><p>&nbsp;</p></div>
+                        <div>Click &nbsp;
+                            <a href="#" onclick="RevealBroadcast.connect( { id: document.getElementById('broadcastid').value } ); return false;">
+                                <svg style="vertical-align:middle;" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="150" height="150">
+                                    <defs>
+                                      <style>
+                                        .cls-1 {
+                                          fill: #cc0000;
+                                        }
+                                      </style>
+                                    </defs>
+                                    <title>playbtn</title>
+                                    <g>
+                                      <path class="cls-1" d="M281.65,191.27,147.37,113.74c-5.57-3.22-10.13-.58-10.13,5.85v155c0,6.43,4.56,9.07,10.13,5.85L281.65,203c5.57-3.21,5.57-8.48,0-11.7Z"/>
+                                      <path class="cls-1" d="M375.94,125a185.72,185.72,0,1,0,14.56,72.09A184.64,184.64,0,0,0,375.94,125ZM205.3,367.31c-93.84,0-170.19-76.35-170.19-170.19S111.46,26.92,205.3,26.92s170.2,76.35,170.2,170.2S299.15,367.31,205.3,367.31Z"/>
+                                    </g>
+                                </svg>
+                            </a>&nbsp; to connect to the presenter broadcast.</div>
+                            <p>&nbsp;</p>
+                            <p>&nbsp;</p>
+                            <p>&nbsp;</p>
+                            <div>Admin id:&nbsp; <input type="text" size="10" id="broadcastid" style="font-size:70%;" onchange="updateURL();" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"> &nbsp;&nbsp; password: &nbsp; <input type="password" size="10" id="password" style="font-size: 70%; background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAPhJREFUOBHlU70KgzAQPlMhEvoQTg6OPoOjT+JWOnRqkUKHgqWP4OQbOPokTk6OTkVULNSLVc62oJmbIdzd95NcuGjX2/3YVI/Ts+t0WLE2ut5xsQ0O+90F6UxFjAI8qNcEGONia08e6MNONYwCS7EQAizLmtGUDEzTBNd1fxsYhjEBnHPQNG3KKTYV34F8ec/zwHEciOMYyrIE3/ehKAqIoggo9inGXKmFXwbyBkmSQJqmUNe15IRhCG3byphitm1/eUzDM4qR0TTNjEixGdAnSi3keS5vSk2UDKqqgizLqB4YzvassiKhGtZ/jDMtLOnHz7TE+yf8BaDZXA509yeBAAAAAElFTkSuQmCC&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: auto;" value="123456" autocomplete="off"> &nbsp;&nbsp; <a href="#" onclick="RevealBroadcast.start( { id: document.getElementById('broadcastid').value, password: document.getElementById('password').value } ); return false;"><i class="fa fa-rss"></i></a></div>    
+                     </section>
+
+                    <section data-auto-animate-duration="0.6" data-background-color="#000000" data-auto-animate="">
+						<div class="sl-block" data-block-type="shape" data-name="square1" style="width: 838.174px; height: 1649.5px; left: -419.087px; top: -227.346px;">
+							<div class="sl-block-style" style="z-index: 10; transform: rotate(15deg);">
+								<div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(224, 102, 102)" data-shape-stretch="true" style="z-index: 10;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 838 1650">
+										<rect width="838.174" height="1649.5" rx="0" ry="0" class="shape-element" fill="rgb(224, 102, 102)"></rect>
+									</svg></div>
+							</div>
+						</div>
+		
+						<div class="sl-block" data-block-type="image" style="width: 518px; height: 368.879px; left: -78px; top: 239.964px; min-width: 1px; min-height: 1px;" data-name="image-7aaf48">
+							<div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="726" data-natural-height="517" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/978557/images/7680711/couch.png"></div>
+						</div>
+						<div class="sl-block" data-block-type="image" style="width: 806.4px; height: 446.83px; left: 140.8px; top: 53.585px; min-width: 1px; min-height: 1px;" data-name="image-f8e5ae">
+							<div class="sl-block-content" style="z-index: 12;"><img data-natural-width="536" data-natural-height="297" style="" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/978557/images/7680717/talkbubbles.svg"></div>
+						</div>
+						<div class="sl-block" data-block-type="image" style="width: 184.154px; height: 203.904px; left: 768.158px; top: 490px; min-width: 1px; min-height: 1px;" data-name="image-15bce8">
+							<div class="sl-block-content" style="z-index: 13;"><img style="left: -48px; top: -65px; width: 276px; height: 276px;" data-natural-width="796" data-natural-height="796" data-lazy-loaded="" data-crop-x="0.171815" data-crop-y="0.233591" data-crop-width="0.666023" data-crop-height="0.737452" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/978557/images/7683900/hardikaslide1.png"></div>
+						</div>
+					</section>
+					<section data-auto-animate-duration="0.6" data-background-color="#000000" data-auto-animate="">
+		
+						<div class="sl-block" data-block-type="shape" data-name="square1" style="width: 984.893px; height: 1649.5px; left: -421.587px; top: -208.359px;">
+							<div class="sl-block-style" style="z-index: 10; transform: rotate(15deg);">
+								<div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(224, 102, 102)" data-shape-stretch="true" style="z-index: 10;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 985 1650">
+		
+		
+		
+		
+		
+										<rect width="984.893" height="1649.5" rx="0" ry="0" class="shape-element" fill="rgb(224, 102, 102)"></rect>
+									</svg></div>
+							</div>
+						</div>
+		
+						<div class="sl-block" data-block-type="image" style="width: 552.758px; height: 393.631px; left: 4.6455px; top: 298.606px; min-width: 1px; min-height: 1px;" data-name="image-7aaf48">
+							<div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="726" data-natural-height="517" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/978557/images/7680711/couch.png"></div>
+						</div>
+		
+						<div class="sl-block" data-block-type="image" style="width: 395.578px; height: 410px; left: 184.312px; top: -40px; min-width: 1px; min-height: 1px;" data-name="image-bd1c64">
+							<div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="576" data-natural-height="597" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/978557/images/7686132/bubbles-intro.svg"></div>
+						</div>
+						<div class="sl-block" data-block-type="image" style="width: 472.263px; height: 469px; left: 496.186px; top: 100.5px; min-width: 1px; min-height: 1px;" data-name="image-5e6093">
+							<div class="sl-block-content fragment" style="z-index: 13;" data-fragment-index="0"><img style="" data-natural-width="579" data-natural-height="575" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/978557/images/7686157/dont-suck.svg"></div>
+						</div>
+					</section>
+					<section data-auto-animate-duration="0.6" data-background-color="#e06666" data-auto-animate="">
+						<div class="sl-block" data-block-type="text" data-name="text-25a173" style="height: auto; width: 700px; left: -251px; top: 296px;">
+							<div class="sl-block-style" style="z-index: 14; transform: rotate(90deg);">
+								<div class="sl-block-content" style="z-index: 14; color: rgb(255, 255, 255); font-size: 200%;">
+									<p><span style="font-size:1.4em"><strong>WHAT IS IT?</strong></span></p>
+								</div>
+							</div>
+						</div>
+		
+		
+						<!-- LINE 1 box -->
+		
+						<div class="sl-block" data-block-type="text" data-name="text-93d559" style="height: auto; width: 700px; left: 250px; top: 0px;">
+							<div class="sl-block-content" style="z-index: 11;">
+								<p style="	position: relative;
+			max-width: 30em;
+			background-color: #fff;
+			padding: .75em .75em;
+			font-size: 1.25em;
+			border-style                :   solid;
+			border-width                :   8px;
+			border-color                :   #212529;
+			-webkit-border-radius       :   3px;
+			-moz-border-radius          :   3px;
+			border-radius: 1rem;
+			box-shadow:	0 0.125rem 0.5rem rgba(0, 0, 0, .3), 0 0.0625rem 0.125rem rgba(0, 0, 0, .2);">
+									<span>Modern presentation, online education, &amp; digital signage platform</span></p>
+							</div>
+						</div>
+		
+						<!-- Line 1 tail-->
+		
+						<div class="sl-block" data-block-type="snippet" style="width: 60px; height: 60px; left: 207px; top: 79px;" data-id="tail-A">
+							<div class="sl-block-content" style="z-index: 15;">
+								<svg style="fill: white; stroke: #212529; stroke-width: 4px; stroke-linejoin: round;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 36" width="60" height="60">
+									<polyline points="26 36 0 18.5 26 0"></polyline>
+								</svg>
+							</div>
+						</div>
+		
+						<!-- LINE 2-->
+		
+						<div class="sl-block" data-block-type="text" data-name="text-93d559" style="height: auto; width: 700px; left: 250px; top: 256px;">
+							<div class="sl-block-content" style="z-index: 12;">
+								<p style="	position: relative;
+			max-width: 30em;
+			background-color: #fff;
+			padding: .75em .75em;
+			font-size: 1.25em;
+			border-style                :   solid;
+			border-width                :   8px;
+			border-color                :   #212529;
+			-webkit-border-radius       :   3px;
+			-moz-border-radius          :   3px;
+			border-radius: 1rem;
+			box-shadow:	0 0.125rem 0.5rem rgba(0, 0, 0, .3), 0 0.0625rem 0.125rem rgba(0, 0, 0, .2);">
+									<span>Driven by modern technology, science, &amp; evidence</span></p>
+							</div>
+						</div>
+		
+						<!-- LINE 2 tail -->
+		
+						<div class="sl-block" data-block-type="snippet" style="width: 60px; height: 60px; left: 207px; top: 311px;" data-id="tail-A" data-name="snippet-6d1557">
+							<div class="sl-block-content" style="z-index: 16;">
+								<svg style="fill: white; stroke: #212529; stroke-width: 3px; stroke-linejoin: round;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 36" width="60" height="60">
+									<polyline points="26 36 0 18.5 26 0"></polyline>
+								</svg>
+							</div>
+						</div>
+		
+						<!-- LINE 3-->
+		
+						<div class="sl-block" data-block-type="text" data-name="text-93d559" style="height: auto; width: 700px; left: 250px; top: 471px;">
+							<div class="sl-block-content" style="z-index: 13;">
+								<p style="	position: relative;
+			max-width: 30em;
+			background-color: #fff;
+			padding: .75em .75em;
+			font-size: 1.25em;
+			border-style                :   solid;
+			border-width                :   8px;
+			border-color                :   #212529;
+			-webkit-border-radius       :   3px;
+			-moz-border-radius          :   3px;
+			border-radius: 1rem;
+			box-shadow:	0 0.125rem 0.5rem rgba(0, 0, 0, .3), 0 0.0625rem 0.125rem rgba(0, 0, 0, .2);">
+									<span>Frees the user. User provides text, platform creates slides, graphics, and finds an optimal layout.</span></p>
+							</div>
+						</div>
+		
+		
+						<!-- LINE 3 tail -->
+		
+						<div class="sl-block" data-block-type="snippet" style="width: 60px; height: 60px; left: 207px; top: 544px;" data-id="tail-A" data-name="snippet-6d1557">
+							<div class="sl-block-content" style="z-index: 16;">
+								<svg style="fill: white; stroke: #212529; stroke-width: 3px; stroke-linejoin: round;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 36" width="60" height="60">
+									<polyline points="26 36 0 18.5 26 0"></polyline>
+								</svg>
+							</div>
+						</div>
+					</section>
+					<section data-auto-animate-duration="0.6" data-background-color="#000000" data-auto-animate="">
+						<div class="sl-block" data-block-type="image" data-name="image-2850c5" style="width: 556px; height: 556px; left: 190px; top: 152px; min-width: 1px; min-height: 1px;">
+							<div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="796" data-natural-height="796" data-lazy-loaded="" data-src="https://render.bitstrips.com/v2/cpanel/10215356-99195964866_3-s5-99259296485_1-s5-v1.png?transparent=1&amp;palette=1&amp;scale=2"></div>
+						</div>
+						<div class="sl-block" data-block-type="text" data-name="text-93d559" style="height: auto; width: 800px; left: 80px; top: -0.5px;">
+							<div class="sl-block-content" style="z-index: 10;">
+								<p style="	position: relative;
+			max-width: 30em;
+			background-color: #fff;
+			padding: 1.125em 1.5em;
+			font-size: 1.25em;
+			border-style                :   solid;
+			border-width                :   8px;
+			border-color                :   #212529;
+			-webkit-border-radius       :   3px;
+			-moz-border-radius          :   3px;
+			border-radius: 1rem;
+			box-shadow:	0 0.125rem 0.5rem rgba(0, 0, 0, .3), 0 0.0625rem 0.125rem rgba(0, 0, 0, .2);">
+									<span>We were sitting at Iggy's with lights of the city behind us...</span></p>
+							</div>
+						</div>
+					</section>
+					<section data-auto-animate-duration="0.6" data-background-color="#000000" data-auto-animate="">
+						<div class="sl-block" data-block-type="image" data-name="image-2850c5" style="width: 556px; height: 556px; left: 190px; top: 152px; min-width: 1px; min-height: 1px;">
+							<div class="sl-block-content" style="z-index: 10;"><img style="" data-natural-width="796" data-natural-height="796" data-lazy-loaded="" data-src="https://render.bitstrips.com/v2/cpanel/10215356-99195964866_3-s5-99259296485_1-s5-v1.png?transparent=1&amp;palette=1&amp;scale=2"></div>
+						</div>
+						<div class="sl-block" data-block-type="text" data-name="text-93d559" style="height: auto; width: 800px; left: 80px; top: -0.5px;">
+							<div class="sl-block-content" style="z-index: 11;">
+								<p style="	position: relative;
+			max-width: 30em;
+			background-color: #fff;
+			padding: 1.125em 1.5em;
+			font-size: 1.25em;
+			border-style                :   solid;
+			border-width                :   8px;
+			border-color                :   #212529;
+			-webkit-border-radius       :   3px;
+			-moz-border-radius          :   3px;
+			border-radius: 1rem;
+			box-shadow:	0 0.125rem 0.5rem rgba(0, 0, 0, .3), 0 0.0625rem 0.125rem rgba(0, 0, 0, .2);">
+		
+									<span>when it occured to me that we got online presentations and online education all wrong.</span></p>
+							</div>
+						</div>
+		
+						<div class="sl-block" data-block-type="snippet" style="width: 100px; height: 125px; left: 206px; top: 205px; min-width: 1px; min-height: 1px;">
+							<div class="sl-block-content" style="z-index: 21;">
+								<svg style="fill: white; stroke: #212529; stroke-width: 8px; stroke-linejoin: round;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 114" width="125" height="150">
+									<g>
+										<path vector-effect="non-scaling-stroke" d="M33.1,47c15.59,0,28.26-9.8,28.26-21.85S48.69,3.27,33.1,3.27,4.82,13.06,4.82,25.11,17.5,47,33.1,47Z" stroke-linecap="round" stroke-linejoin="round"></path>
+									</g>
+									<g>
+										<path vector-effect="non-scaling-stroke" d="M54.94,87.3c10.55,0,19.15-6.57,19.15-14.63S65.49,58,54.94,58,35.79,64.6,35.79,72.67,44.39,87.3,54.94,87.3Z" stroke-linecap="round" stroke-linejoin="round"></path>
+									</g>
+									<g>
+										<path vector-effect="non-scaling-stroke" d="M83.22,110.43c6.08,0,11-3.68,11-8.2s-5-8.2-11-8.2-11,3.68-11,8.2,4.94,8.2,11,8.2Z" stroke-linecap="round" stroke-linejoin="round"></path>
+									</g>
+								</svg>
+							</div>
+						</div>
+		
+		
+						<!--
+		<div class="sl-block" data-block-type="snippet" style="width: 100px; height: 125px; left: 135px; top: 147px; min-width: 1px; min-height: 1px;" data-block-id="3b5e5dd42317497f848f48e0966239a6">
+			<div class="sl-block-content fragment fade-out" style="z-index: 21;" data-fragment-index="0">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 114" width="160" height="200">
+					<defs>
+						<style>
+							.reveal .cls-1 {
+								fill: rgb(255, 255, 255);
+							}
+							
+							.reveal .cls-2 {
+								fill: rgb(26, 23, 27);
+							}
+						</style>
+					</defs>
+					<title>cloud-tail-thought-left</title>
+					<g>
+						<path class="cls-1" d="M33.1,47c15.59,0,28.26-9.8,28.26-21.85S48.69,3.27,33.1,3.27,4.82,13.06,4.82,25.11,17.5,47,33.1,47Z"></path>
+						<path class="cls-2" d="M33.09.69c17,0,30.85,10.93,30.85,24.42S50.13,49.53,33.09,49.53,2.25,38.61,2.25,25.11,16.06.69,33.09.69m0,5.14c-14.17,0-25.7,8.66-25.7,19.28s11.53,19.28,25.7,19.28S58.8,35.74,58.8,25.11,47.27,5.83,33.09,5.83Z"></path>
+					</g>
+					<g>
+						<path class="cls-1" d="M54.94,87.3c10.55,0,19.15-6.57,19.15-14.63S65.49,58,54.94,58,35.79,64.6,35.79,72.67,44.39,87.3,54.94,87.3Z"></path>
+						<path class="cls-2" d="M54.94,55.47c12,0,21.72,7.71,21.72,17.2S66.94,89.86,54.94,89.86,33.23,82.17,33.23,72.67,43,55.47,54.94,55.47m0,5.15c-9,0-16.57,5.52-16.57,12.05s7.59,12,16.57,12,16.58-5.51,16.58-12S63.93,60.62,54.94,60.62Z"></path>
+					</g>
+					<g>
+						<path class="cls-1" d="M83.22,110.43c6.08,0,11-3.68,11-8.2s-5-8.2-11-8.2-11,3.68-11,8.2,4.94,8.2,11,8.2Z"></path>
+						<path class="cls-2" d="M83.22,91.46c7.51,0,13.6,4.82,13.6,10.77S90.73,113,83.22,113s-13.59-4.82-13.59-10.77,6.09-10.77,13.59-10.77m0,5.15c-4.5,0-8.45,2.63-8.45,5.62s4,5.62,8.45,5.62,8.46-2.62,8.46-5.62-4-5.62-8.46-5.62Z"></path>
+					</g>
+				</svg>
+			</div>
+		</div>
+		-->
+		
+						<!--
+		<div class="sl-block" data-block-type="snippet" style="width: 100px; height: 100px; left: 752px; top: 170px; min-width: 1px; min-height: 1px;" data-block-id="3b5e5dd42317497f848f48e0966239a6">
+			<div class="sl-block-content fragment fade-out" style="z-index: 21;" data-fragment-index="0">
+				<svg style="fill: white; stroke: #212529; stroke-width: 3px; stroke-linejoin: round;" xmlns="http://www.w3.org/2000/svg" width="160" height="200" viewBox="0 0 80 100" preserveAspectRatio="xMidYMid meet">
+					<path vector-effect="non-scaling-stroke" d="M28,2 C22.9510895,17.0734069 14.2844228,28.0734069 2,35 C5.78083511,26.2051062 8.08490979,13.7037852 8.08490979,2" stroke-linecap="round" stroke-linejoin="round"></path>
+				</svg>
+			</div>
+		</div>
+		-->
+					</section>
+					<section data-auto-animate-duration="0.6" data-background-color="#000000" data-auto-animate="">
+						<div class="sl-block" data-block-type="shape" data-name="square1" style="width: 984.893px; height: 1649.5px; left: -419.587px; top: -208.359px;">
+							<div class="sl-block-style" style="z-index: 10; transform: rotate(15deg);">
+								<div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(224, 102, 102)" data-shape-stretch="true" style="z-index: 10;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 985 1650">
+		
+		
+		
+		
+		
+		
+										<rect width="984.893" height="1649.5" rx="0" ry="0" class="shape-element" fill="rgb(224, 102, 102)"></rect>
+									</svg></div>
+							</div>
+						</div>
+		
+						<div class="sl-block" data-block-type="image" style="width: 552.758px; height: 393.631px; left: 4.6455px; top: 298.606px; min-width: 1px; min-height: 1px;" data-name="image-7aaf48">
+							<div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="726" data-natural-height="517" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/978557/images/7680711/couch.png"></div>
+						</div>
+		
+						<div class="sl-block" data-block-type="text" data-name="text-93d559" style="height: auto; width: 850px; left: 50px; top: 0px;">
+							<div class="sl-block-content" style="z-index: 11;" dir="ui">
+								<p style="	position: relative;
+			max-width: 30em;
+			background-color: #fff;
+			padding: 1.125em 1.5em;
+			font-size: 1.25em;
+			border-style                :   solid;
+			border-width                :   8px;
+			border-color                :   #212529;
+			-webkit-border-radius       :   3px;
+			-moz-border-radius          :   3px;
+			border-radius: 1rem;
+			box-shadow:	0 0.125rem 0.5rem rgba(0, 0, 0, .3), 0 0.0625rem 0.125rem rgba(0, 0, 0, .2);">
+		
+									<span>From corporate HR departments to K-12 classrooms COVID-19 forced us into online training... and with little to no preparation.</span></p>
+							</div>
+						</div>
+		
+						<div class="sl-block" data-block-type="snippet" style="width: 100px; height: 125px; left: 220px; top: 259px; min-width: 1px; min-height: 1px;">
+							<div class="sl-block-content" style="z-index: 21;">
+								<svg style="fill: white; stroke: #212529; stroke-width: 8px; stroke-linejoin: round;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 114" width="250" height="300">
+									<path vector-effect="non-scaling-stroke" d="M28,2 C22.9510895,17.0734069 14.2844228,28.0734069 2,35 C5.78083511,26.2051062 8.08490979,13.7037852 8.08490979,2" stroke-linecap="round" stroke-linejoin="round"></path>
+								</svg>
+							</div>
+						</div>
+					</section>
+					<section data-auto-animate-duration="0.6" data-background-color="#000000" data-auto-animate="">
+						<div class="sl-block" data-block-type="shape" data-name="square1" style="width: 984.893px; height: 1649.5px; left: -421.587px; top: -208.359px;">
+							<div class="sl-block-style" style="z-index: 10; transform: rotate(15deg);">
+								<div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(224, 102, 102)" data-shape-stretch="true" style="z-index: 10;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 985 1650">
+		
+		
+		
+										<rect width="984.893" height="1649.5" rx="0" ry="0" class="shape-element" fill="rgb(224, 102, 102)"></rect>
+									</svg></div>
+							</div>
+						</div>
+		
+						<div class="sl-block" data-block-type="image" style="width: 552.758px; height: 393.631px; left: 4.6455px; top: 298.606px; min-width: 1px; min-height: 1px;" data-name="image-7aaf48">
+							<div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="726" data-natural-height="517" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/978557/images/7680711/couch.png"></div>
+						</div>
+		
+						<div class="sl-block" data-block-type="text" data-name="text-93d559" style="height: auto; width: 850px; left: 50px; top: 0px;">
+							<div class="sl-block-content" style="z-index: 12;" dir="ui">
+								<p style="	position: relative;
+			max-width: 30em;
+			background-color: #fff;
+			padding: 1.125em 1.5em;
+			font-size: 1.25em;
+			border-style                :   solid;
+			border-width                :   8px;
+			border-color                :   #212529;
+			-webkit-border-radius       :   3px;
+			-moz-border-radius          :   3px;
+			border-radius: 1rem;
+			box-shadow:	0 0.125rem 0.5rem rgba(0, 0, 0, .3), 0 0.0625rem 0.125rem rgba(0, 0, 0, .2);">
+		
+									<span>Higher Ed market by 2025: <strong>$106 billion</strong><br>&nbsp;<br>K-12 market by 2025: <strong>$592 billion</strong></span></p>
+							</div>
+						</div>
+		
+						<div class="sl-block" data-block-type="snippet" style="width: 100px; height: 125px; left: 206px; top: 203px;">
+							<div class="sl-block-content" style="z-index: 13;">
+								<svg style="fill: white; stroke: #212529; stroke-width: 8px; stroke-linejoin: round;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 114" width="250" height="300">
+									<path vector-effect="non-scaling-stroke" d="M28,2 C22.9510895,17.0734069 14.2844228,28.0734069 2,35 C5.78083511,26.2051062 8.08490979,13.7037852 8.08490979,2" stroke-linecap="round" stroke-linejoin="round"></path>
+								</svg>
+							</div>
+						</div>
+					</section>
+					<section data-auto-animate-duration="0.6" data-background-color="#000000" data-auto-animate="">
+						<div class="sl-block" data-block-type="shape" data-name="square1" style="width: 504.174px; height: 1649.5px; left: -282.087px; top: -766.346px;">
+							<div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(170, 170, 170)" data-shape-stretch="true" style="z-index: 10;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 504 1650">
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+									<rect width="504.174" height="1649.5" rx="0" ry="0" class="shape-element" fill="rgb(170, 170, 170)"></rect>
+								</svg></div>
+						</div>
+						<div class="sl-block" data-block-type="text" style="height: auto; width: 588px; left: 320px; top: 140px;">
+							<div class="sl-block-content" style="z-index: 11; color: rgb(255, 255, 255); text-align: left; transition-duration: 0.6s; transition-delay: 0.3s;" dir="ui" data-animation-type="slide-left">
+								<h2>Presentations today</h2>
+							</div>
+						</div>
+						<div class="sl-block" data-block-type="line" style="width: auto; height: auto; min-width: 1px; min-height: 1px; left: 324px; top: 253px;">
+							<div class="sl-block-content" data-line-x1="-220" data-line-y1="0" data-line-x2="20" data-line-y2="0" data-line-color="#ffffff" data-line-start-type="none" data-line-end-type="none" style="z-index: 12; transition-duration: 0.6s; transition-delay: 0.5s;" data-line-width="6px" href="" data-animation-type="fade-in">
+								<svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid" width="240" height="1" viewBox="-220 0 240 1">
+									<line stroke="rgba(0,0,0,0)" stroke-width="15" x1="-220" y1="0" x2="20" y2="0"></line>
+									<line class="line-element" stroke="#ffffff" stroke-width="6" x1="-220" y1="0" x2="20" y2="0"></line>
+								</svg>
+							</div>
+						</div>
+						<div class="sl-block" data-block-type="image" style="min-width: 1px; min-height: 1px; width: 92.6852px; height: 91px; left: 321px; top: 310px;">
+							<div class="sl-block-content" data-inline-svg="false" style="z-index: 13; transition-duration: 0.6s; transition-delay: 0.5s;" data-animation-type="scale-up">
+								<img data-natural-width="110" data-natural-height="108" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/team-1/images/2985510/microsoft-powerpoint-2013.svg">
+							</div>
+						</div>
+						<div class="sl-block" data-block-type="image" style="min-width: 1px; min-height: 1px; width: 93px; height: 91px; left: 460.698px; top: 313px;">
+							<div class="sl-block-content" data-inline-svg="false" style="z-index: 14; transition-duration: 0.6s; transition-delay: 0.6s;" data-animation-type="scale-up">
+								<img data-natural-width="544" data-natural-height="522" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/978557/images/7679053/slides.png">
+							</div>
+						</div>
+						<div class="sl-block" data-block-type="image" style="min-width: 1px; min-height: 1px; width: 87px; height: 86.8005px; left: 580px; top: 312.1px;">
+							<div class="sl-block-content" data-inline-svg="false" style="z-index: 15; transition-duration: 0.6s; transition-delay: 0.7s;" data-animation-type="scale-up">
+								<img data-natural-width="436" data-natural-height="435" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/978557/images/7680733/prezi.svg">
+							</div>
+						</div>
+						<div class="sl-block" data-block-type="image" style="min-width: 1px; min-height: 1px; width: 80.9612px; height: 80.9612px; left: 713.019px; top: 315px;">
+							<div class="sl-block-content" data-inline-svg="false" style="z-index: 16; transition-duration: 0.6s; transition-delay: 0.8s;" data-animation-type="scale-up">
+								<img data-natural-width="96" data-natural-height="96" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/978557/images/7680737/Faenza-libreoffice-impress.svg">
+							</div>
+						</div>
+						<div class="sl-block" data-block-type="image" style="min-width: 1px; min-height: 1px; width: 100px; height: 89px; left: 318.818px; top: 436px;">
+							<div class="sl-block-content" data-inline-svg="false" style="z-index: 17; transition-duration: 0.6s; transition-delay: 0.9s;" data-animation-type="scale-up">
+								<img data-natural-width="512" data-natural-height="512" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/978557/images/7680748/slides.svg">
+							</div>
+						</div>
+						<div class="sl-block" data-block-type="image" style="min-width: 1px; min-height: 1px; width: 87px; height: 86.8701px; left: 450px; top: 436.065px;">
+							<div class="sl-block-content" data-inline-svg="false" style="z-index: 18; transition-duration: 0.6s; transition-delay: 1s;" data-animation-type="scale-up">
+								<img data-natural-width="670" data-natural-height="669" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/978557/images/7680760/impress.png">
+							</div>
+						</div>
+						<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 84px; height: 84px; left: 452px; top: 576px;">
+							<div class="sl-block-content" data-shape-type="symbol-sad" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 19; transition-duration: 0.6s; transition-delay: 1.3s;" data-animation-type="scale-up">
+								<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 32 32">
+		
+									<g class="shape-element" fill="rgb(255, 255, 255)" data-viewbox="0 0 32 32">
+										<path d="M16 32c8.837 0 16-7.163 16-16s-7.163-16-16-16-16 7.163-16 16 7.163 16 16 16zM16 3c7.18 0 13 5.82 13 13s-5.82 13-13 13-13-5.82-13-13 5.82-13 13-13zM8 10c0-1.105 0.895-2 2-2s2 0.895 2 2c0 1.105-0.895 2-2 2-1.105 0-2-0.895-2-2zM20 10c0-1.105 0.895-2 2-2s2 0.895 2 2c0 1.105-0.895 2-2 2-1.105 0-2-0.895-2-2zM9.997 24.398l-2.573-1.544c1.749-2.908 4.935-4.855 8.576-4.855 3.641 0 6.827 1.946 8.576 4.855l-2.573 1.544c-1.224-2.036-3.454-3.398-6.003-3.398-2.549 0-4.779 1.362-6.003 3.398z"></path>
+									</g>
+								</svg>
+							</div>
+						</div>
+						<div class="sl-block" data-block-type="image" style="min-width: 1px; min-height: 1px; width: 82.7037px; height: 87px; left: 582px; top: 436px;">
+							<div class="sl-block-content" data-inline-svg="false" style="z-index: 20; transition-duration: 0.6s; transition-delay: 1.1s;" data-animation-type="scale-up">
+								<img data-natural-width="616" data-natural-height="648" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/team-1/images/2985512/adobe-pdf-icon.svg">
+							</div>
+						</div>
+						<div class="sl-block" data-block-type="image" style="min-width: 1px; min-height: 1px; width: 90px; height: 90px; left: 714px; top: 439.526px;">
+							<div class="sl-block-content" data-inline-svg="false" style="z-index: 21; transition-duration: 0.6s; transition-delay: 1.2s;" data-animation-type="scale-up">
+								<img data-natural-width="196" data-natural-height="196" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/978557/images/7680764/revealjs.svg">
+							</div>
+						</div>
+						<div class="sl-block" data-block-type="image" style="min-width: 1px; min-height: 1px; width: 84px; height: 84px; left: 328.23px; top: 579px;" data-name="image-fa15b3">
+							<div class="sl-block-content" data-shape-type="canvas-logo" data-shape-stretch="true" style="z-index: 22; transition-duration: 0.6s; transition-delay: 0.9s;" data-animation-type="scale-up">
+								<img data-natural-width="60" data-natural-height="60" style="" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/978557/images/7683057/canva.svg">
+							</div>
+						</div>
+					</section>
+					<section data-auto-animate-duration="0.6" data-background-color="#000000" data-auto-animate="">
+						<div class="sl-block" data-block-type="shape" data-name="square1" style="width: 1360.87px; height: 1649.5px; left: -217.435px; top: -743.75px;">
+							<div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(241, 194, 50)" data-shape-stretch="true" style="z-index: 10;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 1361 1650">
+		
+		
+		
+		
+		
+		
+		
+		
+									<rect width="1360.87" height="1649.5" rx="0" ry="0" class="shape-element" fill="rgb(241, 194, 50)"></rect>
+								</svg></div>
+						</div>
+		
+		
+		
+		
+						<div class="sl-block" data-block-type="image" style="width: 174.608px; height: 174.608px; left: 65.392px; top: 455.392px; min-width: 1px; min-height: 1px;" data-name="image-2bcf9c">
+							<div class="sl-block-content" style="z-index: 13;" data-inline-svg="false"><img style="" data-natural-width="480" data-natural-height="480" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/978557/images/7683961/1.svg"></div>
+						</div>
+						<div class="sl-block" data-block-type="text" data-name="text-b39148" style="height: auto; width: 454px; left: 60px; top: 29.5px;">
+							<div class="sl-block-content" style="z-index: 14;">
+								<p><span style="font-size:1.6em"><span style="color:rgb(0, 0, 0); text-align:left">bloated, ancient tech, non-adaptive across devices</span></span></p>
+							</div>
+						</div>
+						<div class="sl-block" data-block-type="text" style="height: auto; width: 454px; left: 438px; top: 512px;" data-name="text-ec5339">
+							<div class="sl-block-content" style="z-index: 20;">
+								<p><span style="font-size:1.6em"><span style="color:rgb(0, 0, 0); text-align:left">ignore how we learn &amp; represent info</span></span></p>
+							</div>
+						</div>
+						<div class="sl-block" data-block-type="image" data-name="image-ca579b" style="width: 600.488px; height: 332.45px; left: 0px; top: 0px; min-width: 1px; min-height: 1px;">
+							<div class="sl-block-content" style="z-index: 12;" data-inline-svg="false"><img data-natural-width="578" data-natural-height="320" style="" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/978557/images/7687535/cloud_suqare-left_top.svg"></div>
+						</div>
+						<div class="sl-block" data-block-type="image" style="width: 600.488px; height: 332.45px; left: 352.512px; top: 367.304px; min-width: 1px; min-height: 1px;" data-name="image-56045d">
+							<div class="sl-block-style" style="z-index: 17; transform: rotate(180deg);">
+								<div class="sl-block-content" style="z-index: 17;" data-inline-svg="false"><img data-natural-width="578" data-natural-height="320" style="" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/978557/images/7687535/cloud_suqare-left_top.svg"></div>
+							</div>
+						</div>
+						<div class="sl-block" data-block-type="image" data-name="image-0c4dc7" style="width: 356px; height: 356px; left: 276.5px; top: 119.5px; min-width: 1px; min-height: 1px;">
+							<div class="sl-block-style" style="z-index: 15; transform: rotate(-5deg);">
+								<div class="sl-block-content" style="z-index: 15;"><img style="" data-natural-width="796" data-natural-height="796" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/978557/images/7687958/headshot_thinking.png"></div>
+							</div>
+						</div>
+						<div class="sl-block" data-block-type="shape" data-name="shape-4b5c1f" style="width: 351.488px; height: 290.054px; left: 288.512px; top: 210px;">
+							<div class="sl-block-content" data-shape-type="circle" data-shape-fill-color="#000000" data-shape-stretch="false" style="z-index: 11;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="xMidYMid" viewBox="0 0 290 290">
+		
+		
+		
+		
+		
+		
+		
+		
+									<ellipse rx="145.027" ry="145.027" cx="145.027" cy="145.027" class="shape-element" fill="#000000"></ellipse>
+								</svg></div>
+						</div>
+					</section>
+					<section data-auto-animate-duration="0.6" data-background-color="#000000" data-auto-animate="">
+						<div class="sl-block" data-block-type="image" style="width: 174.608px; height: 174.608px; left: 65.392px; top: 455.392px; min-width: 1px; min-height: 1px;" data-name="image-2bcf9c">
+							<div class="sl-block-content" style="z-index: 12;" data-inline-svg="false"><img style="" data-natural-width="480" data-natural-height="480" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/978557/images/7683960/2.svg"></div>
+						</div>
+						<div class="sl-block" data-block-type="text" data-name="text-b39148" style="height: auto; width: 454px; left: 60px; top: 46.5px;">
+							<div class="sl-block-content" style="z-index: 13;">
+								<p><span style="font-size:1.6em"><span style="color:rgb(0, 0, 0); text-align:right">modern tech created for the pros</span></span></p>
+							</div>
+						</div>
+						<div class="sl-block" data-block-type="text" style="height: auto; width: 499px; left: 412px; top: 512px;" data-name="text-ec5339">
+							<div class="sl-block-content" style="z-index: 17;">
+								<p><span style="font-size:1.6em"><span style="color:rgb(0, 0, 0); text-align:right">time consuming with a steep learning curve</span></span></p>
+							</div>
+						</div>
+						<div class="sl-block" data-block-type="image" data-name="image-ca579b" style="width: 600.488px; height: 332.45px; left: 0px; top: 0px; min-width: 1px; min-height: 1px;">
+							<div class="sl-block-content" style="z-index: 11;" data-inline-svg="false"><img data-natural-width="578" data-natural-height="320" style="" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/978557/images/7687535/cloud_suqare-left_top.svg"></div>
+						</div>
+						<div class="sl-block" data-block-type="image" style="width: 600.488px; height: 332.45px; left: 352.512px; top: 367.304px; min-width: 1px; min-height: 1px;" data-name="image-56045d">
+							<div class="sl-block-style" style="z-index: 16; transform: rotate(180deg);">
+								<div class="sl-block-content" style="z-index: 16;" data-inline-svg="false"><img data-natural-width="578" data-natural-height="320" style="" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/978557/images/7687535/cloud_suqare-left_top.svg"></div>
+							</div>
+						</div>
+						<div class="sl-block" data-block-type="image" data-name="image-0c4dc7" style="width: 356px; height: 356px; left: 303.5px; top: 133.5px; min-width: 1px; min-height: 1px;">
+							<div class="sl-block-content" style="z-index: 14;"><img style="" data-natural-width="796" data-natural-height="796" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/978557/images/7687990/headshot_neutral_front-10212367.png"></div>
+						</div>
+						<div class="sl-block" data-block-type="shape" data-name="shape-4b5c1f" style="width: 351.488px; height: 290.054px; left: 300.512px; top: 210px;">
+							<div class="sl-block-content" data-shape-type="circle" data-shape-fill-color="rgb(241, 194, 50)" data-shape-stretch="false" style="z-index: 10;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="xMidYMid" viewBox="0 0 290 290">
+		
+									<ellipse rx="145.027" ry="145.027" cx="145.027" cy="145.027" class="shape-element" fill="rgb(241, 194, 50)"></ellipse>
+								</svg></div>
+						</div>
+					</section>
+					<section data-auto-animate-duration="0.6" data-background-color="#000000" data-auto-animate="">
+						<div class="sl-block" data-block-type="shape" data-name="square1" style="width: 858.869px; height: 1649.5px; left: -282.937px; top: -762.248px;">
+							<div class="sl-block-style" style="z-index: 10; transform: rotate(23deg);">
+								<div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(241, 194, 50)" data-shape-stretch="true" style="z-index: 10;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 859 1650">
+										<rect width="858.869" height="1649.5" rx="0" ry="0" class="shape-element" fill="rgb(241, 194, 50)"></rect>
+									</svg></div>
+							</div>
+						</div>
+						<div class="sl-block" data-block-type="text" data-name="text-a0f83c" style="height: auto; width: 528.5px; left: 3px; top: -12px;">
+							<div class="sl-block-content fragment" style="z-index: 11; font-size: 200%;" data-fragment-index="0">
+								<p style="text-align:left"><span style="font-size:1.0em">bloated, ancient tech, non-adaptive across devices</span></p>
+							</div>
+						</div>
+						<div class="sl-block" data-block-type="text" data-name="text-287edd" style="height: auto; width: 354px; left: 604.5px; top: -11px;">
+							<div class="sl-block-content fragment" style="z-index: 12; font-size: 200%; color: rgb(255, 255, 255);" data-fragment-index="2">
+								<p style="text-align:right">modern tech created for the pros</p>
+							</div>
+						</div>
+						<div class="sl-block" data-block-type="text" style="height: auto; width: 442px; left: 3px; top: 425px;" data-name="text-826ec2">
+							<div class="sl-block-content fragment" style="z-index: 13; font-size: 200%;" data-fragment-index="1">
+								<p style="color:rgb(0, 0, 0); text-align:left">ignores how&nbsp; we learn &amp; represent</p>
+							</div>
+						</div>
+						<div class="sl-block" data-block-type="text" style="height: auto; width: 486.5px; left: 472px; top: 427px;" data-name="text-de29c2">
+							<div class="sl-block-content fragment" style="z-index: 14; font-size: 200%; color: rgb(255, 255, 255);" data-fragment-index="3">
+								<p style="text-align:right"><span style="color:rgb(255, 255, 255); text-align:right">time consuming with a steep learning curve</span></p>
+							</div>
+						</div>
+						<div class="sl-block" data-block-type="image" style="width: 174.608px; height: 174.608px; left: 109.61px; top: 240.033px; min-width: 1px; min-height: 1px;" data-name="image-2bcf9c">
+							<div class="sl-block-content" style="z-index: 15;" data-inline-svg="false"><img style="" data-natural-width="480" data-natural-height="480" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/978557/images/7683961/1.svg"></div>
+						</div>
+						<div class="sl-block" data-block-type="image" style="width: 172.973px; height: 172.973px; left: 690.61px; top: 240.033px; min-width: 1px; min-height: 1px;" data-name="image-28656f">
+							<div class="sl-block-content" style="z-index: 16;" data-inline-svg="false"><img style="" data-natural-width="480" data-natural-height="480" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/978557/images/7683960/2.svg"></div>
+						</div>
+					</section>
+					<section data-auto-animate-duration="0.6" data-background-color="#000000" data-auto-animate="">
+						<div class="sl-block" data-block-type="shape" data-name="square1" style="width: 858.869px; height: 1649.5px; left: -282.937px; top: -762.248px;">
+							<div class="sl-block-style" style="z-index: 10; transform: rotate(23deg);">
+								<div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(241, 194, 50)" data-shape-stretch="true" style="z-index: 10;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 859 1650">
+		
+		
+										<rect width="858.869" height="1649.5" rx="0" ry="0" class="shape-element" fill="rgb(241, 194, 50)"></rect>
+									</svg></div>
+							</div>
+						</div>
+						<div class="sl-block" data-block-type="text" data-name="text-a0f83c" style="height: auto; width: 574.5px; left: 3px; top: -12px;">
+							<div class="sl-block-content fragment" style="z-index: 11; font-size: 200%;" data-fragment-index="0">
+								<p style="text-align:left"><span style="font-size:1.0em"><s>bloated, ancient tech, non-</s><strong>adaptive</strong> across devices</span></p>
+							</div>
+						</div>
+						<div class="sl-block" data-block-type="text" data-name="text-287edd" style="height: auto; width: 354px; left: 604.5px; top: -11px;">
+							<div class="sl-block-content fragment" style="z-index: 12; font-size: 200%; color: rgb(255, 255, 255);" data-fragment-index="2">
+								<p style="text-align:right"><strong>modern</strong> tech <s>created for the pros</s></p>
+							</div>
+						</div>
+						<div class="sl-block" data-block-type="text" style="height: auto; width: 469px; left: 3px; top: 425px;" data-name="text-826ec2">
+							<div class="sl-block-content fragment" style="z-index: 13; font-size: 200%;" data-fragment-index="1">
+								<p style="color:rgb(0, 0, 0); text-align:left"><strong>considers how we learn</strong> &amp; represent</p>
+							</div>
+						</div>
+						<div class="sl-block" data-block-type="text" style="height: auto; width: 486.5px; left: 472px; top: 427px;" data-name="text-de29c2">
+							<div class="sl-block-content fragment" style="z-index: 14; font-size: 200%; color: rgb(255, 255, 255);" data-fragment-index="3">
+								<p style="text-align:right"><span style="color:rgb(255, 255, 255); text-align:right"><strong>quick</strong> to use<br>
+										and<br>
+										<strong>easy</strong> to learn</span></p>
+							</div>
+						</div>
+						<div class="sl-block" data-block-type="image" style="width: 175px; height: 175px; left: 412px; top: 240px; min-width: 1px; min-height: 1px;" data-name="image-2bcf9c">
+							<div class="sl-block-content" style="z-index: 15;" data-inline-svg="false"><img style="" data-natural-width="480" data-natural-height="480" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/978557/images/7686030/plus-black.svg"></div>
+						</div>
+						<div class="sl-block" data-block-type="image" style="width: 175px; height: 175px; left: 412px; top: 240px; min-width: 1px; min-height: 1px;" data-name="image-28656f">
+							<div class="sl-block-content" style="z-index: 16;" data-inline-svg="false"><img style="" data-natural-width="480" data-natural-height="480" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/978557/images/7686005/plus.svg"></div>
+						</div>
+					</section>
+					<section data-auto-animate-duration="0.6" data-background-color="#000000" data-auto-animate="">
+						<div class="sl-block" data-block-type="shape" data-name="square1" style="width: 839.174px; height: 1649.5px; left: 399.846px; top: -766.096px;">
+							<div class="sl-block-style" style="z-index: 10; transform: rotate(-20deg);">
+								<div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(241, 194, 50)" data-shape-stretch="true" style="z-index: 10;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 839 1650">
+		
+		
+										<rect width="839.174" height="1649.5" rx="0" ry="0" class="shape-element" fill="rgb(241, 194, 50)"></rect>
+									</svg></div>
+							</div>
+						</div>
+		
+						<div class="sl-block" data-block-type="text" data-name="text-a0f83c" style="height: auto; width: 354px; left: 18.5px; top: 69px;">
+							<div class="sl-block-content" style="z-index: 12; font-size: 200%; color: rgb(255, 255, 255);">
+								<p style="text-align:left"><strong>ADAPTIVE</strong></p>
+							</div>
+						</div>
+						<div class="sl-block" data-block-type="text" style="height: auto; width: 486.5px; left: 20px; top: 491px;" data-name="text-826ec2">
+							<div class="sl-block-content" style="z-index: 13; font-size: 200%; color: rgb(255, 255, 255);">
+								<p style="text-align:left"><strong><span style="color:rgb(255, 255, 255); text-align:right">LEARNING ENABLED</span></strong></p>
+							</div>
+						</div>
+						<div class="sl-block" data-block-type="text" style="height: auto; width: 354px; left: 584.5px; top: 69px;" data-name="text-287edd">
+							<div class="sl-block-content" style="z-index: 14; font-size: 200%; color: rgb(255, 255, 255);">
+								<p style="text-align:right"><span style="color:#000000"><strong>MODERN</strong></span></p>
+							</div>
+						</div>
+						<div class="sl-block" data-block-type="text" style="height: auto; width: 486.5px; left: 452.5px; top: 491px;" data-name="text-de29c2">
+							<div class="sl-block-content" style="z-index: 15; font-size: 200%; color: rgb(255, 255, 255);">
+								<p style="text-align:right"><span style="color:#000000"><strong><span style="text-align:right">QUICK AND EASY</span></strong></span></p>
+							</div>
+						</div>
+						<div class="sl-block" data-block-type="text" data-name="text-9fbe06" style="height: auto; width: 600px; left: 180px; top: 261.5px;">
+							<div class="sl-block-content fragment" style="z-index: 16;" data-fragment-index="0">
+								<p><span style="font-size:3.0em"><span style="color:#FFFFFF"><strong>ENGAGING</strong></span></span></p>
+							</div>
+						</div>
+						<div class="sl-block" data-block-type="shape" data-name="shape-5b6c90" style="width: 600px; height: 136px; left: 180px; top: 252px;">
+							<div class="sl-block-content fragment" data-shape-type="rect" data-shape-fill-color="rgb(255, 0, 0)" data-shape-stretch="true" style="z-index: 11;" data-fragment-index="0"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 600 136">
+		
+									<rect width="600" height="136" rx="0" ry="0" class="shape-element" fill="rgb(255, 0, 0)"></rect>
+								</svg></div>
+						</div>
+					</section>
+					<section data-auto-animate-duration="0.6" data-auto-animate="" data-background-color="#e06666">
+						<!-- hardika -->
+						<div class="sl-block" data-block-type="image" style="width: 417.612px; height: 448.288px; left: 573.974px; top: 270.838px; min-width: 1px; min-height: 1px;" data-name="image-d96648">
+							<div class="sl-block-content" style="z-index: 10;"><img style="" data-natural-width="599" data-natural-height="643" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/978557/images/7685960/hadika-half.png"></div>
+						</div>
+		
+						<!-- #2 bubble box-->
+		
+						<div class="sl-block" data-block-type="text" data-name="text-93d789" style="height: auto; width: 850px; left: 50px; top: 0px;">
+							<div class="sl-block-content" style="z-index: 11;" dir="ui">
+								<p style="position: relative;
+			max-width: 30em;
+			background-color: #fff;
+			padding: 1.125em 1.5em;
+			font-size: 1.25em;
+			border-style                :   solid;
+			border-width                :   8px;
+			border-color                :   #212529;
+			-webkit-border-radius       :   3px;
+			-moz-border-radius          :   3px;
+			border-radius: 1rem;
+			box-shadow:	0 0.125rem 0.5rem rgba(0, 0, 0, .3), 0 0.0625rem 0.125rem rgba(0, 0, 0, .2);">
+		
+									<span style="font-size:1.4em">Technology <strong>can't save</strong> a bad presentation.</span></p>
+							</div>
+						</div>
+						<!-- #2 bubble tail-->
+		
+						<div class="sl-block" data-block-type="snippet" style="width: 100px; height: 125px; left: 206px; top: 213px;" data-id="tail-1">
+							<div class="sl-block-content" style="z-index: 13;">
+								<svg style="fill: white; stroke: #212529; stroke-width: 3px; stroke-linejoin: round;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 127" width="250" height="300">
+									<path d="M21.92,2c0,11.7,2.3,24.21,6.08,33Q9.58,24.61,2,2" transform="translate(-2 -2)"></path>
+								</svg>
+							</div>
+						</div>
+		
+						<!-- #3 bubble box-->
+		
+						<div class="sl-block" data-block-type="text" data-name="text-93d559" style="height: auto; width: 510px; left: 50px; top: 310px;">
+							<div class="sl-block-content" style="z-index: 12;" dir="ui">
+								<p style="	position: relative;
+			max-width: 30em;
+			background-color: #fff;
+			padding: 1.125em 1.5em;
+			font-size: 1.25em;
+			border-style                :   solid;
+			border-width                :   8px;
+			border-color                :   #212529;
+			-webkit-border-radius       :   3px;
+			-moz-border-radius          :   3px;
+			border-radius: 1rem;
+			box-shadow:	0 0.125rem 0.5rem rgba(0, 0, 0, .3), 0 0.0625rem 0.125rem rgba(0, 0, 0, .2);">
+		
+									<span style="font-size:1.4em">Technology <strong>can shape</strong> a good presentation.</span></p>
+							</div>
+						</div>
+		
+						<!-- #3 bubble tail-->
+		
+						<div class="sl-block" data-block-type="snippet" style="width: 127px; height: 100px; left: 539px; top: 383px;" data-id="tail-2">
+							<div class="sl-block-content" style="z-index: 14;">
+								<svg style="fill: white; stroke: #212529; stroke-width: 3px; stroke-linejoin: round;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 127 100" width="300" height="250">
+									<path d="M0,0Q22.61,7.57,33,26c-8.79-3.78-21.3-6.08-33-6.08"></path>
+								</svg>
+							</div>
+						</div>
+					</section>
+					<section data-background-color="#e06666" data-auto-animate="" data-auto-animate-duration="0.6">
+						<!-- hardika -->
+						<div class="sl-block" data-block-type="image" style="width: 417.612px; height: 448.288px; left: 573.974px; top: 270.838px; min-width: 1px; min-height: 1px;" data-name="image-d96648">
+							<div class="sl-block-content" style="z-index: 10;"><img style="" data-natural-width="599" data-natural-height="643" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/978557/images/7685960/hadika-half.png"></div>
+						</div>
+		
+						<!-- #3 bubble box-->
+		
+						<div class="sl-block" data-block-type="text" data-name="text-93d559" style="height: auto; width: 510px; left: 50px; top: 50px;">
+							<div class="sl-block-content" style="z-index: 12;" dir="ui">
+								<p style="	position: relative;
+			max-width: 30em;
+			background-color: #fff;
+			padding: 1.125em 1.5em;
+			font-size: 1.25em;
+			border-style                :   solid;
+			border-width                :   8px;
+			border-color                :   #212529;
+			-webkit-border-radius       :   3px;
+			-moz-border-radius          :   3px;
+			border-radius: 1rem;
+			box-shadow:	0 0.125rem 0.5rem rgba(0, 0, 0, .3), 0 0.0625rem 0.125rem rgba(0, 0, 0, .2);">
+									<span style="font-size:50px"><strong>#1 RULE OF LEARNING:</strong></span><br><br>
+									<span style="font-size:1.4em">Content needs to be <strong>relevant</strong> to the learner.</span>
+								</p>
+							</div>
+						</div>
+		
+						<!-- #3 bubble tail-->
+		
+						<div class="sl-block" data-block-type="snippet" style="width: 127px; height: 100px; left: 538px; top: 383px;" data-id="tail-2">
+							<div class="sl-block-content" style="z-index: 14;">
+								<svg style="fill: white; stroke: #212529; stroke-width: 3px; stroke-linejoin: round;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 127 100" width="300" height="250">
+									<path d="M0,0Q22.61,7.57,33,26c-8.79-3.78-21.3-6.08-33-6.08"></path>
+								</svg>
+							</div>
+						</div>
+					</section>
+					<section data-auto-animate-duration="0.6" data-background-color="#00ff00" data-auto-animate="">
+						<!-- hardika -->
+						<div class="sl-block" data-block-type="image" style="width: 417.612px; height: 448.288px; left: 573.974px; top: 270.838px; min-width: 1px; min-height: 1px;" data-name="image-d96648">
+							<div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="599" data-natural-height="643" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/978557/images/7685960/hadika-half.png"></div>
+						</div>
+		
+						<!-- #2 bubble box-->
+		
+						<div class="sl-block" data-block-type="text" data-name="text-93d789" style="height: auto; width: 850px; left: 50px; top: 0px;">
+							<div class="sl-block-content" style="z-index: 11;" dir="ui">
+								<p style="position: relative;
+			max-width: 30em;
+			background-color: #fff;
+			padding: 1.125em 1.5em;
+			font-size: 1.25em;
+			border-style                :   solid;
+			border-width                :   8px;
+			border-color                :   #212529;
+			-webkit-border-radius       :   3px;
+			-moz-border-radius          :   3px;
+			border-radius: 1rem;
+			box-shadow:	0 0.125rem 0.5rem rgba(0, 0, 0, .3), 0 0.0625rem 0.125rem rgba(0, 0, 0, .2);">
+		
+									<span>Now imagine the world where you create a single presentation ...</span></p>
+							</div>
+						</div>
+						<!-- #2 bubble tail-->
+		
+						<div class="sl-block" data-block-type="snippet" style="width: 100px; height: 125px; left: 206px; top: 169px; min-width: 1px; min-height: 1px;" data-name="tail-1">
+							<div class="sl-block-content" style="z-index: 21;">
+								<svg style="fill: white; stroke: #212529; stroke-width: 3px; stroke-linejoin: round;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 127" width="250" height="300">
+									<path d="M21.92,2c0,11.7,2.3,24.21,6.08,33Q9.58,24.61,2,2" transform="translate(-2 -2)"></path>
+								</svg>
+							</div>
+						</div>
+		
+						<!-- #3 bubble box-->
+		
+						<div class="sl-block" data-block-type="text" data-name="text-93d559" style="height: auto; width: 500px; left: 50px; top: 266px;">
+							<div class="sl-block-content" style="z-index: 11;" dir="ui">
+								<p style="	position: relative;
+			max-width: 30em;
+			background-color: #fff;
+			padding: 1.125em 1.5em;
+			font-size: 1.25em;
+			border-style                :   solid;
+			border-width                :   8px;
+			border-color                :   #212529;
+			-webkit-border-radius       :   3px;
+			-moz-border-radius          :   3px;
+			border-radius: 1rem;
+			box-shadow:	0 0.125rem 0.5rem rgba(0, 0, 0, .3), 0 0.0625rem 0.125rem rgba(0, 0, 0, .2);">
+		
+									<span>... and it magically <strong>customizes itself</strong> for each participant.</span></p>
+							</div>
+						</div>
+		
+						<!-- #3 bubble tail-->
+		
+						<div class="sl-block" data-block-type="snippet" style="width: 127px; height: 100px; left: 525px; top: 350px; min-width: 1px; min-height: 1px;" data-name="tail-2">
+							<div class="sl-block-content" style="z-index: 22;">
+								<svg style="fill: white; stroke: #212529; stroke-width: 3px; stroke-linejoin: round;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 127 100" width="300" height="250">
+									<path d="M0,0Q22.61,7.57,33,26c-8.79-3.78-21.3-6.08-33-6.08"></path>
+								</svg>
+							</div>
+						</div>
+					</section>
+					<section data-auto-animate-duration="0.6" data-background-color="#9900ff" data-auto-animate="">
+						<!-- hardika -->
+						<div class="sl-block" data-block-type="image" style="width: 417.612px; height: 448.288px; left: 573.974px; top: 270.838px; min-width: 1px; min-height: 1px;" data-name="image-d96648">
+							<div class="sl-block-content" style="z-index: 10;"><img style="" data-natural-width="599" data-natural-height="643" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/978557/images/7685960/hadika-half.png"></div>
+						</div>
+		
+						<!-- #2 bubble box-->
+		
+						<div class="sl-block" data-block-type="text" data-name="text-93d789" style="height: auto; width: 850px; left: 50px; top: 0px;">
+							<div class="sl-block-content" style="z-index: 11;" dir="ui">
+								<p style="position: relative;
+			max-width: 30em;
+			background-color: #fff;
+			padding: 1.125em 1.5em;
+			font-size: 1.25em;
+			border-style                :   solid;
+			border-width                :   8px;
+			border-color                :   #212529;
+			-webkit-border-radius       :   3px;
+			-moz-border-radius          :   3px;
+			border-radius: 1rem;
+			box-shadow:	0 0.125rem 0.5rem rgba(0, 0, 0, .3), 0 0.0625rem 0.125rem rgba(0, 0, 0, .2);">
+		
+									<span>Custom tailored presentations are more <strong>relevant</strong> to the viewer and more <strong>engaging</strong>.</span></p>
+							</div>
+						</div>
+						<!-- #2 bubble tail-->
+		
+						<div class="sl-block" data-block-type="snippet" style="width: 100px; height: 125px; left: 206px; top: 221px;" data-name="tail-1">
+							<div class="sl-block-content" style="z-index: 13;">
+								<svg style="fill: white; stroke: #212529; stroke-width: 3px; stroke-linejoin: round;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 127" width="250" height="300">
+									<path d="M21.92,2c0,11.7,2.3,24.21,6.08,33Q9.58,24.61,2,2" transform="translate(-2 -2)"></path>
+								</svg>
+							</div>
+						</div>
+		
+						<!-- #3 bubble box-->
+		
+						<div class="sl-block" data-block-type="text" data-name="text-93d559" style="height: auto; width: 500px; left: 50px; top: 319px;">
+							<div class="sl-block-content" style="z-index: 12;" dir="ui">
+								<p style="	position: relative;
+			max-width: 30em;
+			background-color: #fff;
+			padding: 1.125em 1.5em;
+			font-size: 1.25em;
+			border-style                :   solid;
+			border-width                :   8px;
+			border-color                :   #212529;
+			-webkit-border-radius       :   3px;
+			-moz-border-radius          :   3px;
+			border-radius: 1rem;
+			box-shadow:	0 0.125rem 0.5rem rgba(0, 0, 0, .3), 0 0.0625rem 0.125rem rgba(0, 0, 0, .2);">
+		
+									<span>They <strong>improve learning</strong> and how well you remember them.</span></p>
+							</div>
+						</div>
+		
+						<!-- #3 bubble tail-->
+		
+						<div class="sl-block" data-block-type="snippet" style="width: 127px; height: 100px; left: 527px; top: 369px;" data-name="tail-2">
+							<div class="sl-block-content" style="z-index: 14;">
+								<svg style="fill: white; stroke: #212529; stroke-width: 3px; stroke-linejoin: round;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 127 100" width="300" height="250">
+									<path d="M0,0Q22.61,7.57,33,26c-8.79-3.78-21.3-6.08-33-6.08"></path>
+								</svg>
+							</div>
+						</div>
+					</section>
+					<section data-auto-animate-duration="0.6" data-background-color="#e06666" data-auto-animate="">
+						<!-- hardika -->
+						<div class="sl-block" data-block-type="image" style="width: 417.612px; height: 448.288px; left: 573.974px; top: 270.838px; min-width: 1px; min-height: 1px;" data-name="image-d96648">
+							<div class="sl-block-content" style="z-index: 10;"><img style="" data-natural-width="599" data-natural-height="643" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/978557/images/7685960/hadika-half.png"></div>
+						</div>
+		
+						<!-- #3 bubble box-->
+		
+						<div class="sl-block" data-block-type="text" data-name="text-93d789" style="height: auto; width: 510px; left: 50px; top: 50px;">
+							<div class="sl-block-content" style="z-index: 11;" dir="ui">
+								<p style="	position: relative;
+			max-width: 30em;
+			background-color: #fff;
+			padding: 1.125em 1.5em;
+			font-size: 1.25em;
+			border-style                :   solid;
+			border-width                :   8px;
+			border-color                :   #212529;
+			-webkit-border-radius       :   3px;
+			-moz-border-radius          :   3px;
+			border-radius: 1rem;
+			box-shadow:	0 0.125rem 0.5rem rgba(0, 0, 0, .3), 0 0.0625rem 0.125rem rgba(0, 0, 0, .2);">
+									<span style="font-size:50px"><strong>#1 OUTCOME:</strong></span><br><br>
+									<span style="font-size:1.4em">Improved productivity, saved time, &amp; <strong>SAVED $$$</strong></span>
+								</p>
+							</div>
+						</div>
+		
+						<!-- #3 bubble tail-->
+		
+						<div class="sl-block" data-block-type="snippet" style="width: 127px; height: 100px; left: 539px; top: 383px;" data-name="tail-2">
+							<div class="sl-block-content" style="z-index: 12;">
+								<svg style="fill: white; stroke: #212529; stroke-width: 3px; stroke-linejoin: round;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 127 100" width="300" height="250">
+									<path d="M0,0Q22.61,7.57,33,26c-8.79-3.78-21.3-6.08-33-6.08"></path>
+								</svg>
+							</div>
+						</div>
+					</section>
+					<section data-auto-animate-duration="0.6" data-background-color="#6d9eeb" data-auto-animate="">
+		
+		
+		
+		
+		
+		
+						<div class="sl-block" data-block-type="image" data-name="image-cc2bdc" style="width: 711px; height: 711px; left: 96px; top: -11px; min-width: 1px; min-height: 1px;">
+							<div class="sl-block-content" style="z-index: 10;"><img data-natural-width="796" data-natural-height="796" style="" data-lazy-loaded="" data-src="https://render.bitstrips.com/v2/cpanel/10215347-99195964866_3-s5-v1.png?transparent=1&amp;palette=1&amp;scale=2"></div>
+						</div>
+					</section>
+					<section data-auto-animate-duration="0.6" data-background-color="#000000" data-auto-animate="">
+						<div class="sl-block" data-block-type="shape" data-name="square1" style="width: 2000px; height: 1649.5px; left: -300px; top: -200px;">
+							<div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(60, 120, 216)" data-shape-stretch="true" style="z-index: 10;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 2000 1650">
+		
+		
+		
+									<rect width="2000" height="1649.5" rx="0" ry="0" class="shape-element" fill="rgb(60, 120, 216)"></rect>
+								</svg></div>
+						</div>
+		
+						<!-- hardika -->
+						<div class="sl-block" data-block-type="image" style="width: 417.612px; height: 448.288px; left: 573.974px; top: 270.838px; min-width: 1px; min-height: 1px;" data-name="image-d96648">
+							<div class="sl-block-content" style="z-index: 10;"><img style="" data-natural-width="599" data-natural-height="643" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/978557/images/7685960/hadika-half.png"></div>
+						</div>
+		
+						<!-- #2 bubble box-->
+		
+						<div class="sl-block" data-block-type="text" data-name="text-93d559" style="height: auto; width: 850px; left: 50px; top: 0px;">
+							<div class="sl-block-content" style="z-index: 11;" dir="ui">
+								<p style="position: relative;
+			max-width: 30em;
+			background-color: #fff;
+			padding: 1.125em 1.5em;
+			font-size: 1.25em;
+			border-style                :   solid;
+			border-width                :   8px;
+			border-color                :   #212529;
+			-webkit-border-radius       :   3px;
+			-moz-border-radius          :   3px;
+			border-radius: 1rem;
+			box-shadow:	0 0.125rem 0.5rem rgba(0, 0, 0, .3), 0 0.0625rem 0.125rem rgba(0, 0, 0, .2);">
+		
+									<span>Use of talking characters and speech bubbles curtails</span><br><span><strong>Death by Powerpoint (DxPPT)</strong></span></p>
+							</div>
+						</div>
+						<!-- #2 bubble tail-->
+		
+						<div class="sl-block" data-block-type="snippet" style="width: 100px; height: 125px; left: 206px; top: 221px;">
+							<div class="sl-block-content" style="z-index: 13;">
+								<svg style="fill: white; stroke: #212529; stroke-width: 3px; stroke-linejoin: round;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 127" width="250" height="300">
+									<path d="M21.92,2c0,11.7,2.3,24.21,6.08,33Q9.58,24.61,2,2" transform="translate(-2 -2)"></path>
+								</svg>
+							</div>
+						</div>
+		
+						<!-- #3 bubble box-->
+		
+						<div class="sl-block" data-block-type="text" data-name="text-93d559" style="height: auto; width: 500px; left: 50px; top: 319px;">
+							<div class="sl-block-content" style="z-index: 12;" dir="ui">
+								<p style="	position: relative;
+			max-width: 30em;
+			background-color: #fff;
+			padding: 1.125em 1.5em;
+			font-size: 1.25em;
+			border-style                :   solid;
+			border-width                :   8px;
+			border-color                :   #212529;
+			-webkit-border-radius       :   3px;
+			-moz-border-radius          :   3px;
+			border-radius: 1rem;
+			box-shadow:	0 0.125rem 0.5rem rgba(0, 0, 0, .3), 0 0.0625rem 0.125rem rgba(0, 0, 0, .2);">
+		
+									<span>Slides are forced to follow <strong>5-5-1</strong> best presentation rule.</span></p>
+							</div>
+						</div>
+		
+						<!-- #3 bubble tail-->
+		
+						<div class="sl-block" data-block-type="snippet" style="width: 127px; height: 100px; left: 527px; top: 369px;">
+							<div class="sl-block-content" style="z-index: 14;">
+								<svg style="fill: white; stroke: #212529; stroke-width: 3px; stroke-linejoin: round;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 127 100" width="300" height="250">
+									<path d="M0,0Q22.61,7.57,33,26c-8.79-3.78-21.3-6.08-33-6.08"></path>
+								</svg>
+							</div>
+						</div>
+					</section>
+					<section data-auto-animate-duration="0.6" data-background-color="#00ffff" data-auto-animate="">
+						<!-- hardika -->
+						<div class="sl-block" data-block-type="image" style="width: 417.612px; height: 448.288px; left: 573.974px; top: 270.838px; min-width: 1px; min-height: 1px;" data-name="image-d96648">
+							<div class="sl-block-content" style="z-index: 10;"><img style="" data-natural-width="599" data-natural-height="643" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/978557/images/7685960/hadika-half.png"></div>
+						</div>
+		
+						<!-- #3 bubble box-->
+		
+						<div class="sl-block" data-block-type="text" data-name="text-93d789" style="height: auto; width: 510px; left: 50px; top: 50px;">
+							<div class="sl-block-content" style="z-index: 11;" dir="ui">
+								<p style="	position: relative;
+			max-width: 30em;
+			background-color: #fff;
+			padding: 1.125em 1.5em;
+			font-size: 1.25em;
+			border-style                :   solid;
+			border-width                :   8px;
+			border-color                :   #212529;
+			-webkit-border-radius       :   3px;
+			-moz-border-radius          :   3px;
+			border-radius: 1rem;
+			box-shadow:	0 0.125rem 0.5rem rgba(0, 0, 0, .3), 0 0.0625rem 0.125rem rgba(0, 0, 0, .2);">
+									<span style="font-size:1.6em">Neuroscience of Stories:</span><br>&nbsp;<br><span style="font-size:1.4em"><strong>Stories are more powerful than bullet points.</strong></span></p>
+							</div>
+						</div>
+		
+						<!-- #3 bubble tail-->
+		
+						<div class="sl-block" data-block-type="snippet" style="width: 127px; height: 100px; left: 539px; top: 383px;" data-name="tail-2">
+							<div class="sl-block-content" style="z-index: 12;">
+								<svg style="fill: white; stroke: #212529; stroke-width: 3px; stroke-linejoin: round;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 127 100" width="300" height="250">
+									<path d="M0,0Q22.61,7.57,33,26c-8.79-3.78-21.3-6.08-33-6.08"></path>
+								</svg>
+							</div>
+						</div>
+					</section>
+					<section data-auto-animate-duration="0.6" data-background-color="#00ffff" data-auto-animate="">
+						<!-- hardika -->
+						<div class="sl-block" data-block-type="image" style="width: 417.612px; height: 448.288px; left: 573.974px; top: 270.838px; min-width: 1px; min-height: 1px;" data-name="image-d96648">
+							<div class="sl-block-content" style="z-index: 10;"><img style="" data-natural-width="599" data-natural-height="643" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/978557/images/7685960/hadika-half.png"></div>
+						</div>
+		
+						<!-- #3 bubble box-->
+		
+						<div class="sl-block" data-block-type="text" data-name="text-93d789" style="height: auto; width: 510px; left: 50px; top: 200px;">
+							<div class="sl-block-content" style="z-index: 11;" dir="ui">
+								<p style="	position: relative;
+			max-width: 30em;
+			background-color: #fff;
+			padding: 1.125em 1.5em;
+			font-size: 1.25em;
+			border-style                :   solid;
+			border-width                :   8px;
+			border-color                :   #212529;
+			-webkit-border-radius       :   3px;
+			-moz-border-radius          :   3px;
+			border-radius: 1rem;
+			box-shadow:	0 0.125rem 0.5rem rgba(0, 0, 0, .3), 0 0.0625rem 0.125rem rgba(0, 0, 0, .2);">
+									<span style="font-size:1.4em">Bullets activate languate areas of the brain.</span></p>
+							</div>
+						</div>
+		
+						<!-- #3 bubble tail-->
+		
+						<div class="sl-block" data-block-type="snippet" style="width: 127px; height: 100px; left: 539px; top: 383px;" data-name="tail-2">
+							<div class="sl-block-content" style="z-index: 12;">
+								<svg style="fill: white; stroke: #212529; stroke-width: 3px; stroke-linejoin: round;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 127 100" width="300" height="250">
+									<path d="M0,0Q22.61,7.57,33,26c-8.79-3.78-21.3-6.08-33-6.08"></path>
+								</svg>
+							</div>
+						</div>
+					</section>
+					<section data-auto-animate-duration="0.6" data-background-color="#00ffff" data-auto-animate="">
+						<!-- hardika -->
+						<div class="sl-block" data-block-type="image" style="width: 417.612px; height: 448.288px; left: 573.974px; top: 270.838px; min-width: 1px; min-height: 1px;" data-name="image-d96648">
+							<div class="sl-block-content" style="z-index: 10;"><img style="" data-natural-width="599" data-natural-height="643" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/978557/images/7685960/hadika-half.png"></div>
+						</div>
+		
+						<!-- #3 bubble box-->
+		
+						<div class="sl-block" data-block-type="text" data-name="text-93d789" style="height: auto; width: 510px; left: 50px; top: 50px;">
+							<div class="sl-block-content" style="z-index: 11;" dir="ui">
+								<p style="	position: relative;
+			max-width: 30em;
+			background-color: #fff;
+			padding: 1.125em 1.5em;
+			font-size: 1.25em;
+			border-style                :   solid;
+			border-width                :   8px;
+			border-color                :   #212529;
+			-webkit-border-radius       :   3px;
+			-moz-border-radius          :   3px;
+			border-radius: 1rem;
+			box-shadow:	0 0.125rem 0.5rem rgba(0, 0, 0, .3), 0 0.0625rem 0.125rem rgba(0, 0, 0, .2);">
+									<span style="font-size:1.2em"><strong>Stories activate language areas PLUS</strong> areas associated with <strong>emotions</strong> and <strong>experiencing.</strong></span></p>
+							</div>
+						</div>
+		
+						<!-- #3 bubble tail-->
+		
+						<div class="sl-block" data-block-type="snippet" style="width: 127px; height: 100px; left: 539px; top: 383px;" data-name="tail-2">
+							<div class="sl-block-content" style="z-index: 12;">
+								<svg style="fill: white; stroke: #212529; stroke-width: 3px; stroke-linejoin: round;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 127 100" width="300" height="250">
+									<path d="M0,0Q22.61,7.57,33,26c-8.79-3.78-21.3-6.08-33-6.08"></path>
+								</svg>
+							</div>
+						</div>
+					</section>
+					<section data-auto-animate-duration="0.6" data-background-color="#000000" data-auto-animate="">
+						<div class="sl-block" data-block-type="shape" data-name="square1" style="width: 2000px; height: 1649.5px; left: -300px; top: -200px;">
+							<div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(60, 120, 216)" data-shape-stretch="true" style="z-index: 10;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 2000 1650">
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+									<rect width="2000" height="1649.5" rx="0" ry="0" class="shape-element" fill="rgb(60, 120, 216)"></rect>
+								</svg></div>
+						</div>
+		
+						<!-- hardika -->
+						<div class="sl-block" data-block-type="image" style="width: 417.612px; height: 448.288px; left: 573.974px; top: 270.838px; min-width: 1px; min-height: 1px;" data-name="image-d96648">
+							<div class="sl-block-content" style="z-index: 15;"><img style="" data-natural-width="599" data-natural-height="643" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/978557/images/7685960/hadika-half.png"></div>
+						</div>
+		
+						<!-- #2 bubble box-->
+		
+						<div class="sl-block" data-block-type="text" data-name="text-93d559" style="height: auto; width: 850px; left: 50px; top: 0px;">
+							<div class="sl-block-content" style="z-index: 11;" dir="ui">
+								<p style="position: relative;
+			max-width: 30em;
+			background-color: #fff;
+			padding: 1.125em 1.5em;
+			font-size: 1.25em;
+			border-style                :   solid;
+			border-width                :   8px;
+			border-color                :   #212529;
+			-webkit-border-radius       :   3px;
+			-moz-border-radius          :   3px;
+			border-radius: 1rem;
+			box-shadow:	0 0.125rem 0.5rem rgba(0, 0, 0, .3), 0 0.0625rem 0.125rem rgba(0, 0, 0, .2);">
+		
+									<span style="font-size:0.9em">A story induces a form of <strong>neural mirroring</strong> between brains of the speaker and the listener. Hasson* @ Princeton.</span></p>
+							</div>
+						</div>
+						<!-- #2 bubble tail-->
+		
+						<div class="sl-block" data-block-type="snippet" style="width: 100px; height: 125px; left: 206px; top: 212px;">
+							<div class="sl-block-content" style="z-index: 13;">
+								<svg style="fill: white; stroke: #212529; stroke-width: 3px; stroke-linejoin: round;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 127" width="250" height="300">
+									<path d="M21.92,2c0,11.7,2.3,24.21,6.08,33Q9.58,24.61,2,2" transform="translate(-2 -2)"></path>
+								</svg>
+							</div>
+						</div>
+		
+						<!-- #3 bubble box-->
+		
+						<div class="sl-block" data-block-type="text" data-name="text-93d559" style="height: auto; width: 500px; left: 50px; top: 295px;">
+							<div class="sl-block-content" style="z-index: 12;" dir="ui">
+								<p style="position: relative;
+			max-width: 30em;
+			background-color: #fff;
+			padding: 0.5em 0.5em;
+			font-size: 1.25em;
+			border-style                :   solid;
+			border-width                :   8px;
+			border-color                :   #212529;
+			-webkit-border-radius       :   3px;
+			-moz-border-radius          :   3px;
+			border-radius: 1rem;
+			box-shadow:	0 0.125rem 0.5rem rgba(0, 0, 0, .3), 0 0.0625rem 0.125rem rgba(0, 0, 0, .2);">
+		
+									<span><img style="height: 384px; width: 425px; left: 0px; top: 0px;" data-natural-width="470" data-natural-height="425" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/978557/images/7696872/coupling-hasson-470px.jpg">*</span></p>
+							</div>
+						</div>
+		
+						<!-- #3 bubble tail-->
+		
+						<div class="sl-block" data-block-type="snippet" style="width: 127px; height: 100px; left: 526px; top: 384px;">
+							<div class="sl-block-content" style="z-index: 14;">
+								<svg style="fill: white; stroke: #212529; stroke-width: 3px; stroke-linejoin: round;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 127 100" width="300" height="250">
+									<path d="M0,0Q22.61,7.57,33,26c-8.79-3.78-21.3-6.08-33-6.08"></path>
+								</svg>
+							</div>
+						</div>
+					</section>
+					<section data-auto-animate-duration="0.6" data-background-color="#00ffff" data-auto-animate="">
+						<!-- hardika -->
+						<div class="sl-block" data-block-type="image" style="width: 417.612px; height: 448.288px; left: 573.974px; top: 270.838px; min-width: 1px; min-height: 1px;" data-name="image-d96648">
+							<div class="sl-block-content" style="z-index: 10;"><img style="" data-natural-width="599" data-natural-height="643" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/978557/images/7685960/hadika-half.png"></div>
+						</div>
+		
+						<!-- #3 bubble box-->
+		
+						<div class="sl-block" data-block-type="text" data-name="text-93d789" style="height: auto; width: 510px; left: 50px; top: 50px;">
+							<div class="sl-block-content" style="z-index: 11;" dir="ui">
+								<p style="	position: relative;
+			max-width: 30em;
+			background-color: #fff;
+			padding: 1.125em 1.5em;
+			font-size: 1.25em;
+			border-style                :   solid;
+			border-width                :   8px;
+			border-color                :   #212529;
+			-webkit-border-radius       :   3px;
+			-moz-border-radius          :   3px;
+			border-radius: 1rem;
+			box-shadow:	0 0.125rem 0.5rem rgba(0, 0, 0, .3), 0 0.0625rem 0.125rem rgba(0, 0, 0, .2);">
+									<span style="font-size:1.2em">The <strong>importance of stories</strong> in effective presentations and leadership is documented in literature including HBR.</span></p>
+							</div>
+						</div>
+		
+						<!-- #3 bubble tail-->
+		
+						<div class="sl-block" data-block-type="snippet" style="width: 127px; height: 100px; left: 539px; top: 383px;" data-name="tail-2">
+							<div class="sl-block-content" style="z-index: 12;">
+								<svg style="fill: white; stroke: #212529; stroke-width: 3px; stroke-linejoin: round;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 127 100" width="300" height="250">
+									<path d="M0,0Q22.61,7.57,33,26c-8.79-3.78-21.3-6.08-33-6.08"></path>
+								</svg>
+							</div>
+						</div>
+					</section>
+					<section data-auto-animate-duration="0.6" data-background-color="#000000" data-auto-animate="">
+						<div class="sl-block" data-block-type="shape" data-name="square1" style="width: 1018.06px; height: 1649.5px; left: -259.429px; top: -197.507px;">
+							<div class="sl-block-style" style="z-index: 10; transform: rotate(5deg);">
+								<div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(60, 120, 216)" data-shape-stretch="true" style="z-index: 10;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 1018 1650">
+		
+		
+		
+										<rect width="1018.06" height="1649.5" rx="0" ry="0" class="shape-element" fill="rgb(60, 120, 216)"></rect>
+									</svg></div>
+							</div>
+						</div>
+						<div class="sl-block" data-block-type="text" data-name="text-25a173" style="height: auto; width: 700px; left: 579px; top: 296px;">
+							<div class="sl-block-style" style="z-index: 11; transform: rotate(90deg);">
+								<div class="sl-block-content" style="z-index: 11; color: rgb(255, 255, 255); font-size: 200%;">
+									<p><span style="font-size:1.4em"><strong>WHY BUBBLES?</strong></span></p>
+								</div>
+							</div>
+						</div>
+						<div class="sl-block" data-block-type="text" data-name="text-e0d930" style="height: auto; width: 780px; left: 0px; top: 0px;">
+							<div class="sl-block-content" style="z-index: 17;">
+								<p style="text-align: left;"><span style="font-size:3.0em"><span style="color:#FFFFFF"><strong>GRAND REASONS</strong></span></span></p>
+							</div>
+						</div>
+						<div class="sl-block" data-block-type="text" data-name="text-710d89" style="height: auto; width: 640px; left: -1px; top: 150px;">
+							<div class="sl-block-content" style="z-index: 12; color: rgb(255, 255, 255);">
+								<p style="text-align:left"><span style="font-size:1.2em">Quick and easy to create content</span></p>
+							</div>
+						</div>
+						<div class="sl-block" data-block-type="text" style="height: auto; width: 640px; left: -1px; top: 250px;" data-name="text-7bd054">
+							<div class="sl-block-content fragment" style="z-index: 13; color: rgb(255, 255, 255);" data-fragment-index="0">
+								<p style="text-align:left"><span style="font-size:1.2em"><span style="color:rgb(255, 255, 255)">Slick, creative, and non-linear design</span></span></p>
+							</div>
+						</div>
+						<div class="sl-block" data-block-type="text" style="height: auto; width: 701px; left: -1px; top: 350px;" data-name="text-0a2851">
+							<div class="sl-block-content fragment" style="z-index: 14; color: rgb(255, 255, 255);" data-fragment-index="1">
+								<p style="text-align:left"><span style="font-size:1.2em"><span style="color:rgb(255, 255, 255)">Light, universal, easy to share and deliver</span></span></p>
+							</div>
+						</div>
+						<div class="sl-block" data-block-type="text" style="height: auto; width: 640px; left: -1px; top: 450px;" data-name="text-b9b3f0">
+							<div class="sl-block-content fragment" style="z-index: 15; color: rgb(255, 255, 255);" data-fragment-index="2">
+								<p style="text-align:left"><span style="font-size:1.2em"><span style="color:rgb(255, 255, 255)">Science-backed </span>learning &amp; presenting</span></p>
+							</div>
+						</div>
+						<div class="sl-block" data-block-type="text" style="height: auto; width: 721px; left: -1px; top: 550px;" data-name="text-4f0db8">
+							<div class="sl-block-content fragment" style="z-index: 16; color: rgb(255, 255, 255);" data-fragment-index="3">
+								<p style="text-align:left"><span style="font-size:36px">Designed for teamwork &amp; collaboration</span></p>
+							</div>
+						</div>
+					</section>
+					<section data-auto-animate-duration="0.6" data-background-color="#000000" data-auto-animate="">
+						<div class="sl-block" data-block-type="shape" data-name="square1" style="width: 1018.06px; height: 1649.5px; left: -259.429px; top: -197.507px;">
+							<div class="sl-block-style" style="z-index: 10; transform: rotate(5deg);">
+								<div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(60, 120, 216)" data-shape-stretch="true" style="z-index: 10;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 1018 1650">
+		
+		
+		
+										<rect width="1018.06" height="1649.5" rx="0" ry="0" class="shape-element" fill="rgb(60, 120, 216)"></rect>
+									</svg></div>
+							</div>
+						</div>
+						<div class="sl-block" data-block-type="text" data-name="text-25a173" style="height: auto; width: 700px; left: 579px; top: 296px;">
+							<div class="sl-block-style" style="z-index: 11; transform: rotate(90deg);">
+								<div class="sl-block-content" style="z-index: 11; color: rgb(255, 255, 255); font-size: 200%;">
+									<p><span style="font-size:1.4em"><strong>WHY BUBBLES?</strong></span></p>
+								</div>
+							</div>
+						</div>
+						<div class="sl-block" data-block-type="text" data-name="text-e0d930" style="height: auto; width: 780px; left: 0px; top: 0px;">
+							<div class="sl-block-content" style="z-index: 17;">
+								<p><span style="font-size:3.0em"><span style="color:#FFFFFF"><strong>DESIGN REASONS</strong></span></span></p>
+							</div>
+						</div>
+						<div class="sl-block" data-block-type="text" data-name="text-710d89" style="height: auto; width: 746px; left: 0px; top: 150px;">
+							<div class="sl-block-content" style="z-index: 12; color: rgb(255, 255, 255);">
+								<p style="text-align:left"><span style="font-size:36px">Promotes best practices, chunking, 5-5-1</span></p>
+							</div>
+						</div>
+						<div class="sl-block" data-block-type="text" style="height: auto; width: 640px; left: 0px; top: 250px;" data-name="text-7bd054">
+							<div class="sl-block-content fragment" style="z-index: 13; color: rgb(255, 255, 255);" data-fragment-index="0">
+								<p style="text-align:left"><span style="font-size:1.2em"><span style="color:rgb(255, 255, 255)">Custom-tailored, relevant, enagaging</span></span></p>
+							</div>
+						</div>
+						<div class="sl-block" data-block-type="text" style="height: auto; width: 746px; left: 0px; top: 350px;" data-name="text-0a2851">
+							<div class="sl-block-content fragment" style="z-index: 14; color: rgb(255, 255, 255);" data-fragment-index="1">
+								<p style="text-align:left"><span style="font-size:1.2em"><span style="color:rgb(255, 255, 255)">Creative story-telling attuned to our brains</span></span></p>
+							</div>
+						</div>
+						<div class="sl-block" data-block-type="text" style="height: auto; width: 746px; left: 0px; top: 450px;" data-name="text-b9b3f0">
+							<div class="sl-block-content fragment" style="z-index: 15; color: rgb(255, 255, 255);" data-fragment-index="2">
+								<p style="text-align:left"><span style="font-size:36px">Accounts for how we process and learn</span></p>
+							</div>
+						</div>
+						<div class="sl-block" data-block-type="text" style="height: auto; width: 720px; left: 0px; top: 550px;" data-name="text-4f0db8">
+							<div class="sl-block-content fragment" style="z-index: 16; color: rgb(255, 255, 255);" data-fragment-index="3">
+								<p style="text-align:left"><span style="font-size:36px">Dynamic, slick, adaptive, modern design</span></p>
+							</div>
+						</div>
+					</section>
+					<section data-auto-animate-duration="0.6" data-background-color="#000000" data-auto-animate="">
+						<div class="sl-block" data-block-type="shape" data-name="square1" style="width: 1018.06px; height: 1649.5px; left: -258.429px; top: -197.507px;">
+							<div class="sl-block-style" style="z-index: 10; transform: rotate(5deg);">
+								<div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(60, 120, 216)" data-shape-stretch="true" style="z-index: 10;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 1018 1650">
+		
+										<rect width="1018.06" height="1649.5" rx="0" ry="0" class="shape-element" fill="rgb(60, 120, 216)"></rect>
+									</svg></div>
+							</div>
+						</div>
+		
+						<div class="sl-block" data-block-type="text" data-name="text-25a173" style="height: auto; width: 700px; left: 579px; top: 296px;">
+							<div class="sl-block-style" style="z-index: 11; transform: rotate(90deg);">
+								<div class="sl-block-content" style="z-index: 11; color: rgb(255, 255, 255); font-size: 200%;">
+									<p><span style="font-size:1.4em"><strong>WHY BUBBLES?</strong></span></p>
+								</div>
+							</div>
+						</div>
+						<div class="sl-block" data-block-type="text" data-name="text-e0d930" style="height: auto; width: 780px; left: 0px; top: 0px;">
+							<div class="sl-block-content" style="z-index: 17;">
+								<p style="text-align: left;"><span style="font-size:3.0em"><span style="color:#FFFFFF"><strong>TECH REASONS</strong></span></span></p>
+							</div>
+						</div>
+						<div class="sl-block" data-block-type="text" data-name="text-710d89" style="height: auto; width: 840px; left: 0px; top: 150px;">
+							<div class="sl-block-content" style="z-index: 12; color: rgb(255, 255, 255);">
+								<p style="text-align:left"><span style="font-size:1.2em">Modern versatile &amp; flexible engine</span></p>
+							</div>
+						</div>
+						<div class="sl-block" data-block-type="text" style="height: auto; width: 771px; left: 0px; top: 250px;" data-name="text-7bd054">
+							<div class="sl-block-content fragment" style="z-index: 13; color: rgb(255, 255, 255);" data-fragment-index="0">
+								<p style="text-align:left"><span style="font-size:1.2em">Powered by AI and Bitmojis</span></p>
+							</div>
+						</div>
+						<div class="sl-block" data-block-type="text" style="height: auto; width: 701px; left: 0px; top: 350px;" data-name="text-0a2851">
+							<div class="sl-block-content fragment" style="z-index: 14; color: rgb(255, 255, 255);" data-fragment-index="1">
+								<p style="text-align:left"><span style="font-size:1.2em"><span style="color:rgb(255, 255, 255)">Universal across devices and applications</span></span></p>
+							</div>
+						</div>
+						<div class="sl-block" data-block-type="text" style="height: auto; width: 760px; left: 0px; top: 450px;" data-name="text-b9b3f0">
+							<div class="sl-block-content fragment" style="z-index: 15; color: rgb(255, 255, 255);" data-fragment-index="2">
+								<p style="text-align:left"><span style="font-size:36px">Very lightweight, for rural &amp; dev'ing nations</span></p>
+							</div>
+						</div>
+						<div class="sl-block" data-block-type="text" style="height: auto; width: 746px; left: 0px; top: 550px;" data-name="text-4f0db8">
+							<div class="sl-block-content fragment" style="z-index: 16; color: rgb(255, 255, 255);" data-fragment-index="3">
+								<p style="text-align:left"><span style="font-size:36px">Teamwork, collaboration, &amp; multi-site access enabled.</span></p>
+							</div>
+						</div>
+					</section>
+					<section data-auto-animate-duration="0.6" data-background-color="#000000" data-auto-animate="">
+						<div class="sl-block" data-block-type="shape" data-name="square1" style="width: 504.174px; height: 1649.5px; left: 241.413px; top: -866.837px;">
+							<div class="sl-block-style" style="z-index: 10; transform: rotate(90deg);">
+								<div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(102, 223, 174)" data-shape-stretch="true" style="z-index: 10;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 504 1650">
+		
+										<rect width="504.174" height="1649.5" rx="0" ry="0" class="shape-element" fill="rgb(102, 223, 174)"></rect>
+									</svg></div>
+							</div>
+						</div>
+						<div class="sl-block" data-block-type="text" style="height: auto; width: 860px; left: 54px; top: 78px;">
+							<div class="sl-block-content" style="z-index: 11; color: rgb(255, 255, 255); text-align: left; transition-duration: 0.6s; transition-delay: 0.4s;" dir="ui" data-animation-type="slide-up">
+								<h2>
+									<strong>FREE</strong> for public presentations</h2>
+							</div>
+						</div>
+						<div class="fade-up-fixed visible">
+							<div class="sl-block" data-block-type="text" style="height: auto; width: 160px; left: 29px; top: 357px;">
+								<div class="sl-block-content slide-up-intro" style="z-index: 13; text-align: left; font-size: 40%; color: rgb(255, 255, 255);" dir="ui">
+									<h2>LITE</h2>
+								</div>
+							</div>
+							<div class="sl-block" data-block-type="text" style="height: auto; width: 186px; left: 29px; top: 378px;">
+								<div class="sl-block-content slide-up-intro" style="z-index: 14; text-align: left; font-size: 160%; color: rgb(255, 255, 255);" dir="ui">
+									<h2>$5</h2>
+								</div>
+							</div>
+							<div class="sl-block" data-block-type="text" style="height: auto; width: 160px; left: 29px; top: 496px;">
+								<div class="sl-block-content slide-up-intro" style="z-index: 15; text-align: left; font-size: 28%; color: rgb(255, 255, 255);" dir="ui">
+									<h2>per month</h2>
+								</div>
+							</div>
+							<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 210px; height: 220px; left: -1px; top: 326px;">
+								<div class="sl-block-content slide-up-intro" data-shape-type="rect" data-shape-fill-color="rgba(255, 255, 255, 0)" data-shape-stretch="true" style="z-index: 12;" data-shape-stroke-color="#ffffff" data-shape-stroke-width="8">
+									<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 210 220">
+										<defs>
+											<clipPath id="shape-mask-4-1520498803030">
+												<rect width="210" height="220" fill="rgba(255, 255, 255, 0)" stroke="#ffffff" stroke-width="16" rx="0" ry="0"></rect>
+											</clipPath>
+										</defs>
+										<rect width="210" height="220" class="shape-element" fill="rgba(255, 255, 255, 0)" stroke="#ffffff" stroke-width="16" rx="0" ry="0" clip-path="url(#shape-mask-4-1520498803030)"></rect>
+									</svg>
+								</div>
+							</div>
+						</div>
+						<div class="fade-up-fixed visible">
+							<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 210px; height: 220px; left: 248px; top: 326px;">
+								<div class="sl-block-content slide-up-intro" data-shape-type="rect" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 20;" data-shape-stroke-color="#ffffff" data-shape-stroke-width="8">
+									<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 210 220">
+		
+		
+		
+		
+										<defs>
+											<clipPath id="shape-mask-6-1520498803037">
+												<rect width="210" height="220" fill="rgba(0, 0, 0, 0)" stroke="#ffffff" stroke-width="16" rx="0" ry="0"></rect>
+											</clipPath>
+										</defs>
+										<rect width="210" height="220" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#ffffff" stroke-width="16" rx="0" ry="0" clip-path="url(#shape-mask-6-1520498803037)"></rect>
+									</svg>
+								</div>
+							</div>
+							<div class="sl-block" data-block-type="text" style="height: auto; width: 160px; left: 278px; top: 357px;">
+								<div class="sl-block-content slide-up-intro" style="z-index: 21; text-align: left; font-size: 40%; color: rgb(255, 255, 255);" dir="ui">
+									<h2>PRO</h2>
+								</div>
+							</div>
+							<div class="sl-block" data-block-type="text" style="height: auto; width: 186px; left: 274px; top: 378px;">
+								<div class="sl-block-content slide-up-intro" style="z-index: 22; text-align: left; font-size: 160%; color: rgb(255, 255, 255);" dir="ui">
+									<h2>$10</h2>
+								</div>
+							</div>
+							<div class="sl-block" data-block-type="text" style="height: auto; width: 160px; left: 278px; top: 496px;">
+								<div class="sl-block-content slide-up-intro" style="z-index: 23; text-align: left; font-size: 28%; color: rgb(255, 255, 255);" dir="ui">
+									<h2>per month</h2>
+								</div>
+							</div>
+						</div>
+						<div class="fragment fade-up-fixed" data-fragment-index="0">
+							<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 210px; height: 220px; left: 501px; top: 326px;" data-name="shape-4a5c5c">
+								<div class="sl-block-content slide-up-intro" data-shape-type="rect" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 24;" data-shape-stroke-color="#ffffff" data-shape-stroke-width="8">
+									<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 210 220">
+		
+		
+		
+		
+										<defs>
+											<clipPath id="shape-mask-1-1598747722692">
+												<rect width="210" height="220" fill="rgba(0, 0, 0, 0)" stroke="#ffffff" stroke-width="16" rx="0" ry="0"></rect>
+											</clipPath>
+										</defs>
+										<rect width="210" height="220" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#ffffff" stroke-width="16" rx="0" ry="0" clip-path="url(#shape-mask-1-1598747722692)"></rect>
+									</svg>
+								</div>
+							</div>
+							<div class="sl-block" data-block-type="text" style="height: auto; width: 160px; left: 531px; top: 357px;" data-name="text-3a6ee0">
+								<div class="sl-block-content slide-up-intro" style="z-index: 25; text-align: left; font-size: 40%; color: rgb(255, 255, 255);" dir="ui">
+									<h2>EDU TEAM</h2>
+								</div>
+							</div>
+							<div class="sl-block" data-block-type="text" style="height: auto; width: 186px; left: 527px; top: 378px;" data-name="text-1d081e">
+								<div class="sl-block-content slide-up-intro" style="z-index: 26; text-align: left; font-size: 160%; color: rgb(255, 255, 255);" dir="ui">
+									<h2>$15</h2>
+								</div>
+							</div>
+							<div class="sl-block" data-block-type="text" style="height: auto; width: 160px; left: 531px; top: 496px;" data-name="text-f29b4d">
+								<div class="sl-block-content slide-up-intro" style="z-index: 27; text-align: left; font-size: 28%; color: rgb(255, 255, 255);" dir="ui">
+									<h2>per user/month</h2>
+								</div>
+							</div>
+						</div>
+						<div class="fragment fade-up-fixed" data-fragment-index="0">
+							<div class="sl-block" data-block-type="text" style="height: auto; width: 170px; left: 781px; top: 357px;">
+								<div class="sl-block-content slide-up-intro" style="z-index: 17; text-align: left; font-size: 40%; color: rgb(37, 37, 37);" dir="ui">
+									<h2>ENTERPRISE</h2>
+								</div>
+							</div>
+							<div class="sl-block" data-block-type="text" style="height: auto; width: 259px; left: 777px; top: 378px;">
+								<div class="sl-block-content slide-up-intro" style="z-index: 18; text-align: left; font-size: 160%; color: rgb(37, 37, 37);" dir="ui">
+									<h2>$20</h2>
+								</div>
+							</div>
+							<div class="sl-block" data-block-type="text" style="height: auto; width: 160px; left: 781px; top: 496px;">
+								<div class="sl-block-content slide-up-intro" style="z-index: 19; text-align: left; font-size: 28%; color: rgb(37, 37, 37);" dir="ui">
+									<h2>per user/month</h2>
+								</div>
+							</div>
+							<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 210px; height: 220px; left: 751px; top: 326px;">
+								<div class="sl-block-content slide-up-intro" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 16;" data-shape-stroke-color="#ffffff" data-shape-stroke-width="8">
+									<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 210 220">
+										<defs>
+											<clipPath id="shape-mask-5-1520498803035">
+												<rect width="210" height="220" fill="rgb(255, 255, 255)" stroke="#ffffff" stroke-width="16" rx="0" ry="0"></rect>
+											</clipPath>
+										</defs>
+										<rect width="210" height="220" class="shape-element" fill="rgb(255, 255, 255)" stroke="#ffffff" stroke-width="16" rx="0" ry="0" clip-path="url(#shape-mask-5-1520498803035)"></rect>
+									</svg>
+								</div>
+							</div>
+						</div>
+						<div class="sl-block" data-block-type="text" style="height: auto; width: 860px; left: 51px; top: 593px;" data-name="text-3f7792">
+							<div class="sl-block-content" style="z-index: 28; color: rgb(255, 255, 255); text-align: left; transition-duration: 0.6s; transition-delay: 0.4s;" dir="ui" data-animation-type="slide-up">
+								<h3 style="text-align:center"><span style="font-size:0.7em">20% discount with the annual subscription</span></h3>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+		</div>
+		<script src="../revealjs/dist/reveal.js"></script>
+		<script src="../revealjs/plugin/notes/notes.js"></script>
+		<script src="../revealjs/plugin/markdown/markdown.js"></script>
+		<script src="../revealjs/plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+				width: 960,
+				height: 700,
+				transition: "slide",
+				backgroundTransition: "slide",
+				center: false,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ],
+
+				// initialize broadcast extra plugin
+				broadcast: {
+					 // Set master password to "job****"
+					 secret: '$2a$05$CMSHei0uEj/iOPz5XLkOuOng.W4h7FZipz7Bw7dL0boxrFqncz.tS',
+					 // Configure RTCMultiConnection
+					 connection: {
+						socketURL: 'https://joncartc.herokuapp.com:443/'
+					 },
+				  },
+//         multiplex: {
+//                        url: 'https://reveal-js-multiplex-ccjbegmaii.now.sh/',
+//                        id: '741b740f8128bcac',
+//                        secret: Reveal.getQueryHash().s || null
+//                     },
+
+				dependencies: [
+// Multiplex dependencies, need updating to 4.0
+//                           { src: 'https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js', async: true },
+//                           { src: Reveal.getQueryHash().s ?
+//                                 'plugin/multiplex/master.js' :
+//                                 'plugin/multiplex/client.js', async: true },
+						{ src: '../reveal.js-plugins/broadcast/RTCMultiConnection/RTCMultiConnection.min.js'},
+						{ src: '../reveal.js-plugins/broadcast/RTCMultiConnection/adapter.js'},
+						{ src: '../reveal.js-plugins/broadcast/RTCMultiConnection/socket.io.js'},
+						{ src: '../reveal.js-plugins/broadcast/bCrypt.js'},
+						{ src: '../reveal.js-plugins/broadcast/broadcast.js'},
+		 //               { src: '../reveal.js-plugins/simplemenu/assets/js/revealjs/plugin/simplemenu/simplemenu.js', async: false },
+						{ src: '../reveal.js-plugins/menu/menu.js' }
+					 ]
+
+			}); // this bracket closes Reveal.initialize settings
+		</script>
+	</body>
+</html>
