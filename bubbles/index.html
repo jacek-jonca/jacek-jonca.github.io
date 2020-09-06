@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>Bubbl.es Pitch</title>
 
       <!-- Loading standard RevealJS files from ../revealjs folder -->
       <link rel="stylesheet" href="../revealjs/dist/reset.css">
@@ -20,13 +20,12 @@
 	  <link rel="stylesheet" href="../revealjs/plugin/highlight/monokai.css" id="highlight-theme">
 	</head>
 	<body>
-		<div class="theme-font-opensans theme-color-white-blue" style="width: 100%; height: 100%;">
+		<div class="theme-font-sequentialist theme-color-white-blue" style="width: 100%; height: 100%;">
 			<div class="reveal">
 				<div class="slides">
                     <section data-menu-title="Authenticate">
                         <h2>Lobby</h2>
                         <p>Bubbl.es Pitch</p>
-                        <p>&nbsp;</p>
                         <div><p>&nbsp;</p></div>
                         <div>Click &nbsp;
                             <a href="#" onclick="RevealBroadcast.connect( { id: document.getElementById('broadcastid').value } ); return false;">
@@ -100,9 +99,9 @@
 					</section>
 					<section data-auto-animate-duration="0.6" data-background-color="#e06666" data-auto-animate="">
 						<div class="sl-block" data-block-type="text" data-name="text-25a173" style="height: auto; width: 700px; left: -251px; top: 296px;">
-							<div class="sl-block-style" style="z-index: 14; transform: rotate(90deg);">
+							<div class="sl-block-style" style="z-index: 14; transform: rotate(270deg);">
 								<div class="sl-block-content" style="z-index: 14; color: rgb(255, 255, 255); font-size: 200%;">
-									<p><span style="font-size:1.4em"><strong>WHAT IS IT?</strong></span></p>
+									<p><span style="font-size:1.8em"><strong>WHAT IS IT?</strong></span></p>
 								</div>
 							</div>
 						</div>
@@ -345,7 +344,7 @@
 								</svg></div>
 						</div>
 						<div class="sl-block" data-block-type="text" style="height: auto; width: 588px; left: 320px; top: 140px;">
-							<div class="sl-block-content" style="z-index: 11; color: rgb(255, 255, 255); text-align: left; transition-duration: 0.6s; transition-delay: 0.3s;" dir="ui" data-animation-type="slide-left">
+							<div class="sl-block-content" style="z-index: 11; color: rgb(255, 255, 255); text-align: left; transition-duration: 0.6s; transition-delay: 0.3s;" dir="ui">
 								<h2>Presentations today</h2>
 							</div>
 						</div>
@@ -1507,6 +1506,18 @@
 				transition: "slide",
 				backgroundTransition: "slide",
 				center: false,
+
+				// Help the user learn the controls by providing hints, for example by
+			    // bouncing the down arrow when they first encounter a vertical slide
+				controlsTutorial: true,
+
+				// Flags if we should show a help overlay when the question-mark
+  				// key is pressed
+				help: true,
+				
+				// Can be used to globally disable auto-animation
+				autoAnimate: true,
+				autoAnimateUnmatched: false,  
 
 				// Learn about plugins: https://revealjs.com/plugins/
 				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealChalkboard ],
