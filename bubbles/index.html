@@ -44,7 +44,7 @@
                             </a>&nbsp; to connect to the presenter broadcast.</div>
                             <p>&nbsp;</p>
                             <p>&nbsp;</p>
-                            <p>&nbsp;</p>
+                            <p>Meeting host? Login here:</p>
                             <div>Admin id:&nbsp; <input type="text" size="10" id="broadcastid" style="font-size:70%;" onchange="updateURL();" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"> &nbsp;&nbsp; password: &nbsp; <input type="password" size="10" id="password" style="font-size: 70%; background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAPhJREFUOBHlU70KgzAQPlMhEvoQTg6OPoOjT+JWOnRqkUKHgqWP4OQbOPokTk6OTkVULNSLVc62oJmbIdzd95NcuGjX2/3YVI/Ts+t0WLE2ut5xsQ0O+90F6UxFjAI8qNcEGONia08e6MNONYwCS7EQAizLmtGUDEzTBNd1fxsYhjEBnHPQNG3KKTYV34F8ec/zwHEciOMYyrIE3/ehKAqIoggo9inGXKmFXwbyBkmSQJqmUNe15IRhCG3byphitm1/eUzDM4qR0TTNjEixGdAnSi3keS5vSk2UDKqqgizLqB4YzvassiKhGtZ/jDMtLOnHz7TE+yf8BaDZXA509yeBAAAAAElFTkSuQmCC&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: auto;" value="123456" autocomplete="off"> &nbsp;&nbsp; <a href="#" onclick="RevealBroadcast.start( { id: document.getElementById('broadcastid').value, password: document.getElementById('password').value } ); return false;"><i class="fa fa-rss"></i></a></div>    
                      </section>
 
@@ -418,8 +418,8 @@
 							<div class="sl-block-content" style="z-index: 13;" data-inline-svg="false"><img style="" data-natural-width="480" data-natural-height="480" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/978557/images/7683961/1.svg"></div>
 						</div>
 						<div class="sl-block" data-block-type="text" data-name="text-b39148" style="height: auto; width: 454px; left: 60px; top: 29.5px;">
-							<div class="sl-block-content" style="z-index: 14;">
-								<p><span style="font-size:1.6em"><span style="color:rgb(0, 0, 0); text-align:left">bloated, ancient tech, non-adaptive across devices</span></span></p>
+							<div class="sl-block-content" style="z-index: 14; position: relative;">
+								<p><span style="font-size:1.6em; color:rgb(0, 0, 0); text-align:left">bloated, ancient tech, non-adaptive across devices</span></p>
 							</div>
 						</div>
 						<div class="sl-block" data-block-type="text" style="height: auto; width: 454px; left: 438px; top: 512px;" data-name="text-ec5339">
@@ -1517,7 +1517,7 @@
 				  multiplex: {
                         url: 'https://reveal-multiplex.glitch.me/',
                         id: '367184d8c3341887',
-                        secret: '15993718986287223688'
+                        secret: none //'15993718986287223688'
                      },
 				dependencies: [
 						{ src: 'https://reveal-multiplex.glitch.me/socket.io/socket.io.js', async: true },
