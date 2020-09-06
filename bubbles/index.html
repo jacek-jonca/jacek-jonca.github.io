@@ -1517,13 +1517,12 @@
 				  multiplex: {
                         url: 'https://mpx.now.sh/',
                         id: '4c6aa1f518ed4778',
-                        secret: Reveal.getQueryHash().s || null //secret: 'b999364df1c25294'
+                        secret: 'b999364df1c25294'
                      },
 				dependencies: [
                         { src: 'https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js', async: true },
-                        { src: Reveal.getQueryHash().s ?
-                               '../reveal.js-plugins/multiplex/master.js' :
-                               '../reveal.js-plugins/multiplex/client.js', async: true },
+                        { src: '../reveal.js-plugins/multiplex/master.js', async: true },
+                        { src: '../reveal.js-plugins/multiplex/client.js', async: true },
 						{ src: '../reveal.js-plugins/broadcast/RTCMultiConnection/RTCMultiConnection.min.js'},
 						{ src: '../reveal.js-plugins/broadcast/RTCMultiConnection/adapter.js'},
 						{ src: '../reveal.js-plugins/broadcast/RTCMultiConnection/socket.io.js'},
