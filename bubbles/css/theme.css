@@ -54,6 +54,12 @@
     font-weight: bold;
 }
 
+@font-face {
+    font-family: 'League Spartan Variable';
+    src: url('https://jonca.org/bubbles/fonts/LeagueSpartanVariable.woff2') format('woff2-variations');
+    font-weight: 400 700;
+  }
+
 article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary {
   display: block;
 }
@@ -352,7 +358,7 @@ table {
 }
 
 .theme-font-backissues .themed,.theme-font-backissues .reveal {
-    font-family: BackIssuesBB, cursive;
+    font-family: "BackIssuesBB", sans-serif;
     font-size: 30px;
   }
   
@@ -361,10 +367,10 @@ table {
   }
   
   .theme-font-backissues .themed h1,.theme-font-backissues .themed h2,.theme-font-backissues .themed h3,.theme-font-backissues .themed h4,.theme-font-backissues .themed h5,.theme-font-backissues .themed h6,.theme-font-backissues .reveal h1,.theme-font-backissues .reveal h2,.theme-font-backissues .reveal h3,.theme-font-backissues .reveal h4,.theme-font-backissues .reveal h5,.theme-font-backissues .reveal h6 {
-    font-family: "Open Sans", Helvetica, sans-serif;
+    font-family: "League Spartan Variable", Helvetica, sans-serif;
     text-transform: none;
     line-height: 1.3;
-    font-weight: bold;
+    font-weight: 700;
   }
 
 .theme-font-palatino .themed,.theme-font-palatino .reveal {
@@ -7479,6 +7485,7 @@ html.print-pdf .aria-status {
   background-color: rgba(0,0,0,0.3);
 }
 
-body {
-    font-family: SequentialistBB, cursive;
+em {
+    font-weight: bold !important;
+    font-style: italic !important;
 }
