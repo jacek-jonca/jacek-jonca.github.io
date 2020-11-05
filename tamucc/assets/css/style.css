@@ -6982,7 +6982,7 @@ footer {
 .hero .hero_content h1 {
     -webkit-animation-fill-mode: both;
     -moz-animation-fill-mode: both;
-    -o-animation-fill-mode: both
+    -o-animation-fill-mode: both    
 }
 
 .home .section_1 {
@@ -10331,7 +10331,7 @@ input[type=radio]:not(:checked):focus+label {
 }
 
 .hero .hero_content {
-    margin-top: 50px;
+    margin-top: -10px;
     text-align: center
 }
 
@@ -10339,6 +10339,7 @@ input[type=radio]:not(:checked):focus+label {
     margin-top: 0;
     font-weight: 100;
     font-size: 70px;
+    font-family: 'Metropolis Bold';
     letter-spacing: -2px;
     color: #0067C5;
     animation-name: fadeInDown;
@@ -10372,6 +10373,10 @@ input[type=radio]:not(:checked):focus+label {
     font-size: 20px;
     color: #777;
     margin-bottom: 30%
+}
+
+.hero .hero_content h3 {
+    font-family: 'Metropolis Light';
 }
 
 .hero .hero_content .button {
