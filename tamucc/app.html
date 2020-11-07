@@ -10,6 +10,9 @@
     <meta name="title" content="Texas A&M University-Corpus Christi QuickApp" />
     <meta name="description" content="Texas A&M University-Corpus Christi Quick Application" />
     <link rel="icon" type="images/ico" href="./assets/img/favicon.ico" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
@@ -132,181 +135,152 @@
                     <div class="waves two"><img src="./assets/img/wave_2.png"></div>
 <!--                    <div class="waves three"><img src="./assets/img/wave_3.png"></div> -->
                 </div>
-<!--
-                    <div class="button-group">
-                    <ul>
-
-                        <li>
-                            <a href="/student-admissions/apply">
-                                Apply Now
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="/contact-us/inquire-now">
-                                Inquire Now
-                            </a>
-                        </li>
-                    </ul>
-                </div>
--->
 
                 <div class="section_1" id="section_1">
                     <div class="container">
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="content_box arrow">
-                                    <a class="hero_nav" href="#section_2"><i class="fas fa-angle-down jump" aria-hidden="true"></i></a>
+                                    <a class="hero_nav" href="#section_1"><i class="fas fa-angle-down jump" aria-hidden="true"></i></a>
                                 </div>
                                 <div class="content_box">
-                                    <h2>We’ve made this application simple and easy. We even pre-filled it for you!</h2>
-                                    <p>We pre-baked your application, it just need a few finishing touches from you and of course that credit card of yours. Everything should not take more than 5 minutes. Let's begin, shall we?
-                                    </p>
+                                    <h2>We’ve made this application simple and easy.<br/>We even pre-filled it for you!</h2>
+                                    <p>We pre-baked your application, it just need a few finishing touches from you and of course that credit card of yours. Everything should not take more than 5 minutes. Let's begin, shall we?</p>
+                                    <p>&nbsp;</p>
                                 </div>
                             </div>
                         </div>
+                        <div class="row">
+                            <div class="input-group">
+                                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                                    <label for="first">First Name</label>
+                                    <input type="text" class="form-control" id="name" name="first">
+                                </div>
+                                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                                    <label for="middle">Middle Name</label>
+                                    <input type="text" class="form-control" id="name" name="middle">
+                                </div>
+                                <div class="col-xs-12 col-sm-5 col-md-4 col-lg-4">
+                                    <label for="last">Last Name</label>
+                                    <input type="text" class="form-control" id="name" name="last">
+                                </div>
+                                <div class="col-xs-12 col-sm-1 col-md-1 col-lg-1">
+                                    <label for="suffix">Suffix</label>
+                                    <input type="text" class="form-control" id="name" name="suffix">
+                                </div>
+                            </div>
+                        </div>
+                        <p>&nbsp;</p>
+                        <div class="row">
+                            <div class="input-group">
+                                <div class="col-xs-9 col-sm-3 col-md-3 col-lg-3">
+                                    <label for="street1">Street</label>
+                                    <input type="text" class="form-control" id="address" name="street1">
+                                </div>
+                                <div class="col-xs-3 col-sm-2 col-md-2 col-lg-2">
+                                    <label for="street2">Appartment / Suite</label>
+                                    <input type="text" class="form-control" id="address" name="street2">
+                                </div>
+                                <div class="col-xs-9 col-sm-2 col-md-2 col-lg-2">
+                                    <label for="city">City</label>
+                                    <input type="text" class="form-control" id="address" name="city">
+                                </div>
+                                <div class="col-xs-3 col-sm-2 col-md-2 col-lg-2">
+                                    <label for="state">State</label>
+                                    <select type="text" class="form-control" id="address" name="state">
+                                        <option value="TX">TX</option>
+                                        <option value="NULL">none</option>
+                                        <option value="AL">AL</option>
+                                        <option value="AK">AK</option>
+                                        <option value="AR">AR</option>	
+                                        <option value="AZ">AZ</option>
+                                        <option value="CA">CA</option>
+                                        <option value="CO">CO</option>
+                                        <option value="CT">CT</option>
+                                        <option value="DC">DC</option>
+                                        <option value="DE">DE</option>
+                                        <option value="FL">FL</option>
+                                        <option value="GA">GA</option>
+                                        <option value="HI">HI</option>
+                                        <option value="IA">IA</option>	
+                                        <option value="ID">ID</option>
+                                        <option value="IL">IL</option>
+                                        <option value="IN">IN</option>
+                                        <option value="KS">KS</option>
+                                        <option value="KY">KY</option>
+                                        <option value="LA">LA</option>
+                                        <option value="MA">MA</option>
+                                        <option value="MD">MD</option>
+                                        <option value="ME">ME</option>
+                                        <option value="MI">MI</option>
+                                        <option value="MN">MN</option>
+                                        <option value="MO">MO</option>	
+                                        <option value="MS">MS</option>
+                                        <option value="MT">MT</option>
+                                        <option value="NC">NC</option>	
+                                        <option value="NE">NE</option>
+                                        <option value="NH">NH</option>
+                                        <option value="NJ">NJ</option>
+                                        <option value="NM">NM</option>			
+                                        <option value="NV">NV</option>
+                                        <option value="NY">NY</option>
+                                        <option value="ND">ND</option>
+                                        <option value="OH">OH</option>
+                                        <option value="OK">OK</option>
+                                        <option value="OR">OR</option>
+                                        <option value="PA">PA</option>
+                                        <option value="RI">RI</option>
+                                        <option value="SC">SC</option>
+                                        <option value="SD">SD</option>
+                                        <option value="TN">TN</option>
+                                        <option value="TX">TX</option>
+                                        <option value="UT">UT</option>
+                                        <option value="VT">VT</option>
+                                        <option value="VA">VA</option>
+                                        <option value="WA">WA</option>
+                                        <option value="WI">WI</option>	
+                                        <option value="WV">WV</option>
+                                        <option value="WY">WY</option>
+                                    </select>
+                                </div>
+                                <div class="col-xs-6 col-sm-1 col-md-1 col-lg-1">
+                                    <label for="zip">ZIP</label>
+                                    <input type="text" class="form-control" id="address" name="zip">
+                                </div>
+                                <div class="col-xs-6 col-sm-2 col-md-2 col-lg-2">
+                                    <label for="zip">Country</label>
+                                    <input type="text" class="form-control" id="address" name="zip">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="input-group">
+                                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                    <label for="col1">University 1</label>
+                                    <input type="text" class="form-control" id="name" name="first">
+                                </div>
+                                <div class="col-xs-12 col-sm-1 col-md-1 col-lg-1">
+                                    <label for="middle">From Month</label>
+                                    <input type="text" class="form-control" id="name" name="middle">
+                                </div>
+                                <div class="col-xs-12 col-sm-1 col-md-1 col-lg-1">
+                                    <label for="last">Year</label>
+                                    <input type="text" class="form-control" id="name" name="last">
+                                </div>
+                                <div class="col-xs-12 col-sm-1 col-md-1 col-lg-1">
+                                    <label for="suffix">to Month</label>
+                                    <input type="text" class="form-control" id="name" name="suffix">
+                                </div>
+                                <div class="col-xs-12 col-sm-1 col-md-1 col-lg-1">
+                                    <label for="suffix">Year</label>
+                                    <input type="text" class="form-control" id="name" name="suffix">
+                                </div>
+                            </div>
+                        </div>
+
+
                     </div>
-                </div>
-
-                <div class="section_2" id="section_2">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="content_box promo">
-                                    <div class="row">
-                                        <div class="col-md-4"><img alt="Online learning" height="400"
-                                                src="/-/media/ISC/All/online_learning_image.jpg" width="582"></div>
-                                        <div class="col-md-8">
-                                            <h3>We’ll help you get to where you want to be</h3>
-                                            <p>Start your program online with confidence and you will have
-                                                flexibility and control of your academic and career goals. You will
-                                                benefit from world-class teaching from the same faculty as face to
-                                                face classes. The Study Group Student Promise ensures you will have
-                                                a supportive environment paired with the reassurance of our
-                                                risk-free introductory period.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="row">
-                            <div class="col-md-12">
-
-                                <div class="content_box">
-                                    <h2>Why Texas A&M-Corpus Christi?</h2>
-                                    <p>Study at the only island university in the USA. As part of the prestigious
-                                        Texas A&M University System, excellent academics and <a
-                                            href="/tamucc/why-choose-texas-am-corpus-christi">ground-breaking
-                                            research</a> mean you will learn and <a
-                                            href="/about-us/student-career-development">develop your career
-                                            skills</a> in highly-rated degree programs in a multicultural learning
-                                        community.</p>
-
-                                    <style>
-                                        .content_box.promo h3 {
-                                            color: #00994a !important;
-                                        }
-
-                                        .content_box.promo p {
-                                            color: #333 !important;
-                                        }
-                                    </style>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="widget">
-                                    <h3>About The Island University</h3>
-                                    <img src="/-/media/ISC/Texas-CC-V2/Widgets/texas_talk_500.jpg?h=310&amp;la=en&amp;w=500&amp;hash=9A062F70BB00335EB2175DB22720263299A82B89"
-                                        alt="Three Texas A&M students talking together on campus" width="500"
-                                        height="310" />
-                                    <p>Live and study on the only island university in the USA, where innovation and
-                                        a hands-on learning experience are at the core of your education.</p>
-                                    <div class="button">
-                                        <a href="/tamucc">Discover TAMU-CC</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="content_box stat">
-                                    <p><strong>Top 25</strong></p>
-                                    <p>campuses for <br />
-                                        best weather</p>
-                                    <p><small>BestCollegeReviews.org</small></p>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="widget">
-                                    <h3>Programs</h3>
-                                    <img src="/-/media/ISC/Texas-CC-V2/Widgets/texas_snail_500.jpg?h=310&amp;la=en&amp;w=500&amp;hash=1C382D4C62ECBF82FC04748888D070B269B301BD"
-                                        alt="A research student at Texas A&M measures a marine snail&#39;s reaction time to an external stimulus"
-                                        width="500" height="310" />
-                                    <p>Get a head start in your degree with one of our pathway programs, designed
-                                        for international students.</p>
-                                    <div class="button">
-                                        <a href="/pathway-programs-usa">Explore Pathway Programs</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-4">
-
-                                <div class="content_box stat">
-                                    <p>Texas is home<br />
-                                        to <strong>54 </strong><strong>Fortune 500 companies</strong></p>
-                                    <p>and over 120 largest U.S. companies</p>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="widget">
-                                    <h3>International Pathway Program</h3>
-                                    <img src="/-/media/ISC/Texas-CC-V2/Widgets/texas_talking_500.jpg?h=310&amp;la=en&amp;w=500&amp;hash=70B32F6768E7C3BC213BFE13BE922E8C90E4FD8E"
-                                        alt="Two Texas A&M students on campus" width="500" height="310" />
-                                    <p>During your International Pathway Program you will receive the dedicated
-                                        support you need to improve your academic and English language skills while
-                                        studying your chosen subject.
-                                    </p>
-                                    <div class="button">
-                                        <a href="/about-us">Learn More</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-
-                                <div class="content_box stat">
-                                    <p><strong>Top 10 </strong></p>
-                                    <p>universities offering unmanned aircraft systems education</p>
-                                    <p style="line-height: 14px; margin-top: 10px;"><small>Development Counselors
-                                            International</small></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="section_3">
-
-                    <div class="carousel slide">
-                        <div class="carousel-inner" role="listbox">
-                            <div class="item  active" role="option">
-                                <img src="./assets/img/tu.jpg" alt="Tu from Vietnam" width="941" height="768" />
-                                <div class="carousel-caption">
-                                    <p>"The thing I like is the opportunity to be a teaching assistant. I love
-                                        teaching and I never think that I can be a teaching assistant. It’s a good
-                                        chance for me to improve my language and also my skills. When I am teaching,
-                                        I am learning from students. So it’s good, amazing.”</p>
-                                    <p class="name">Tu from Vietnam, <br />
-                                        Studying M.A. in Communication</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="waves"><img src="./assets/img/waves.png"></div>
                 </div>
             </div>
 

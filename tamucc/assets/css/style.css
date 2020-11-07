@@ -6996,12 +6996,15 @@ footer {
 
 .home .section_2,
 .siteSearch {
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#2ca263', endColorstr='#1578cc', GradientType=0)
+    background: #66aeef;
+ /*    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#2ca263', endColorstr='#1578cc', GradientType=0)
+ */
 }
 
 .home .section_2 {
     padding: 60px 0;
-    background: url("/assets/img/bluegreen_bg.jpg");
+/*    background: url("/assets/img/bluegreen_bg.jpg");
+*/
     background-size: 100% 100%
 }
 
