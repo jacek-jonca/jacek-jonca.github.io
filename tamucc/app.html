@@ -804,9 +804,9 @@ function getUrlVars() {
 }
 
 // var id = getUrlVars()["id"];
-var id = "andy@warhol.com";
-
-const URL = 'https://api.apispreadsheets.com/data/3259/?query=select*from3256whereemail=\'${id}\''
+var id = "'andy@warhol.com'";
+const baseURL = "https://api.apispreadsheets.com/data/3256/?query=select*from3256whereemail="
+var URL = baseURL+id
 console.log(URL)
 
 fetch(URL).then(res=>{
@@ -814,7 +814,9 @@ fetch(URL).then(res=>{
 		// SUCCESS
 		res.json().then(data=>{
 			const myData = data
-            console.log(data)
+            console.log(myData)
+            populate('#section_1', myData);
+//            populate('#section_1', myData);
 		}).catch(err => console.log(err))
 	}
 	else{
@@ -822,8 +824,39 @@ fetch(URL).then(res=>{
         console.log('Else error')
 	}
 })
-
-populate('#section_1', $.parseJSON(myData));
 </script>
+
+<script>
+var id = "'andy@warhol.com'";
+const baseURL = "https://api.apispreadsheets.com/data/3256/?query=select*from3256whereemail="
+var URL = baseURL+id
+
+    fetch(URL)
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+            populate('#section_1', myData);
+        })
+        .catch(function (err) {
+            console.log('error: ' + err);
+        });
+
+function populate(frm, data) {   
+    $.each(data, function(key, value) {  
+        var ctrl = $('[name='+key+']', frm);  
+        switch(ctrl.prop("type")) { 
+            case "radio": case "checkbox":   
+                ctrl.each(function() {
+                    if($(this).attr('value') == value) $(this).attr("checked",value);
+                });   
+                break;  
+            default:
+                ctrl.val(value); 
+        }  
+    });  
+}
+</script>
+
 </body>
 </html>

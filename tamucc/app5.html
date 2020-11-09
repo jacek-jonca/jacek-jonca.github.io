@@ -789,8 +789,23 @@ function getUrlVars() {
     return vars;
 }
 
-// var id = getUrlVars()["id"];
-var id = "'andy@warhol.com'";
+function populate(frm, data) {   
+    $.each(data, function(key, value) {  
+        var ctrl = $('[name='+key+']', frm);  
+        switch(ctrl.prop("type")) { 
+            case "radio": case "checkbox":   
+                ctrl.each(function() {
+                    if($(this).attr('value') == value) $(this).attr("checked",value);
+                });   
+                break;  
+            default:
+                ctrl.val(value); 
+        }  
+    });  
+}
+
+var id = getUrlVars()["id"];
+//var id = "'andy@warhol.com'";
 const baseURL = "https://api.apispreadsheets.com/data/3256/?query=select*from3256whereemail="
 var URL = baseURL+id
 console.log(URL)
@@ -801,41 +816,8 @@ fetch(URL).then(res=>{
 		res.json().then(data=>{
 			const myData = data['data'][0]
             console.log(myData)
-			$("#section_1").jsonToForm({
-				data: myData,
-				callbacks: {
-first: function(value){ $('[name="first"]').val(value); },
-middle: function(value){ $('[name="middle"]').val(value); },
-last: function(value){ $('[name="last"]').val(value); },
-suffix: function(value){ $('[name="suffix"]').val(value); },
-street1: function(value){ $('[name="street1"]').val(value); },
-street2: function(value){ $('[name="street2"]').val(value); },
-city: function(value){ $('[name="city"]').val(value); },
-state: function(value){ $('[name="state"]').val(value); },
-zip: function(value){ $('[name="zip"]').val(value); },
-country: function(value){ $('[name="country"]').val(value); },
-uni1: function(value){ $('[name="uni1"]').val(value); },
-fromMonth_uni1: function(value){ $('[name="fromMonth_uni1"]').val(value); },
-fromYear_uni1: function(value){ $('[name="fromYear_uni1"]').val(value); },
-toMonth_uni1: function(value){ $('[name="toMonth_uni1"]').val(value); },
-toYear_uni1: function(value){ $('[name="toYear_uni1"]').val(value); },
-uni2: function(value){ $('[name="uni2"]').val(value); },
-fromMonth_uni2: function(value){ $('[name="fromMonth_uni2"]').val(value); },
-fromYear_uni2: function(value){ $('[name="fromYear_uni2"]').val(value); },
-toMonth_uni2: function(value){ $('[name="toMonth_uni2"]').val(value); },
-toYear_uni2: function(value){ $('[name="toYear_uni2"]').val(value); },
-uni3: function(value){ $('[name="uni3"]').val(value); },
-fromMonth_uni3: function(value){ $('[name="fromMonth_uni3"]').val(value); },
-fromYear_uni3: function(value){ $('[name="fromYear_uni3"]').val(value); },
-toMonth_uni3: function(value){ $('[name="toMonth_uni3"]').val(value); },
-toYear_uni3: function(value){ $('[name="toYear_uni3"]').val(value); },
-uni4: function(value){ $('[name="uni4"]').val(value); },
-fromMonth_uni4: function(value){ $('[name="fromMonth_uni4"]').val(value); },
-fromYear_uni4: function(value){ $('[name="fromYear_uni4"]').val(value); },
-toMonth_uni4: function(value){ $('[name="toMonth_uni4"]').val(value); },
-toYear_uni4: function(value){ $('[name="toYear_uni4"]').val(value); }
-				}
-			});
+            populate('#section_1', myData);
+//            populate('#section_1', myData);
 		}).catch(err => console.log(err))
 	}
 	else{

@@ -11,7 +11,6 @@
     <meta name="description" content="Texas A&M University-Corpus Christi Quick Application" />
     <link rel="icon" type="images/ico" href="https://jonca.org/tamucc/assets/img/favicon.ico" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://jonca.org/tamucc/assets/js/jquery-json-form-binding.min.js"></script>
     <link rel="stylesheet" type="text/css" href="https://jonca.org/tamucc/assets/css/style.css" />
 <!--    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css"> -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
@@ -780,69 +779,61 @@
             </footer>
         </div>
     </div>
-    <script>
-function getUrlVars() {
-    var vars = {};
-    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
-        vars[key] = value;
-    });
-    return vars;
-}
-
-// var id = getUrlVars()["id"];
+<script>
+(function(e){var t=function(e){for(var t in e){var a=e[t];var i=document.getElementsByName(t),n,r;if(i){r=i[0].nodeName.toLowerCase();switch(r){case"input":n=i[0].getAttribute("type");switch(n){case"checkbox":if(a==true||a==false||a=="checked"){i.checked=a}else{a=a.split(",");a.map(function(e){for(var t=0;t<i.length;t++){i[t].value==e?i[t].checked=true:""}})}break;case"radio":for(var o=0;o<i.length;o++){i[o].value==a?i[o].checked=true:""}break;default:i[0].value=a}break;case"select":if(i[0].hasAttribute("multiple")){a=a.split(",");var f=i[0].getElementsByTagName("option");for(var o=0;o<f.length;o++){if(a.indexOf(f[o].value)!=-1){f[o].selected=true}}}else{i[0].value=a}break}}}};if(typeof define=="function"&&typeof define.amd=="object"&&define.amd){define(function(){return t})}else if(typeof module!=="undefined"&&module.exports){module.exports=t}else{e.populatejs=t}})(this);
+</script>
+<script>
 var id = "'andy@warhol.com'";
 const baseURL = "https://api.apispreadsheets.com/data/3256/?query=select*from3256whereemail="
 var URL = baseURL+id
-console.log(URL)
 
-fetch(URL).then(res=>{
-	if (res.status === 200){
-		// SUCCESS
-		res.json().then(data=>{
-			const myData = data['data'][0]
-            console.log(myData)
-			$("#section_1").jsonToForm({
-				data: myData,
-				callbacks: {
-first: function(value){ $('[name="first"]').val(value); },
-middle: function(value){ $('[name="middle"]').val(value); },
-last: function(value){ $('[name="last"]').val(value); },
-suffix: function(value){ $('[name="suffix"]').val(value); },
-street1: function(value){ $('[name="street1"]').val(value); },
-street2: function(value){ $('[name="street2"]').val(value); },
-city: function(value){ $('[name="city"]').val(value); },
-state: function(value){ $('[name="state"]').val(value); },
-zip: function(value){ $('[name="zip"]').val(value); },
-country: function(value){ $('[name="country"]').val(value); },
-uni1: function(value){ $('[name="uni1"]').val(value); },
-fromMonth_uni1: function(value){ $('[name="fromMonth_uni1"]').val(value); },
-fromYear_uni1: function(value){ $('[name="fromYear_uni1"]').val(value); },
-toMonth_uni1: function(value){ $('[name="toMonth_uni1"]').val(value); },
-toYear_uni1: function(value){ $('[name="toYear_uni1"]').val(value); },
-uni2: function(value){ $('[name="uni2"]').val(value); },
-fromMonth_uni2: function(value){ $('[name="fromMonth_uni2"]').val(value); },
-fromYear_uni2: function(value){ $('[name="fromYear_uni2"]').val(value); },
-toMonth_uni2: function(value){ $('[name="toMonth_uni2"]').val(value); },
-toYear_uni2: function(value){ $('[name="toYear_uni2"]').val(value); },
-uni3: function(value){ $('[name="uni3"]').val(value); },
-fromMonth_uni3: function(value){ $('[name="fromMonth_uni3"]').val(value); },
-fromYear_uni3: function(value){ $('[name="fromYear_uni3"]').val(value); },
-toMonth_uni3: function(value){ $('[name="toMonth_uni3"]').val(value); },
-toYear_uni3: function(value){ $('[name="toYear_uni3"]').val(value); },
-uni4: function(value){ $('[name="uni4"]').val(value); },
-fromMonth_uni4: function(value){ $('[name="fromMonth_uni4"]').val(value); },
-fromYear_uni4: function(value){ $('[name="fromYear_uni4"]').val(value); },
-toMonth_uni4: function(value){ $('[name="toMonth_uni4"]').val(value); },
-toYear_uni4: function(value){ $('[name="toYear_uni4"]').val(value); }
-				}
-			});
-		}).catch(err => console.log(err))
-	}
-	else{
-		// ERROR
-        console.log('Else error')
-	}
-})
+    fetch(URL)
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+            console.log(data)
+            (function () {
+  populatejs({
+    'email': 'email',
+'first': 'first',
+'middle': 'middle',
+'last': 'last',
+'suffix': 'suffix',
+'street1': 'street1',
+'street2': 'street2',
+'city': 'city',
+'state': 'state',
+'zip': 'zip',
+'country': 'country',
+'uni1': 'uni1',
+'fromMonth_uni1': 'fromMonth_uni1',
+'fromYear_uni1': 'fromYear_uni1',
+'toMonth_uni1': 'toMonth_uni1',
+'toYear_uni1': 'toYear_uni1',
+'uni2': 'uni2',
+'fromMonth_uni2': 'fromMonth_uni2',
+'fromYear_uni2': 'fromYear_uni2',
+'toMonth_uni2': 'toMonth_uni2',
+'toYear_uni2': 'toYear_uni2',
+'uni3': 'uni3',
+'fromMonth_uni3': 'fromMonth_uni3',
+'fromYear_uni3': 'fromYear_uni3',
+'toMonth_uni3': 'toMonth_uni3',
+'toYear_uni3': 'toYear_uni3',
+'uni4': 'uni4',
+'fromMonth_uni4': 'fromMonth_uni4',
+'fromYear_uni4': 'fromYear_uni4',
+'toMonth_uni4': 'toMonth_uni4',
+'toYear_uni4': 'toYear_uni4'
+  });
+})();
+        })
+        .catch(function (err) {
+            console.log('error: ' + err);
+        });
 </script>
+
 </body>
 </html>
+
