@@ -812,8 +812,11 @@ function populate(frm, data) {
 var id = getUrlVars()["id"];
 //var id = "'andy@warhol.com'";
 const baseURL = "https://api.apispreadsheets.com/data/3256/?query=select*from3256whereemail="
+var pathQuery = "select*from3256whereemail="+id
+var pathQuery = decodeURI(pathQuery)
 var URL = baseURL+id
-console.log(URL)
+decodedId = decodeURI(id)
+console.log(decodeURI(pathQuery))
 
 fetch(URL).then(res=>{
 	if (res.status === 200){
@@ -835,7 +838,8 @@ fetch(URL).then(res=>{
         e.preventDefault();
           //and now anything else you want to do.
           const newData = {
-            'first' : document.getElementById('first').value,
+'email' : decodedId.replace(/['"]+/g, ''),
+'first' : document.getElementById('first').value,
 'middle' : document.getElementById('middle').value,
 'last' : document.getElementById('last').value,
 'suffix' : document.getElementById('suffix').value,
@@ -867,13 +871,14 @@ fetch(URL).then(res=>{
 'toYear_uni4' : document.getElementById('toYear_uni4').value
           };
 
-fetch("https://api.apispreadsheets.com/data/3256/", {
+fetch(URL, {
 	method: "POST",
-	body: JSON.stringify({"data": newData}),
+	body: JSON.stringify({"data": newData, "query": pathQuery}),
 }).then(res =>{
 	if (res.status === 201){
         // SUCCESS
         console.log("write success")
+        console.log(URL)
 	}
 	else{
         // ERROR
