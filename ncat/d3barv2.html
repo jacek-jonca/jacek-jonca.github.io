@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<style>
+
+.axis .domain {
+  display: none;
+}
+
+body {  
+  font-family: 'Droid Sans', sans-serif;  
+}
+  
+.axis {
+	font-size: 17px;
+}
+  
+text {
+  fill: #727075;
+  stroke: none;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: none;
+  stroke-width: 2px;
+  shape-rendering: crispEdges;
+}
+
+.grid path {
+  stroke: none;
+}
+
+.grid line {
+  stroke: #E0E0E0;
+  shape-rendering: crispEdges;
+}
+  
+.data-line {
+  fill: none;
+  stroke: #3C92BA;
+  stroke-width: 4px;
+}
+  
+.data-circle {
+	fill: #3C92BA;     
+}
+  
+.axis-title {
+	text-anchor: middle;
+  fill: #5D6971;
+  font-weight: normal;
+}
+  
+.axis-tspan {
+	font-size: 12px;
+}
+
+.clinical-cut-off-line {
+  fill: none;
+  stroke: #333333;
+  stroke-dasharray: 8,8;
+  stroke-width: 4px;
+}
+
+.clinical-cut-off-text {
+  text-transform: uppercase;
+  text-anchor: start;
+	font-size: 12px;
+  font-weight: bold;
+  fill: #333333;
+  stroke: none
+}
+  
+@-webkit-keyframes pulse {       
+  0% {opacity: 1;}
+  50% {opacity: 0.3;}
+  100% {opacity: 1;}
+}
+  
+.bars-container-middle {
+  fill: none;
+  stroke: none;
+}
+  
+.clinically-significant-pulsing-rect {
+  fill: pink;
+  /* Giving Animation Function */
+  -webkit-animation: pulse 1.5s ease infinite;
+}
+
+</style>
+<link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet">
+<svg width="960" height="530"></svg>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script>
+var svg = d3.select("svg"),
+    margin = {top: 20, right: 20, bottom: 30, left: 40},
+    width = +svg.attr("width") - margin.left - margin.right,
+    height = +svg.attr("height") - margin.top - margin.bottom,
+    g = svg.append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+var x0 = d3.scaleBand()
+    .rangeRound([0, width])
+    .paddingInner(0.2);
+
+var x1 = d3.scaleBand()
+    .padding(0.1);
+
+var y = d3.scaleLinear()
+    .rangeRound([(height / 1.75), 0]);
+
+var z = d3.scaleOrdinal()
+    .range(["#37A3D6", "#FF9400", "#ff0000"]);
+
+var clinicalCutOffValue = 0;
+
+d3.json("skillsbardata.json", function(error, data) {
+  if (error) throw error;
+
+  var categoriesNames = data.map(function(d) { return d.State; });
+  var rateNames = data[0].values.map(function(d) { return d.type; });
+  
+  x0.domain(categoriesNames);
+  x1.domain(rateNames).rangeRound([0, x0.bandwidth()]);
+//   y.domain([60, d3.max(data, function(categorie) { return d3.max(categorie.values, function(d) { return d.value; }); }) * 1.2]);
+  y.domain([40, 75]);
+  
+  var legend = g.append("g") // add g element it will be the container for our legend
+    	.attr("class", "legend");
+  
+  var legenG = legend.selectAll("g")
+      .data(data[0].values.map(function(d) { return d.type; }))
+      .enter()
+    .append("g")
+      .attr("transform", function(d, i) { return "translate(" + i * (width / (rateNames.length + 1)) + ", 0)"; });
+
+  legenG.append("rect") // legend rectangle (rect)
+      .attr("x", 0)
+      .attr("width", 20)
+      .attr("height", 20)
+      .attr("fill", z);
+
+  legenG.append("text")
+      .attr("x", 25)
+      .attr("y", 9.5)
+      .attr("dy", "0.32em")
+      .text(function(d) { return d; });
+
+//  var cliniciallySignificantLegend = legend.append("g")
+//      .attr("transform", function(d, i) { 
+//    		return "translate(" + width / (rateNames.length + 1) + ", 0)"; 
+//  		});
+//  cliniciallySignificantLegend
+//    .append("rect")
+//      .attr("x", (width / 2))
+//      .attr("width", 20)
+//      .attr("height", 20)
+//      .attr("class", "bars-container-middle clinically-significant-pulsing-rect");
+//  cliniciallySignificantLegend.append("text")
+//      .attr("x", (width / 2) + 25)
+//      .attr("y", 9.5)
+//      .attr("dy", "0.32em")
+//      .text("Clinicially Significant");
+
+  // add the Y gridlines
+  g.append("g")			
+    .attr("class", "grid")
+    .attr("transform", "translate(0," + (height / 7) + ")")
+    .call(d3.axisLeft(y)
+          .tickSize(-width)
+          .tickFormat("")
+          .ticks(6)
+         );
+
+  var barG = g.append("g")
+    .selectAll("g")
+    .data(data)
+    .enter()
+  .append("g")
+    .attr("transform", function(d) { return "translate(" + x0(d.State) + ",0)"; });
+
+  barG.selectAll(".bars-container-middle")
+      .data(function(d) { return d.values; })
+    .enter()
+  .append("rect")
+    	.attr("class", function(d) { 
+  			if (d.significant) return 'bars-container-middle clinically-significant-pulsing-rect';
+  			else return 'bars-container-middle';
+  		})
+    	.attr("transform", "translate(0," + (height / 7) + ")")
+      .attr("x", function(d) { return x1(d.type); })
+      .attr("y", function(d) { return 0; })
+      .attr("width", x1.bandwidth())
+        .transition()
+        .delay(function (d,i){ return 750;}) // this is to do left then right bars
+        .duration(500)
+        .attr('height', function( d ) { 
+    				if (d.value > 0) { return (height / 1.75); }
+    				else {return 0}
+  			})
+
+  barG.selectAll(".bars")
+      .data(function(d) { return d.values; })
+    .enter()
+  .append("rect")
+      .attr("class", "bars")
+    	.attr("transform", "translate(0," + (height / 7) + ")")
+      .attr("x", function(d) { return x1(d.type); })
+      .attr("width", x1.bandwidth())
+    	.attr("fill", function(d) { return z(d.type); })
+      .attr("y", (height / 2))
+        .transition()
+        .delay(function (d,i){ return i * 250;}) // this is to do left then right bars
+        .duration(500)
+        .attr("y", function(d) { return y(d.value); })
+        .attr('height', function( d ) { 
+    				if (d.value > 0) { return ((height / 1.75))  - y( d.value ); }
+    				else {return 0}
+  			});
+
+  g.append("g")
+      .attr("class", "x-axis axis")
+      .attr("transform", "translate(0," + (height / 1.4) + ")")
+      .call(d3.axisBottom(x0))
+      .selectAll("text")	
+    	.style("text-anchor", "middle")
+//    	.attr("dx", "-.8em")
+    	.attr("dx", "0em")
+//    	.attr("dy", ".15em")
+    	.attr("dy", "1em")
+//    	.attr("transform", "rotate(-65)")
+    	.text(function (d) {
+    		if(d.length > 14) { return d; } 
+    		else { return d; }
+  		});
+
+  g.append("g")
+      .attr("class", "y-axis axis")
+    	.attr("transform", "translate(0," + (height / 7) + ")")
+      .call(d3.axisLeft(y).ticks(7));
+  
+    // Clinicial cut off line and text group
+  	var clinicalCutOffLineAndText = g.append("g")
+        .attr("class", "clinical-cut-off-line-and-text")
+    		.attr("transform", "translate(0," + (height / 7) + ")")
+  
+    // Clinicial cut off line
+    clinicalCutOffLineAndText.append("line")
+        .attr("class", "clinical-cut-off-line")
+        .attr("x1", 0)
+        .attr("y1", y(clinicalCutOffValue))
+        .attr("x2", width)
+        .attr("y2", y(clinicalCutOffValue)); 
+  
+    // Clinicial cut off text
+    clinicalCutOffLineAndText.append("text")
+        .attr("class", "clinical-cut-off-text")
+        .attr("y", y(clinicalCutOffValue))
+        .attr("dy","20px")
+        .text("Clinical Cut-off");
+});
+
+</script>

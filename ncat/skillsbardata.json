@@ -1,0 +1,34 @@
+[
+            {
+              "State": "Leadership",
+              "values": [
+                {"value": 65, "type": "Executives", "significant" : false},
+                {"value": 66, "type": "Managers", "significant" : false},
+                {"value": 74, "type": "Talent Developers", "significant" : false}
+              ]
+            },
+            {
+              "State": "Communication",
+              "values": [
+                {"value": 64, "type": "Executives", "significant" : false},
+                {"value": 66, "type": "Managers", "significant" : false},
+                {"value": 66, "type": "Talent Developers", "significant" : false}
+              ]
+            },
+            {
+              "State": "Collaboration",
+              "values": [
+                {"value": 55, "type": "Executives", "significant" : false},
+                {"value": 50, "type": "Managers", "significant" : false},
+                {"value": 50, "type": "Talent Developers", "significant" : false}
+              ]
+            },
+            {
+              "State": "Role Specific Skills",
+              "values": [
+                {"value": 42, "type": "Executives", "significant" : false},
+                {"value": 49, "type": "Managers", "significant" : false},
+                {"value": 50, "type": "Talent Developers", "significant" : false}
+              ]
+            }
+          ]
