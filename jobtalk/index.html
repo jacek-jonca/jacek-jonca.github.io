@@ -2196,24 +2196,10 @@
                borderColor: ["rgba(20,220,220,.8)", "rgba(220,120,120,.8)", "rgba(20,120,220,.8)"]
             },
          },
-         // initialize broadcast
-         broadcast: {
-                        // Set master password to "job****"
-                        secret: '$2a$05$CMSHei0uEj/iOPz5XLkOuOng.W4h7FZipz7Bw7dL0boxrFqncz.tS',
-                        // Configure RTCMultiConnection
-                        connection: {
-                           socketURL: 'https://joncartc.herokuapp.com:443/'
-                        },
-                     },
-//         multiplex: {
-//                        url: 'https://reveal-js-multiplex-ccjbegmaii.now.sh/',
-//                        id: '741b740f8128bcac',
-//                        secret: Reveal.getQueryHash().s || null
-//                     },
          // Optional libraries used to extend on reveal.js
-         plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealSearch ],
-         dependencies: [
-                           { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+         plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealSearch, RevealChart, RevealMenu ]//,
+//         dependencies: [
+//                           { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
 //                           { src: '../revealjs/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
 //                           { src: '../revealjs/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
 //            			        { src: '../revealjs/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
@@ -2227,15 +2213,10 @@
 //                           { src: Reveal.getQueryHash().s ?
 //                                 'plugin/multiplex/master.js' :
 //                                 'plugin/multiplex/client.js', async: true },
-                           { src: '../reveal.js-plugins/broadcast/RTCMultiConnection/RTCMultiConnection.min.js'},
-                           { src: '../reveal.js-plugins/broadcast/RTCMultiConnection/adapter.js'},
-                           { src: '../reveal.js-plugins/broadcast/RTCMultiConnection/socket.io.js'},
-                           { src: '../reveal.js-plugins/broadcast/bCrypt.js'},
-                           { src: '../reveal.js-plugins/broadcast/broadcast.js'},
             //               { src: '../reveal.js-plugins/simplemenu/assets/js/revealjs/plugin/simplemenu/simplemenu.js', async: false },
-//                           { src: '../reveal.js-plugins/menu/menu.js' }
-                        ]
-      });
+            //               { src: '../reveal.js-plugins/menu/menu.js' }
+//                        ]
+      });  // this bracket closes Reveal.initialize settings
    </script>
    		<script src="lib/js/text-animation.js"></script>
 </body>
