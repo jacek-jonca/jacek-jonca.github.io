@@ -1,0 +1,973 @@
+.theme-font-helvetica .reveal {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 30px
+}
+
+.theme-font-helvetica .reveal section {
+    line-height: 1.3
+}
+
+.theme-font-helvetica .reveal h1,
+.theme-font-helvetica .reveal h2,
+.theme-font-helvetica .reveal h3,
+.theme-font-helvetica .reveal h4,
+.theme-font-helvetica .reveal h5,
+.theme-font-helvetica .reveal h6 {
+    font-family: Helvetica, Arial, sans-serif;
+    text-transform: none;
+    line-height: 1.3;
+    font-weight: 400
+}
+
+.theme-font-no-font .reveal,
+.theme-font-no-font.reveal {
+    font-family: sans-serif;
+    font-size: 30px
+}
+
+.theme-font-no-font .reveal section font,
+.theme-font-no-font.reveal section font {
+    line-height: 1
+}
+
+@font-face {
+    font-family: KaTeX_AMS;
+    src: url(//assets.slid.es/assets/katex/KaTeX_AMS-Regular-ce1ebce55c88871c7a6059c3a51fd6ede5531335dc9856ab2790694aa67224a4.woff) format("woff"), url(//assets.slid.es/assets/katex/KaTeX_AMS-Regular-89d3c5f7f55deba5741efd2189a0a8132824035ff9ad869800759412adfc8682.ttf) format("truetype");
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: KaTeX_Caligraphic;
+    src: url(//assets.slid.es/assets/katex/KaTeX_Caligraphic-Bold-08c8229182fd845d3edb17810b3bf84fc919119bafd5a527c1433597afd4cc29.woff) format("woff"), url(//assets.slid.es/assets/katex/KaTeX_Caligraphic-Bold-b86eaec3180a15a294294cff6c6689d86a4ab9baba37d868ecaddb66613ec723.ttf) format("truetype");
+    font-weight: 700;
+    font-style: normal
+}
+
+@font-face {
+    font-family: KaTeX_Caligraphic;
+    src: url(//assets.slid.es/assets/katex/KaTeX_Caligraphic-Regular-fc3b9d6af6452606e1e7978a139f5bdaa0480ee8c890ecea9267cd89ee701b6f.woff) format("woff"), url(//assets.slid.es/assets/katex/KaTeX_Caligraphic-Regular-1568ca1aa82f7b3749dfdb3fa9fae47ecdad3e48268469a15e2ce6f4bed10ab4.ttf) format("truetype");
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: KaTeX_Fraktur;
+    src: url(//assets.slid.es/assets/katex/KaTeX_Fraktur-Bold-ce8f6b8d0541e703bf270236cd2f22f94af0a3f3cd34853f7d2ab0944b4ed3a2.woff) format("woff"), url(//assets.slid.es/assets/katex/KaTeX_Fraktur-Bold-9968ac3c9756403afc0c0f168509edd39e6b7ddca3a3e78e890da3718a5dafd7.ttf) format("truetype");
+    font-weight: 700;
+    font-style: normal
+}
+
+@font-face {
+    font-family: KaTeX_Fraktur;
+    src: url(//assets.slid.es/assets/katex/KaTeX_Fraktur-Regular-9d47d38ef92b81d2dfabee95b0d69fda25cc2cbaace7270749c3f99f3f51cbba.woff) format("woff"), url(//assets.slid.es/assets/katex/KaTeX_Fraktur-Regular-8dfd4f60ba0a35f62c7503f019e96d54ba5f509cd20453d66ea0bb89b898234b.ttf) format("truetype");
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: KaTeX_Main;
+    src: url(//assets.slid.es/assets/katex/KaTeX_Main-Bold-c2db7b8ce51021c292c6e2cd03bc11a4be96507345f62dd415787701c6afa940.woff) format("woff"), url(//assets.slid.es/assets/katex/KaTeX_Main-Bold-9ce6c56369cf0928715d56b6c4357b46a73ac0957101ad2fdc23ea95fdd0c5d8.ttf) format("truetype");
+    font-weight: 700;
+    font-style: normal
+}
+
+@font-face {
+    font-family: KaTeX_Main;
+    src: url(//assets.slid.es/assets/katex/KaTeX_Main-BoldItalic-84b2dc26d6a4ace6f25e9f39e7d8fdd9b64e97feede8ff6b9666b376d7582286.woff) format("woff"), url(//assets.slid.es/assets/katex/KaTeX_Main-BoldItalic-e06c469ed45a5db87889a655571b58aeee6bbbcf58a26cf3317fa1d62e3ac8d7.ttf) format("truetype");
+    font-weight: 700;
+    font-style: italic
+}
+
+@font-face {
+    font-family: KaTeX_Main;
+    src: url(//assets.slid.es/assets/katex/KaTeX_Main-Italic-e5279ba4cd2439be39d995a70d0c6520cb2febc2423bca381e57d82035de0f12.woff) format("woff"), url(//assets.slid.es/assets/katex/KaTeX_Main-Italic-59ad22b91c4999b840d1266db8bf231aa22533543fb7ee26ecbd8d93aa770aad.ttf) format("truetype");
+    font-weight: 400;
+    font-style: italic
+}
+
+@font-face {
+    font-family: KaTeX_Main;
+    src: url(//assets.slid.es/assets/katex/KaTeX_Main-Regular-f1d8b6477855998675dacbf85c275b369b209f2221190594d17077e86842c8b0.woff) format("woff"), url(//assets.slid.es/assets/katex/KaTeX_Main-Regular-ef1f105a5ac8d98ab0ddbc015bdda3041f3f499a08e3ea5fa1389b77a1b25293.ttf) format("truetype");
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: KaTeX_Math;
+    src: url(//assets.slid.es/assets/katex/KaTeX_Math-BoldItalic-301943e01b59a2e5844d3b8500d4e508fb1cc77ea92a04cb29c9cafed52f4d1b.woff) format("woff"), url(//assets.slid.es/assets/katex/KaTeX_Math-BoldItalic-180a9e8c89d5b4cb8a2e755d5e3dc10ddb466e6608e70436213f3ceea176dbf9.ttf) format("truetype");
+    font-weight: 700;
+    font-style: italic
+}
+
+@font-face {
+    font-family: KaTeX_Math;
+    src: url(//assets.slid.es/assets/katex/KaTeX_Math-Italic-d9de33083224dacb133b8ef90c2fe59af169e292b6d04ca360112b4857d924b5.woff) format("woff"), url(//assets.slid.es/assets/katex/KaTeX_Math-Italic-af6e4c3730217aa8aab4d8c737682068d6bef3b251daee6f48664d9b3e55379c.ttf) format("truetype");
+    font-weight: 400;
+    font-style: italic
+}
+
+@font-face {
+    font-family: KaTeX_Math;
+    src: url(//assets.slid.es/assets/katex/KaTeX_Math-Regular-39a937db41978d863d1351d8ba751be5521c52490f4b18e03b89376adaf486bc.woff) format("woff"), url(//assets.slid.es/assets/katex/KaTeX_Math-Regular-5dc84f840a63e528bd6cb99e31492bcc7dee81253374e2d05912fcb8d82e54f4.ttf) format("truetype");
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: KaTeX_SansSerif;
+    src: url(//assets.slid.es/assets/katex/KaTeX_SansSerif-Regular-b87c6eade55690b5cee6e66b2f0885593b3f411d4fe900dee548a74e78fc2cb6.woff) format("woff"), url(//assets.slid.es/assets/katex/KaTeX_SansSerif-Regular-5fabdc722cd155c489a8a522014e4a4019d8798e7092d13cd6850453ffa78f7f.ttf) format("truetype");
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: KaTeX_Script;
+    src: url(//assets.slid.es/assets/katex/KaTeX_Script-Regular-41b2ef81df7103de00d47743ab7a3fe61105a8c21f1b5f55e3fec8f2cda2b94f.woff) format("woff"), url(//assets.slid.es/assets/katex/KaTeX_Script-Regular-e442ce8239b36ad629c757737c2a34a5876cc20607cbb165bfb5a91cfbe25ef3.ttf) format("truetype");
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: KaTeX_Size1;
+    src: url(//assets.slid.es/assets/katex/KaTeX_Size1-Regular-0152f420481d302f4de3954d98f83404155f1bc6ab90c209d7a926a06e4c8a4d.woff) format("woff"), url(//assets.slid.es/assets/katex/KaTeX_Size1-Regular-6ff83fa3bb76941759777a3d7cf5e19155635191b960728f585c593d6f3f193c.ttf) format("truetype");
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: KaTeX_Size2;
+    src: url(//assets.slid.es/assets/katex/KaTeX_Size2-Regular-fa1eb01f2e704954cabee6977518b533eb9304e1994ce1095aa34b05221cf57d.woff) format("woff"), url(//assets.slid.es/assets/katex/KaTeX_Size2-Regular-216cd1b1aa23fe169e41fecf6c4a61e7338bb2d95adc604a111fa7df04c9f2aa.ttf) format("truetype");
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: KaTeX_Size3;
+    src: url(//assets.slid.es/assets/katex/KaTeX_Size3-Regular-ea931a5ffb9f81710277c89ee1902e95e49c77490f937e481e254d68f7209a3a.woff) format("woff"), url(//assets.slid.es/assets/katex/KaTeX_Size3-Regular-00fd6016cebc419cac7143d9c8f6a3279cc6e33009d17c513d64227ac41d44fb.ttf) format("truetype");
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: KaTeX_Size4;
+    src: url(//assets.slid.es/assets/katex/KaTeX_Size4-Regular-581b07f16ac528a7d6e68146fb2b799bd03f77d18bda7ac928a75e250a871760.woff) format("woff"), url(//assets.slid.es/assets/katex/KaTeX_Size4-Regular-1ffe0db6dbffbd0460ca68aebc97653dd333a43cda13270518e4516a1ebe3c76.ttf) format("truetype");
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: KaTeX_Typewriter;
+    src: url(//assets.slid.es/assets/katex/KaTeX_Typewriter-Regular-b205e1762a82f0a31f70058cac23dce8c4cc56fb3f0d3178e050df459363f974.woff) format("woff"), url(//assets.slid.es/assets/katex/KaTeX_Typewriter-Regular-46799c96df52b710ce843ffa66c2a82fd3e2d6c380a02ff66eb83dc6f6851802.ttf) format("truetype");
+    font-weight: 400;
+    font-style: normal
+}
+
+.reveal a,
+.reveal address,
+.reveal article,
+.reveal b,
+.reveal caption,
+.reveal center,
+.reveal cite,
+.reveal dd,
+.reveal div,
+.reveal dl,
+.reveal em,
+.reveal embed,
+.reveal form,
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6,
+.reveal img,
+.reveal label,
+.reveal li,
+.reveal ol,
+.reveal output,
+.reveal p,
+.reveal pre,
+.reveal q,
+.reveal s,
+.reveal section,
+.reveal small,
+.reveal span,
+.reveal strong,
+.reveal sup,
+.reveal time,
+.reveal u,
+.reveal ul,
+.reveal var {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline
+}
+
+/*!
+* reveal.js 4.0.2
+* https://revealjs.com
+* MIT licensed
+*
+* Copyright (C) 2020 Hakim El Hattab, https://hakim.se
+*/
+.reveal .r-stack {
+    display: -ms-grid;
+    display: grid
+}
+
+.reveal .r-stack>* {
+    grid-area: 1/1;
+    margin: auto
+}
+
+.reveal-viewport {
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    line-height: 1;
+    margin: 0;
+    background-color: #fff;
+    color: #000
+}
+
+.reveal .slides section .fragment {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all .2s ease;
+    transition: all .2s ease;
+    will-change: opacity
+}
+
+.reveal .slides section .fragment.visible {
+    opacity: 1;
+    visibility: inherit
+}
+
+.reveal .slides section .fragment.shrink {
+    opacity: 1;
+    visibility: inherit
+}
+
+.reveal .slides section .fragment.shrink.visible {
+    -webkit-transform: scale(.7);
+    transform: scale(.7)
+}
+
+.reveal .slides section .fragment.zoom-in {
+    -webkit-transform: scale(.1);
+    transform: scale(.1)
+}
+
+.reveal .slides section .fragment.zoom-in.visible {
+    -webkit-transform: none;
+    transform: none
+}
+
+.reveal .slides section .fragment.fade-out {
+    opacity: 1;
+    visibility: inherit
+}
+
+.reveal .slides section .fragment.fade-out.visible {
+    opacity: 0;
+    visibility: hidden
+}
+
+.reveal .slides section .fragment.fade-up {
+    -webkit-transform: translate(0, 40px);
+    transform: translate(0, 40px)
+}
+
+.reveal .slides section .fragment.fade-up.visible {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0)
+}
+
+.reveal .slides section .fragment.fade-down {
+    -webkit-transform: translate(0, -40px);
+    transform: translate(0, -40px)
+}
+
+.reveal .slides section .fragment.fade-down.visible {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0)
+}
+
+.reveal .slides section .fragment.fade-right {
+    -webkit-transform: translate(-40px, 0);
+    transform: translate(-40px, 0)
+}
+
+.reveal .slides section .fragment.fade-right.visible {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0)
+}
+
+.reveal .slides section .fragment.fade-left {
+    -webkit-transform: translate(40px, 0);
+    transform: translate(40px, 0)
+}
+
+.reveal .slides section .fragment.fade-left.visible {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0)
+}
+
+.reveal .slides section .fragment.current-visible,
+.reveal .slides section .fragment.fade-in-then-out {
+    opacity: 0;
+    visibility: hidden
+}
+
+.reveal .slides section .fragment.current-visible.current-fragment,
+.reveal .slides section .fragment.fade-in-then-out.current-fragment {
+    opacity: 1;
+    visibility: inherit
+}
+
+.reveal:after {
+    content: '';
+    font-style: italic
+}
+
+.reveal a {
+    position: relative
+}
+
+@-webkit-keyframes bounce-right {
+
+    0%,
+    10%,
+    25%,
+    40%,
+    50% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0)
+    }
+
+    20% {
+        -webkit-transform: translateX(10px);
+        transform: translateX(10px)
+    }
+
+    30% {
+        -webkit-transform: translateX(-5px);
+        transform: translateX(-5px)
+    }
+}
+
+@keyframes bounce-right {
+
+    0%,
+    10%,
+    25%,
+    40%,
+    50% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0)
+    }
+
+    20% {
+        -webkit-transform: translateX(10px);
+        transform: translateX(10px)
+    }
+
+    30% {
+        -webkit-transform: translateX(-5px);
+        transform: translateX(-5px)
+    }
+}
+
+@-webkit-keyframes bounce-left {
+
+    0%,
+    10%,
+    25%,
+    40%,
+    50% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0)
+    }
+
+    20% {
+        -webkit-transform: translateX(-10px);
+        transform: translateX(-10px)
+    }
+
+    30% {
+        -webkit-transform: translateX(5px);
+        transform: translateX(5px)
+    }
+}
+
+@keyframes bounce-left {
+
+    0%,
+    10%,
+    25%,
+    40%,
+    50% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0)
+    }
+
+    20% {
+        -webkit-transform: translateX(-10px);
+        transform: translateX(-10px)
+    }
+
+    30% {
+        -webkit-transform: translateX(5px);
+        transform: translateX(5px)
+    }
+}
+
+@-webkit-keyframes bounce-down {
+
+    0%,
+    10%,
+    25%,
+    40%,
+    50% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0)
+    }
+
+    20% {
+        -webkit-transform: translateY(10px);
+        transform: translateY(10px)
+    }
+
+    30% {
+        -webkit-transform: translateY(-5px);
+        transform: translateY(-5px)
+    }
+}
+
+@keyframes bounce-down {
+
+    0%,
+    10%,
+    25%,
+    40%,
+    50% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0)
+    }
+
+    20% {
+        -webkit-transform: translateY(10px);
+        transform: translateY(10px)
+    }
+
+    30% {
+        -webkit-transform: translateY(-5px);
+        transform: translateY(-5px)
+    }
+}
+
+.reveal .progress {
+    position: absolute;
+    display: none;
+    height: 3px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, .2);
+    color: #fff
+}
+
+.reveal .progress:after {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 10px;
+    width: 100%;
+    top: -10px
+}
+
+.reveal .progress span {
+    display: block;
+    height: 100%;
+    width: 100%;
+    background-color: currentColor;
+    -webkit-transition: -webkit-transform .8s cubic-bezier(.26, .86, .44, .985);
+    transition: -webkit-transform .8s cubic-bezier(.26, .86, .44, .985);
+    transition: transform .8s cubic-bezier(.26, .86, .44, .985);
+    transition: transform .8s cubic-bezier(.26, .86, .44, .985), -webkit-transform .8s cubic-bezier(.26, .86, .44, .985);
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0)
+}
+
+.reveal .slide-number {
+    position: absolute;
+    display: block;
+    right: 8px;
+    bottom: 8px;
+    z-index: 31;
+    font-family: Helvetica, sans-serif;
+    font-size: 12px;
+    line-height: 1;
+    color: #fff;
+    background-color: rgba(0, 0, 0, .4);
+    padding: 5px
+}
+
+.reveal .slide-number a {
+    color: currentColor
+}
+
+.reveal {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    -ms-touch-action: pinch-zoom;
+    touch-action: pinch-zoom
+}
+
+.reveal .slides {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    pointer-events: none;
+    overflow: visible;
+    z-index: 1;
+    text-align: center;
+    -webkit-perspective: 600px;
+    perspective: 600px;
+    -webkit-perspective-origin: 50% 40%;
+    perspective-origin: 50% 40%
+}
+
+.reveal .slides>section {
+    -webkit-perspective: 600px;
+    perspective: 600px
+}
+
+.reveal .slides>section,
+.reveal .slides>section>section {
+    display: none;
+    position: absolute;
+    width: 100%;
+    pointer-events: auto;
+    z-index: 10;
+    -webkit-transform-style: flat;
+    transform-style: flat;
+    -webkit-transition: visibility .8s cubic-bezier(.26, .86, .44, .985), opacity .8s cubic-bezier(.26, .86, .44, .985), -webkit-transform-origin .8s cubic-bezier(.26, .86, .44, .985), -webkit-transform .8s cubic-bezier(.26, .86, .44, .985);
+    transition: visibility .8s cubic-bezier(.26, .86, .44, .985), opacity .8s cubic-bezier(.26, .86, .44, .985), -webkit-transform-origin .8s cubic-bezier(.26, .86, .44, .985), -webkit-transform .8s cubic-bezier(.26, .86, .44, .985);
+    transition: transform-origin .8s cubic-bezier(.26, .86, .44, .985), transform .8s cubic-bezier(.26, .86, .44, .985), visibility .8s cubic-bezier(.26, .86, .44, .985), opacity .8s cubic-bezier(.26, .86, .44, .985);
+    transition: transform-origin .8s cubic-bezier(.26, .86, .44, .985), transform .8s cubic-bezier(.26, .86, .44, .985), visibility .8s cubic-bezier(.26, .86, .44, .985), opacity .8s cubic-bezier(.26, .86, .44, .985), -webkit-transform-origin .8s cubic-bezier(.26, .86, .44, .985), -webkit-transform .8s cubic-bezier(.26, .86, .44, .985)
+}
+
+.reveal[data-transition-speed=fast] .slides section {
+    -webkit-transition-duration: .4s;
+    transition-duration: .4s
+}
+
+.reveal[data-transition-speed=slow] .slides section {
+    -webkit-transition-duration: 1.2s;
+    transition-duration: 1.2s
+}
+
+.reveal .slides section[data-transition-speed=fast] {
+    -webkit-transition-duration: .4s;
+    transition-duration: .4s
+}
+
+.reveal .slides section[data-transition-speed=slow] {
+    -webkit-transition-duration: 1.2s;
+    transition-duration: 1.2s
+}
+
+.reveal .slides>section.stack {
+    padding-top: 0;
+    padding-bottom: 0;
+    pointer-events: none;
+    height: 100%
+}
+
+.reveal .slides>section.present,
+.reveal .slides>section>section.present {
+    display: block;
+    z-index: 11;
+    opacity: 1
+}
+
+.reveal .slides>section:empty,
+.reveal .slides>section>section:empty,
+.reveal .slides>section>section[data-background-interactive],
+.reveal .slides>section[data-background-interactive] {
+    pointer-events: none
+}
+
+.reveal.center,
+.reveal.center .slides,
+.reveal.center .slides section {
+    min-height: 0 !important
+}
+
+.reveal .slides>section:not(.present),
+.reveal .slides>section>section:not(.present) {
+    pointer-events: none
+}
+
+.reveal .slides>section.past,
+.reveal .slides>section>section.past {
+    opacity: 0
+}
+
+.reveal.slide section {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden
+}
+
+.reveal .slides>section[data-transition=slide].past,
+.reveal .slides>section[data-transition~=slide-out].past,
+.reveal.slide .slides>section:not([data-transition]).past {
+    -webkit-transform: translate(-150%, 0);
+    transform: translate(-150%, 0)
+}
+
+.reveal .slides>section>section[data-transition=slide].past,
+.reveal .slides>section>section[data-transition~=slide-out].past,
+.reveal.slide .slides>section>section:not([data-transition]).past {
+    -webkit-transform: translate(0, -150%);
+    transform: translate(0, -150%)
+}
+
+.reveal .slides>section[data-transition=linear].past,
+.reveal .slides>section[data-transition~=linear-out].past {
+    -webkit-transform: translate(-150%, 0);
+    transform: translate(-150%, 0)
+}
+
+.reveal .slides>section>section[data-transition=linear].past,
+.reveal .slides>section>section[data-transition~=linear-out].past {
+    -webkit-transform: translate(0, -150%);
+    transform: translate(0, -150%)
+}
+
+.reveal .slides section[data-transition=default].stack,
+.reveal.default .slides section.stack {
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d
+}
+
+.reveal .slides>section[data-transition=default].past,
+.reveal .slides>section[data-transition~=default-out].past,
+.reveal.default .slides>section:not([data-transition]).past {
+    -webkit-transform: translate3d(-100%, 0, 0) rotateY(-90deg) translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0) rotateY(-90deg) translate3d(-100%, 0, 0)
+}
+
+.reveal .slides>section>section[data-transition=default].past,
+.reveal .slides>section>section[data-transition~=default-out].past,
+.reveal.default .slides>section>section:not([data-transition]).past {
+    -webkit-transform: translate3d(0, -300px, 0) rotateX(70deg) translate3d(0, -300px, 0);
+    transform: translate3d(0, -300px, 0) rotateX(70deg) translate3d(0, -300px, 0)
+}
+
+.reveal .slides section[data-transition=convex].stack {
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d
+}
+
+.reveal .slides>section[data-transition=convex].past,
+.reveal .slides>section[data-transition~=convex-out].past {
+    -webkit-transform: translate3d(-100%, 0, 0) rotateY(-90deg) translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0) rotateY(-90deg) translate3d(-100%, 0, 0)
+}
+
+.reveal .slides>section>section[data-transition=convex].past,
+.reveal .slides>section>section[data-transition~=convex-out].past {
+    -webkit-transform: translate3d(0, -300px, 0) rotateX(70deg) translate3d(0, -300px, 0);
+    transform: translate3d(0, -300px, 0) rotateX(70deg) translate3d(0, -300px, 0)
+}
+
+.reveal .slides section[data-transition=concave].stack {
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d
+}
+
+.reveal .slides>section[data-transition=concave].past,
+.reveal .slides>section[data-transition~=concave-out].past {
+    -webkit-transform: translate3d(-100%, 0, 0) rotateY(90deg) translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0) rotateY(90deg) translate3d(-100%, 0, 0)
+}
+
+.reveal .slides>section>section[data-transition=concave].past,
+.reveal .slides>section>section[data-transition~=concave-out].past {
+    -webkit-transform: translate3d(0, -80%, 0) rotateX(-70deg) translate3d(0, -80%, 0);
+    transform: translate3d(0, -80%, 0) rotateX(-70deg) translate3d(0, -80%, 0)
+}
+
+.reveal .slides section[data-transition=zoom],
+.reveal.zoom .slides section:not([data-transition]) {
+    -webkit-transition-timing-function: ease;
+    transition-timing-function: ease
+}
+
+.reveal .slides>section[data-transition=zoom].past,
+.reveal .slides>section[data-transition~=zoom-out].past,
+.reveal.zoom .slides>section:not([data-transition]).past {
+    visibility: hidden;
+    -webkit-transform: scale(16);
+    transform: scale(16)
+}
+
+.reveal .slides>section>section[data-transition=zoom].past,
+.reveal .slides>section>section[data-transition~=zoom-out].past,
+.reveal.zoom .slides>section>section:not([data-transition]).past {
+    -webkit-transform: scale(16);
+    transform: scale(16)
+}
+
+.reveal .slides section[data-transition=fade],
+.reveal.fade .slides section:not([data-transition]),
+.reveal.fade .slides>section>section:not([data-transition]) {
+    -webkit-transform: none;
+    transform: none;
+    -webkit-transition: opacity .5s;
+    transition: opacity .5s
+}
+
+.reveal .slides section[data-transition=none],
+.reveal.none .slides section:not([data-transition]) {
+    -webkit-transform: none;
+    transform: none;
+    -webkit-transition: none;
+    transition: none
+}
+
+.reveal .no-transition,
+.reveal .no-transition * {
+    -webkit-transition: none !important;
+    transition: none !important
+}
+
+.reveal .slide-background {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+    background-color: transparent;
+    -webkit-transition: all .8s cubic-bezier(.26, .86, .44, .985);
+    transition: all .8s cubic-bezier(.26, .86, .44, .985)
+}
+
+.reveal .slide-background-content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover
+}
+
+.reveal .slide-background.stack {
+    display: block
+}
+
+.reveal .slide-background.present {
+    opacity: 1;
+    visibility: visible;
+    z-index: 2
+}
+
+.reveal [data-auto-animate-target^=unmatched] {
+    will-change: opacity
+}
+
+.reveal section[data-auto-animate]:not(.stack):not([data-auto-animate=running]) [data-auto-animate-target^=unmatched] {
+    opacity: 0
+}
+
+.reveal>.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    background: rgba(0, 0, 0, .9);
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease
+}
+
+.reveal>.overlay .viewport {
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    top: 50px;
+    right: 0;
+    bottom: 0;
+    left: 0
+}
+
+.reveal>.overlay.overlay-help .viewport {
+    overflow: auto;
+    color: #fff
+}
+
+.reveal>.overlay.overlay-help .viewport .viewport-inner {
+    width: 600px;
+    margin: auto;
+    padding: 20px 20px 80px 20px;
+    text-align: center;
+    letter-spacing: normal
+}
+
+.reveal>.overlay.overlay-help .viewport .viewport-inner .title {
+    font-size: 20px
+}
+
+.reveal pre[data-auto-animate-target] {
+    overflow: hidden
+}
+
+.reveal .slides>section,
+.reveal .slides>section>section {
+    height: 100%;
+    font-weight: inherit;
+    padding: 0
+}
+
+.reveal h1 {
+    font-size: 2.5em;
+    margin-bottom: .15em
+}
+
+.reveal h2 {
+    font-size: 1.9em;
+    margin-bottom: .2em
+}
+
+.reveal h3 {
+    font-size: 1.3em;
+    margin-bottom: .25em
+}
+
+.reveal h4 {
+    font-size: 1em;
+    margin-bottom: .25em
+}
+
+.reveal h5 {
+    font-size: 1em;
+    margin-bottom: .25em
+}
+
+.reveal h6 {
+    font-size: 1em;
+    margin-bottom: .25em
+}
+
+.reveal p {
+    margin-bottom: .25em
+}
+
+.reveal a {
+    text-decoration: none
+}
+
+.reveal b,
+.reveal strong {
+    font-weight: 700
+}
+
+.reveal em {
+    font-style: italic
+}
+
+.reveal sup {
+    vertical-align: super;
+    font-size: smaller
+}
+
+.reveal small {
+    font-size: .6em
+}
+
+.reveal dl,
+.reveal ol,
+.reveal ul {
+    display: inline-block;
+    margin: .25em 0 .25em 1.5em;
+    text-align: left;
+    max-width: 100%
+}
+
+.reveal ol:not([type]) {
+    list-style-type: decimal
+}
+
+.reveal ul {
+    list-style-type: disc
+}
+
+.reveal ul ul {
+    list-style-type: square
+}
+
+.reveal ul ul ul {
+    list-style-type: circle
+}
+
+.reveal ol ol,
+.reveal ol ul,
+.reveal ul ol,
+.reveal ul ul {
+    display: block;
+    margin-left: 1.5em
+}
+
+.reveal dd {
+    margin-left: 1.5em
+}
+
+.reveal q {
+    quotes: none;
+    font-style: italic
+}
+
+.reveal pre {
+    display: block;
+    position: relative;
+    margin: .25em auto;
+    text-align: left;
+    font-family: monospace;
+    line-height: 1.2;
+    word-wrap: break-word
+}
+
+.theme-color-no-color {
+    background-color: #fff
+}
+
+.theme-color-no-color .theme-body-color-block,
+.theme-color-no-color .theme-link-color-block {
+    background: #000
+}
+
+.theme-color-no-color .reveal,
+.theme-color-no-color.reveal {
+    color: #000
+}

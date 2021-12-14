@@ -1,0 +1,55 @@
+@font-face {
+    font-family: slides;
+    src: url(//assets.slid.es/assets/slides/slides-043f27b4896fb08d1c18a39e8bcc015deed72f630b55e87249a17dfb2cf3a949.woff?1) format("woff"), url(//assets.slid.es/assets/slides/slides-a63f5acb698f9720b0e3318ad431188693a237bd831dcf633e7462a3d8c592d8.ttf?1) format("truetype"), url(//assets.slid.es/assets/slides/slides-01786c16e393aac51496c498b07e275dd4770d197e5a24b5809fa64c066b9674.svg#slides) format("svg");
+    font-weight: 400;
+    font-style: normal
+}
+
+[class*=" i-"],
+[class^=i-] {
+    font-family: slides !important;
+    speak: none;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+.i-code:before {
+    content: "\e90b"
+}
+
+.i-add:before {
+    content: "\e904"
+}
+
+.i-x:before {
+    content: "\e00b"
+}
+
+.i-link:before {
+    content: "\e025"
+}
+
+.i-new-window:before {
+    content: "\e034"
+}
+
+.i-user:before {
+    content: "\e08b"
+}
+
+.i-tag-fill:before {
+    content: "\e0a1"
+}
+
+.i-mobile:before {
+    content: "\e015"
+}
+
+.i-type:before {
+    content: "\e014"
+}

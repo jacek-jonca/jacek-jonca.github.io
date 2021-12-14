@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Bubbles examples</title>
+    <style>
+        @font-face {
+            font-family: 'SequentialistBB';
+            src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/306FA6_1_0.woff2') format('woff2'),
+                url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/306FA6_0_0.woff') format('woff');
+            font-style: normal;
+            font-weight: 400;
+        }
+
+        @font-face {
+            font-family: 'SequentialistBB';
+            src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/306FA6_0_0.woff2') format('woff2'),
+                url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/306FA6_0_0.woff') format('woff');
+            font-style: italic;
+            font-weight: 400;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: SequentialistBB, cursive;
+            font-size: 2.5vw;
+            margin: 0;
+        }
+
+        div.bubble {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+        }
+
+        div.bubble {
+            padding: 3rem;
+        }
+
+        blockquote.bubble {
+            background-position: center;
+            background-repeat: no-repeat !important;
+            background-size: 100% 100%;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 2.2vw;
+            height: 0;
+            box-sizing: content-box;
+            line-height: 1;
+        }
+
+        blockquote.speech {
+            background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/speech-bubble.svg);
+            width: 35%;
+            padding-top: 6%;
+            padding-bottom: 24%;
+            padding-right: 5%;
+            padding-left: 5%;
+        }
+
+        blockquote.whisper {
+            background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/whisper.svg);
+            width: 35%;
+            font-size: 2vw;
+            color: #ccc;
+            font-style: italic;
+            padding: 6% 5% 15%;
+        }
+
+        blockquote.electric {
+            background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/electric.svg);
+            width: 35%;
+            font-size: 2.4vw;
+            font-style: italic;
+            width: 35%;
+            padding-top: 10%;
+            padding-bottom: 28%;
+            padding-right: 20%;
+            padding-left: 8%;
+            box-sizing: content-box;
+        }
+
+        blockquote.electric span {
+            display: block;
+            font-size: 3vw;
+            font-weight: bold;
+        }
+    </style>
+
+</head>
+
+<body>
+
+<!-- http://thenewcode.com/443/Making-Comic-Book-Speech-Bubbles-with-SVG -->
+<!-- https://codepen.io/dudleystorey/pen/wMLBLK -->
+
+<!-- also see: http://thenewcode.com/633/Boom-Wham-Pow-Comic-Book-FX-Lettering-with-SVG-Filters -->
+
+    <div class="bubble">
+        <blockquote class="speech bubble">I am just testing how those <em>speech bubbles</em> scale up! <br/>Of course only if they scale up at all ... Awwwwwwww ...</blockquote>
+    </div>
+    <div class="bubble">
+        <blockquote class="whisper bubble">That’s the sound of my brain</blockquote>
+    </div>
+    <div class="bubble">
+        <blockquote class="electric bubble">I am just testing how those <span>speech bubbles</span> scale up! <br/>Of course only if they scale up at all ... Awwwwwwww ...</blockquote>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,860 @@
+<!doctype html>
+<html>
+
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+   <title>Student Development</title>
+   <meta name="description" content="Student Development Job Talk">
+   <meta name="author" content="Jacek Jonca-Jasinski">
+   <meta name="apple-mobile-web-app-capable" content="yes">
+   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+   <!-- Loading standard RevealJS files from ../revealjs folder -->
+   <link rel="stylesheet" href="../revealjs/dist/reset.css">
+   <link rel="stylesheet" href="../revealjs/dist/reveal.css">
+
+   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet"
+      type="text/css" data-application-font="inter">
+
+   <!-- story specififc css start -->
+   <link rel="stylesheet" media="all"
+      href="assets/css/slides.css" />
+   <link rel="stylesheet" media="all"
+      href="assets/css/application.css" />
+   <link rel="stylesheet" media="all"
+      href="assets/css/deck.css" />
+
+   <style id="theme-css-output" type="text/css">
+    /* 
+      @import url('assets/css/custom.css');
+    */ 
+        /* 
+      .reveal {}
+          */ 
+   </style>
+
+    <link rel="stylesheet" href="assets/css/custom.css" id="theme">
+
+   <style id="user-css-output" type="text/css">
+      .reveal .contained--iphone--portrait.phone-notch--airbnb-dark-01::before {
+         background: #010001 !important;
+      }
+
+      .reveal .contained--iphone--portrait.phone-notch--airbnb-dark-200::before {
+         background: #686669 !important;
+      }
+   </style>
+   <!-- story specififc css end -->
+
+   <!-- Bubble css -->
+   <style>
+      @font-face {
+          font-family: 'SequentialistBB';
+          src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/306FA6_1_0.woff2') format('woff2'),
+              url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/306FA6_0_0.woff') format('woff');
+          font-style: normal;
+          font-weight: 400;
+      }
+
+      @font-face {
+          font-family: 'SequentialistBB';
+          src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/306FA6_0_0.woff2') format('woff2'),
+              url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/306FA6_0_0.woff') format('woff');
+          font-style: italic;
+          font-weight: 400;
+      }
+
+      * {
+          box-sizing: border-box;
+      }
+
+      div.bubble {
+          font-family: SequentialistBB, cursive;
+          font-size: 2.5vw;
+          margin: 0;
+      }
+
+      div.bubble {
+          min-height: 100vh;
+          display: flex;
+          justify-content: center;
+          align-content: center;
+      }
+
+      div.bubble {
+          padding: 3rem;
+      }
+
+      blockquote.bubble {
+          background-position: center;
+          background-repeat: no-repeat !important;
+          background-size: 100% 100%;
+          margin: 0 auto;
+          text-align: center;
+          font-size: 2vw;
+          height: 0;
+          box-sizing: content-box;
+          line-height: 1;
+      }
+
+      blockquote.speech {
+          background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/speech-bubble.svg);
+          width: 35%;
+          padding-top: 6%;
+          padding-bottom: 24%;
+          padding-right: 5%;
+          padding-left: 5%;
+      }
+
+      blockquote.whisper {
+          background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/whisper.svg);
+          width: 35%;
+          font-size: 2vw;
+          color: #ccc;
+          font-style: italic;
+          padding: 6% 5% 15%;
+      }
+
+      blockquote.electric {
+          background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/electric.svg);
+          width: 35%;
+          font-size: 2.4vw;
+          font-style: italic;
+          padding: 4% 6% 12% 0%;
+      }
+
+      blockquote.electric span {
+          display: block;
+          font-size: 3vw;
+          font-weight: bold;
+      }
+  </style>
+
+</head>
+
+<body>
+   <div class="reveal">
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+         <section data-background-color="#b94044" data-background-opacity="0" >
+      <!--        data-background-position="50% 0%"  -->
+      
+      <!--
+            <div class="sl-block" data-block-type="snippet" style="width: 46px; height: 97px; left: 1209px; top: 514px;" >
+               <div class="sl-block-style" style="z-index: 12; transform: rotate(13deg);">
+                  <div class="sl-block-content" data-has-custom-html=""
+                       style="z-index: 12; transition-duration: 3s; transition-delay: 2s;" data-animation-type="fade-in">
+                     <div class="hud__cursor--wrapper"><img class="hud__cursor--mobile" data-lazy-loaded=""
+                          data-src="https://s3.amazonaws.com/files.growth.design/media/slides-assets/cursor--mobile--dan--active.png">
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+            <div class="sl-block" data-block-type="image"
+               style="width: 216px; height: 143px; left: 1054px; top: 441px; min-width: 1px; min-height: 1px;" >
+               <div class="sl-block-content" style="z-index: 10; transition-duration: 3s; transition-delay: 2s;"
+                  data-animation-type="fade-in"><img style="" data-natural-width="234" data-natural-height="155"
+                     data-lazy-loaded=""
+                     data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/996460/images/6234892/pasted-from-clipboard.png">
+               </div>
+            </div>
+      -->
+
+            <div class="sl-block" data-block-type="text" style="height: auto; width: 661px; left: 350px; top: 100px;" >
+               <div class="sl-block-content cover__display text-light" data-placeholder-tag="p"
+                  data-placeholder-text="Text" style="z-index: 11; transition-duration: 1s; transition-delay: 0.6s;"
+                  data-has-custom-html="" >
+                  <!-- data-animation-type="slide-right" -->
+                  <h1 style="font-size: 120%">Airbnb Case Study:<br>
+                     How To Reduce Churn With Personalization</h1>
+                     <h1 class="fragment fade-left">Slide up while fading in</h1>
+               </div>
+            </div>
+
+         <!--
+            <div class="sl-block" data-block-type="snippet" style="width: 301px; height: 138px; left: 979px; top: 574px;" >
+               <div class="sl-block-content" data-has-custom-html=""
+                  style="z-index: 13; transition-duration: 3s; transition-delay: 2s;" data-animation-type="fade-in">
+                  <div class="conversation__caption__wrapper">
+                     <div class="conversation__caption">
+                        <p class="conversation__caption__text">Use your <strong>keyboard arrows</strong><br>to view the
+                           story!</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="sl-block" data-block-type="image"
+               style="width: 436px; height: 219px; left: 218px; top: 475px; min-width: 1px; min-height: 1px;" >
+               <div class="sl-block-style" style="z-index: 17; transform: rotate(360deg);">
+                  <div class="sl-block-content" style="z-index: 17; transition-duration: 1s; transition-delay: 0.9s;"
+                     data-animation-type="slide-right"><img data-natural-width="398" data-natural-height="200" style=""
+                        data-lazy-loaded=""
+                        data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/996460/images/6787822/bitmoji-dan-sleep.png">
+                  </div>
+               </div>
+            </div>
+
+            <div class="sl-block" data-block-type="text" style="height: auto; width: 743px; left: 448px; top: 271px;" >
+               <div class="sl-block-style" style="z-index: 14; opacity: 0.49;">
+                  <div class="sl-block-content text-light" data-placeholder-tag="p" data-placeholder-text="Text"
+                     style="z-index: 14; transition-duration: 1s; transition-delay: 0.7s;"
+                     data-animation-type="slide-right">
+                     <p>Growth.Design<span> </span>Case Study #015<br>
+                        Story Duration: 8 min</p>
+                  </div>
+               </div>
+            </div>
+
+            <div class="sl-block" data-block-type="line" style="width: auto; height: auto; left: 416px; top: 39px;">
+               <div class="sl-block-style" style="z-index: 15; opacity: 0.23;">
+                  <div class="sl-block-content" data-line-x1="-140" data-line-y1="173" data-line-x2="-140"
+                     data-line-y2="-137" data-line-color="#ffffff" data-line-start-type="none" data-line-end-type="none"
+                     style="z-index: 15; transition-duration: 1s; transition-delay: 0.5s;" data-line-width="5px"
+                     data-animation-type="slide-right"><svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                        preserveaspectratio="xMidYMid" width="1" height="310" viewbox="-140 -137 1 310">
+                        <line stroke="rgba(0,0,0,0)" stroke-width="15" x1="-139.5" y1="173.5" x2="-139.5" y2="-136.5">
+                        </line>
+                        <line class="line-element" stroke="#ffffff" stroke-width="5" x1="-139.5" y1="173.5" x2="-139.5"
+                           y2="-136.5"></line>
+                     </svg></div>
+               </div>
+            </div>
+
+            <div class="sl-block" data-block-type="image"
+               style="width: 332px; height: 720px; left: 18px; top: 0px; min-width: 1px; min-height: 1px;">
+               <div class="sl-block-content contained--iphone--portrait" style="z-index: 16; transition-duration: 1s;"
+                  data-animation-type="fade-in"><img data-natural-width="580" data-natural-height="1256" style=""
+                     data-lazy-loaded=""
+                     data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/996460/images/6787827/cover-phone-white.png">
+               </div>
+            </div>
+
+            <div class="sl-block" data-block-type="snippet"
+               style="min-width: 30px; min-height: 30px; width: 1280px; height: 720px; left: 0px; top: 0px;">
+               <div class="sl-block-content" data-has-custom-html="" style="z-index: 18;">
+                  <div class="nudge-phone-rotate-container">
+                     <h1 class="nudge-phone-rotate-label text-light">Pro tip: Use landscape mode!</h1>
+                     <img class="nudge-phone-rotate-img" data-lazy-loaded=""
+                        data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/996460/images/6372992/rotate-phone-left.gif">
+                  </div>
+               </div>
+            </div>
+         -->
+         
+         </section>
+         <section data-background-color="#5a3745" data-background-opacity="0.12"
+                    data-background-image="https://source.unsplash.com/1920x1080?data">
+            <div class="sl-block" data-block-type="snippet"
+               style="min-width: 30px; min-height: 30px; width: 379px; height: 192px; left: 27px; top: 0px;" >
+               <div class="sl-block-content caption--top-left" data-has-custom-html="" style="z-index: 10;">
+                  <div class="conversation__caption__wrapper">
+                     <div class="conversation__caption">
+                        <p class="conversation__caption__text">I've been living on the <strong>island</strong> for a
+                           bit now.</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="sl-block" data-block-type="image"
+               style="min-width: 1px; min-height: 1px; width: 425px; height: 425px; left: 7px; top: 300px;" >
+               <div class="sl-block-content" style="z-index: 14;"><img style="" data-natural-width="398"
+                     data-natural-height="398" data-lazy-loaded=""
+                     data-src="images/coffee.png">
+               </div>
+            </div>
+            <div class="sl-block" data-block-type="snippet"
+               style="min-width: 30px; min-height: 30px; width: 379px; height: 138px; left: 27px; top: 96px;" >
+               <div class="sl-block-content caption--top-left" data-has-custom-html="" style="z-index: 15;">
+                  <div class="conversation__caption__wrapper">
+                     <div class="conversation__caption">
+                        <p class="conversation__caption__text"><span
+                              style='color: rgb(33, 37, 41); font-family: GrowthComicBasic, -apple-system, system-ui, Roboto, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";  font-style: italic; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 300; letter-spacing: -0.42px; background-color: rgb(247, 241, 171);'>
+                              My <strong>girlfriend</strong> and I were sitting in a coffee shop enjoying a cup of Joe and watching the rain, when
+                              <strong>suddenly</strong>…</span></p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            
+            <!-- Navigation hint start -->
+            <!--
+            <div class="sl-block" data-block-type="image"
+               style="min-width: 1px; min-height: 1px; width: 205px; height: 136px; left: 564px; top: 283px;" >
+               <div class="sl-block-content" style="z-index: 16; transition-duration: 1s; transition-delay: 7s;"
+                  data-animation-type="slide-up"><img style="" data-natural-width="234" data-natural-height="155"
+                     data-lazy-loaded=""
+                     data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/996460/images/6234892/pasted-from-clipboard.png">
+               </div>
+            </div>
+            -->
+            <!-- Navigation hint end -->
+
+            <!-- Rotate Nudge start -->
+            <!--
+            <div class="sl-block" data-block-type="snippet"
+               style="min-width: 30px; min-height: 30px; width: 46px; height: 97px; left: 704px; top: 351px;" >
+               <div class="sl-block-style" style="z-index: 17; transform: rotate(13deg);">
+                  <div class="sl-block-content" data-has-custom-html=""
+                     style="z-index: 17; transition-duration: 1s; transition-delay: 7s;" data-animation-type="slide-up">
+                     <div class="hud__cursor--wrapper"><img class="hud__cursor--mobile" data-lazy-loaded=""
+                           data-src="https://s3.amazonaws.com/files.growth.design/media/slides-assets/cursor--mobile--dan--active.png">
+                     </div>
+                  </div>
+               </div>
+            </div>
+            -->
+            <!-- Rotate Nudge end -->
+
+            <!--
+            <div class="sl-block" data-block-type="text"
+               style="height: auto; min-width: 30px; min-height: 30px; width: 291px; left: 504px; top: 432px;" >
+               <div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text"
+                  style="z-index: 18; text-align: center; transition-delay: 7s; transition-duration: 1s;"
+                  data-has-custom-html="" data-animation-type="fade-in">
+                  <p><span class="cover__byline">Remember to use your keyboard arrows to navigate</span></p>
+               </div>
+            </div>
+            -->
+         </section>
+         <section data-background-color="#5a3745"
+                  data-background-image="https://source.unsplash.com/TamMbr4okv4/1920x1080" 
+                  data-background-opacity="0.23" >
+            <div class="sl-block" data-block-type="snippet" style="width: 30px; height: 30px; left: 0px; top: 690px;"
+               data-locked="true" >
+               <div class="sl-block-content" data-has-custom-html="" style="z-index: 12;">
+                  <div class="hud__avatar__wrapper">
+                     <div class="hud__avatar__container--outer">
+                        <div class="hud__avatar__container--inner"></div>
+                        <div id="hud-avatar-container" class="hud__avatar__container--mask anim__avatar--expand">
+                           <img id="hud-avatar-image" class="hud__avatar__container--img"
+                              alt="Avatar displaying current emotion" data-lazy-loaded=""
+                              data-src="images/headshot_front-small.png">
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="sl-block" data-block-type="snippet"
+               style="min-width: 30px; min-height: 30px; width: 536px; height: 188px; left: 24px; top: 0px;" >
+               <div class="sl-block-content caption--top-left fragment fade-out" data-has-custom-html=""
+                  style="z-index: 13;" data-fragment-index="0">
+                  <div class="conversation__caption__wrapper">
+                     <div class="conversation__caption">
+                        <p class="conversation__caption__text">…a last-minute event meant we had to <strong>book an
+                              Airbnb</strong> in Porto.</p>
+                        <p class="conversation__caption__text">Despite the <strong>rush</strong>, I have to admit that—
+                        </p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="sl-block" data-block-type="image"
+               style="min-width: 1px; min-height: 1px; width: 398px; height: 398px; left: 43px; top: 288px;" >
+               <div class="sl-block-content jumbo-avatar narrator-face anim__avatar-jumbo--expand jumbo-deja-la"
+                  style="z-index: 14;" data-fragment-index="0"><img style="" data-natural-width="398"
+                     data-natural-height="398" data-lazy-loaded=""
+                     data-src="images/coffee-suprise.png">
+               </div>
+            </div>
+            <div class="sl-block" data-block-type="snippet"
+               style="min-width: 30px; min-height: 30px; width: 328px; height: 139px; left: 27px; top: 127px;" >
+               <div class="sl-block-content caption--top-left fragment jumbo-avatar-reset" data-has-custom-html=""
+                  style="z-index: 15;" data-fragment-index="0">
+                  <div class="conversation__caption__wrapper">
+                     <div class="conversation__caption">
+                        <p class="conversation__caption__text">—I was psyched to <span
+                              style='color: rgb(33, 37, 41); font-family: GrowthComicBasic, -apple-system, system-ui, Roboto, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";  font-style: italic; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 300; letter-spacing: -0.42px; background-color: rgb(247, 241, 171);'>
+                              <strong>analyze Airbnb's experience</strong>!</span></p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="sl-block" data-block-type="image"
+               style="width: 333px; height: 720px; left: 474px; top: 0px; min-width: 1px; min-height: 1px;" >
+               <div class="sl-block-content contained--iphone--portrait phone-notch--overlay--white fragment"
+                  style="z-index: 10;" data-fragment-index="0"><img style="" data-natural-width="580"
+                     data-natural-height="1255" data-lazy-loaded=""
+                     data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/996460/images/6797252/IMG_6960.PNG">
+               </div>
+            </div>
+         </section>
+
+         <section data-background-color="#5a3745"
+            data-background-image="https://source.unsplash.com/TamMbr4okv4/1920x1080"
+            data-background-opacity="0.3" >
+            <div class="sl-block" data-block-type="snippet" style="width: 30px; height: 30px; left: 0px; top: 690px;"
+               data-locked="true" >
+               <div class="sl-block-content" data-has-custom-html="" style="z-index: 12;">
+                  <div class="hud__avatar__wrapper">
+                     <div class="hud__avatar__container--outer">
+                        <div class="hud__avatar__container--inner"></div>
+                        <div id="hud-avatar-container" class="hud__avatar__container--mask">
+                           <img id="hud-avatar-image" class="hud__avatar__container--img"
+                              alt="Avatar displaying current emotion" data-lazy-loaded=""
+                              data-src="images/headshot_neutral_right-small.png">
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="sl-block" data-block-type="snippet"
+               style="min-width: 30px; min-height: 30px; width: 46px; height: 97px; left: 433px; top: 363px;" >
+               <div class="sl-block-style" style="z-index: 14; transform: rotate(120deg);">
+                  <div class="sl-block-content flip fragment" data-has-custom-html="" style="z-index: 14;"
+                     data-fragment-index="0">
+                     <div class="hud__cursor--wrapper"><img class="hud__cursor--mobile" data-lazy-loaded=""
+                           data-src="images/headshot_thinking-small.png">
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="sl-block" data-block-type="snippet" style="min-width: 230px; min-height: 230px; left: -240px; top: 275px;" >
+               <div class="sl-block-content fragment fade-out" data-has-custom-html="" style="z-index: 15;"
+                  data-fragment-index="0">
+                  <div class="bubble">
+                     <blockquote class="speech bubble">I am just testing how those <em>speech bubbles</em> scale up! <br/>Of course only if they scale up at all ... Awwwwwwww ...</blockquote>
+                 </div>
+               </div>
+            </div>
+         </section>
+
+
+
+
+         <section data-background-color="#5a3745"
+            data-background-image="https://s3.amazonaws.com/media-p.slid.es/uploads/996460/images/6787742/coffee-shop-background-3-edit.png"
+            data-background-opacity="0.3" >
+            <div class="sl-block" data-block-type="image"
+               style="width: 333px; height: 720px; left: 474px; top: 0px; min-width: 1px; min-height: 1px;"
+                data-locked="true">
+               <div class="sl-block-content contained--iphone--portrait phone-notch--overlay--white"
+                  style="z-index: 11;"><img style="" data-natural-width="580" data-natural-height="1255"
+                     data-lazy-loaded=""
+                     data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/996460/images/6797267/intro-with-interrogation.png">
+               </div>
+            </div>
+            <div class="sl-block" data-block-type="snippet" style="width: 30px; height: 30px; left: 0px; top: 690px;"
+               data-locked="true" >
+               <div class="sl-block-content" data-has-custom-html="" style="z-index: 12;">
+                  <div class="hud__avatar__wrapper">
+                     <div class="hud__avatar__container--outer">
+                        <div class="hud__avatar__container--inner"></div>
+                        <div id="hud-avatar-container" class="hud__avatar__container--mask">
+                           <img id="hud-avatar-image" class="hud__avatar__container--img"
+                              alt="Avatar displaying current emotion" data-lazy-loaded=""
+                              data-src="images/headshot_neutral_right-small.png">
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="sl-block" data-block-type="snippet" 
+               style="min-width: 30px; min-height: 30px; width: 46px; height: 97px; left: 476px; top: 197px;">
+               <div class="sl-block-style" style="z-index: 13; transform: rotate(62deg);">
+                  <div class="sl-block-content flip fragment fade-out" data-has-custom-html="" style="z-index: 13;"
+                     data-fragment-index="0">
+                     <div class="hud__cursor--wrapper"><img class="hud__cursor--mobile" data-lazy-loaded=""
+                           data-src="images/headshot_thinking-small.png">
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="sl-block" data-block-type="snippet"
+               style="min-width: 30px; min-height: 30px; width: 46px; height: 97px; left: 433px; top: 363px;" >
+               <div class="sl-block-style" style="z-index: 14; transform: rotate(120deg);">
+                  <div class="sl-block-content flip fragment" data-has-custom-html="" style="z-index: 14;"
+                     data-fragment-index="0">
+                     <div class="hud__cursor--wrapper"><img class="hud__cursor--mobile" data-lazy-loaded=""
+                           data-src="images/headshot_thinking-small.png">
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="sl-block" data-block-type="snippet" style="width: 327px; height: 261px; left: 54px; top: 275px;" >
+               <div class="sl-block-content fragment fade-out" data-has-custom-html="" style="z-index: 15;"
+                  data-fragment-index="0">
+                  <div class="speech-balloon-container speech-balloon--default" data-hud-avatar="dan--surprise--050">
+                     <div class="speech-balloon__text-wrapper">
+                        <svg class="speech-balloon__bubble" height="188" preserveaspectratio="none"
+                           viewbox="0 0 292 188" width="292" xmlns="http://www.w3.org/2000/svg">
+                           <path
+                              d="M19.68 170.25C1.1 157.65-4.87 43.4 16.98 20.32c21.85-23.06 231.95-23.13 257.6 0 23.82 21.49 14.02 129.8 0 149.93-18.51 25.68-236.33 12.6-254.9 0z"
+                              vector-effect="non-scaling-stroke"></path>
+                        </svg>
+                        <div class="speech-balloon__text comic-font--default">
+                           <p>Oh, calling me by my <strong>first name</strong><span
+                                 style='color: rgb(33, 37, 41); font-family: GrowthComicBasic, -apple-system, system-ui, Roboto, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";  font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 300; letter-spacing: -0.42px; text-align: center;'>!</span>
+                           </p>
+                           <p>That's a good way to make Airbnb feel <strong>friendlier</strong> than other hotel booking
+                              apps.</p>
+                           <p>Also, notice these…</p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="sl-block" data-block-type="snippet" style="width: 373px; height: 232px; left: 54px; top: 375px;" >
+               <div class="sl-block-content fragment" data-has-custom-html="" style="z-index: 16;"
+                  data-fragment-index="0">
+                  <div class="speech-balloon-container speech-balloon--default" data-hud-avatar="dan--good--150">
+                     <div class="speech-balloon__text-wrapper">
+                        <svg class="speech-balloon__bubble" height="188" preserveaspectratio="none"
+                           viewbox="0 0 292 188" width="292" xmlns="http://www.w3.org/2000/svg">
+                           <path
+                              d="M19.68 170.25C1.1 157.65-4.87 43.4 16.98 20.32c21.85-23.06 231.95-23.13 257.6 0 23.82 21.49 14.02 129.8 0 149.93-18.51 25.68-236.33 12.6-254.9 0z"
+                              vector-effect="non-scaling-stroke"></path>
+                        </svg>
+                        <div class="speech-balloon__text comic-font--default">
+                           <p>…shortcuts to <strong>jump back</strong> to my <strong>previous searches</strong>.</p>
+                           <p>With that said, none of these apply to my recent <strong>change of plans</strong>.</p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="sl-block" data-block-type="image"
+               style="width: 32px; height: 40px; left: 110px; top: 512px; min-width: 1px; min-height: 1px;" >
+               <div class="sl-block-content fragment fade-out" style="z-index: 17;" data-inline-svg="true"
+                  data-fragment-index="0">
+                  <img class="balloon__tail-img" style="" data-natural-width="30" data-natural-height="37"
+                     data-lazy-loaded=""
+                     data-src="https://s3.amazonaws.com/files.growth.design/media/slides-assets/tail__regular--small.svg">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="speech-balloon__bubble" width="30" height="37"
+                     viewbox="0 0 30 37" preserveaspectratio="xMidYMid meet">
+                     <path vector-effect="non-scaling-stroke"
+                        d="M28,2 C22.9510895,17.0734069 14.2844228,28.0734069 2,35 C5.78083511,26.2051062 8.08490979,13.7037852 8.08490979,2"
+                        stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
+               </div>
+            </div>
+            <div class="sl-block" data-block-type="image"
+               style="width: 32px; height: 40px; left: 110px; top: 587px; min-width: 1px; min-height: 1px;" >
+               <div class="sl-block-content fragment current-visible" style="z-index: 18;" data-inline-svg="true"
+                  data-fragment-index="0">
+                  <img class="balloon__tail-img" style="" data-natural-width="30" data-natural-height="37"
+                     data-lazy-loaded=""
+                     data-src="https://s3.amazonaws.com/files.growth.design/media/slides-assets/tail__regular--small.svg">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="speech-balloon__bubble" width="30" height="37"
+                     viewbox="0 0 30 37" preserveaspectratio="xMidYMid meet">
+                     <path vector-effect="non-scaling-stroke"
+                        d="M28,2 C22.9510895,17.0734069 14.2844228,28.0734069 2,35 C5.78083511,26.2051062 8.08490979,13.7037852 8.08490979,2"
+                        stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
+               </div>
+            </div>
+         </section>
+         <section data-background-color="#5a3745"
+            data-background-image="https://s3.amazonaws.com/media-p.slid.es/uploads/996460/images/6787742/coffee-shop-background-3-edit.png"
+            data-background-opacity="0.3" >
+            <div class="sl-block" data-block-type="image"
+               style="width: 333px; height: 720px; left: 474px; top: 0px; min-width: 1px; min-height: 1px;"
+               data-locked="true" >
+               <div class="sl-block-content contained--iphone--portrait phone-notch--overlay--white"
+                  style="z-index: 13;"><img style="" data-natural-width="580" data-natural-height="1255"
+                     data-lazy-loaded=""
+                     data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/996460/images/6792925/airbnb-intro-edited.png">
+               </div>
+            </div>
+            <div class="sl-block" data-block-type="snippet" style="width: 30px; height: 30px; left: 0px; top: 690px;"
+               data-locked="true" >
+               <div class="sl-block-content" data-has-custom-html="" style="z-index: 14;">
+                  <div class="hud__avatar__wrapper">
+                     <div class="hud__avatar__container--outer">
+                        <div class="hud__avatar__container--inner"></div>
+                        <div id="hud-avatar-container" class="hud__avatar__container--mask">
+                           <img id="hud-avatar-image" class="hud__avatar__container--img"
+                              alt="Avatar displaying current emotion" data-lazy-loaded=""
+                              data-src="images/headshot_thinking-small.png">
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="sl-block" data-block-type="snippet" style="width: 46px; height: 97px; left: 435px; top: 68px;" >
+               <div class="sl-block-style" style="z-index: 15; transform: rotate(62deg);">
+                  <div class="sl-block-content flip fragment fade-out" data-has-custom-html="" style="z-index: 15;"
+                     data-fragment-index="0">
+                     <div class="hud__cursor--wrapper"><img class="hud__cursor--mobile" data-lazy-loaded=""
+                           data-src="https://s3.amazonaws.com/files.growth.design/media/slides-assets/cursor--mobile--dan--default.png">
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="sl-block" data-block-type="snippet" style="width: 350px; height: 251px; left: 65px; top: 353px;" >
+               <div class="sl-block-content fragment fade-out" data-has-custom-html="" style="z-index: 16;"
+                  data-fragment-index="0">
+                  <div class="speech-balloon-container speech-balloon--default" data-hud-avatar="dan--search--100">
+                     <div class="speech-balloon__text-wrapper">
+                        <svg class="speech-balloon__bubble" height="188" preserveaspectratio="none"
+                           viewbox="0 0 292 188" width="292" xmlns="http://www.w3.org/2000/svg">
+                           <path
+                              d="M19.68 170.25C1.1 157.65-4.87 43.4 16.98 20.32c21.85-23.06 231.95-23.13 257.6 0 23.82 21.49 14.02 129.8 0 149.93-18.51 25.68-236.33 12.6-254.9 0z"
+                              vector-effect="non-scaling-stroke"></path>
+                        </svg>
+                        <div class="speech-balloon__text comic-font--default">
+                           <p><strong>Searching </strong>is the main thing I need to do right now, <span
+                                 style='font-family: GrowthComicBasic, -apple-system, system-ui, Roboto, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; font-size: 21px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 300; letter-spacing: -0.42px;'>but
+                                 t</span><span
+                                 style='font-family: GrowthComicBasic, -apple-system, system-ui, Roboto, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; font-size: 21px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 300; letter-spacing: -0.42px;'>he
+                                 <strong>search field</strong> </span><span
+                                 style='font-family: GrowthComicBasic, -apple-system, system-ui, Roboto, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; font-size: 21px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 300; letter-spacing: -0.42px;'>contrast
+                                 is so low, I almost missed it. </span></p>
+                           <p><span
+                                 style='font-family: GrowthComicBasic, -apple-system, system-ui, Roboto, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; font-size: 21px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 300; letter-spacing: -0.42px;'>Also,
+                                 don't you find it <strong>weird</strong> that—</span></p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="sl-block" data-block-type="snippet" style="width: 350px; height: 159px; left: 72px; top: 439px;" >
+               <div class="sl-block-content fragment current-visible" data-has-custom-html="" style="z-index: 17;"
+                  data-fragment-index="0">
+                  <div class="speech-balloon-container speech-balloon--default" data-hud-avatar="dan--notsure--400">
+                     <div class="speech-balloon__text-wrapper">
+                        <svg class="speech-balloon__bubble" height="188" preserveaspectratio="none"
+                           viewbox="0 0 292 188" width="292" xmlns="http://www.w3.org/2000/svg">
+                           <path
+                              d="M19.68 170.25C1.1 157.65-4.87 43.4 16.98 20.32c21.85-23.06 231.95-23.13 257.6 0 23.82 21.49 14.02 129.8 0 149.93-18.51 25.68-236.33 12.6-254.9 0z"
+                              vector-effect="non-scaling-stroke"></path>
+                        </svg>
+                        <div class="speech-balloon__text comic-font--default">
+                           <p>—"Kuala Lumpur" is the default placeholder, yet it's <strong>16 hours away</strong> from
+                              Lisbon by plane?</p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="sl-block" data-block-type="snippet" style="width: 447px; height: 375px; left: 833px; top: 0px;" >
+               <div class="sl-block-content fragment current-visible" data-has-custom-html="" style="z-index: 18;"
+                  data-fragment-index="1">
+                  <div class="hud__callout__wrapper hud__callout__wrapper--animated">
+                     <div class="hud__callout hud__callout--experiment hud__callout--animated">
+                        <h3 class="hud__callout__title">Location Personalization</h3>
+                        <p>Airbnb has the data required to know that I'm using their app <strong>outside</strong> of my
+                           home country (Canada).</p>
+                        <p>In this kind of situation, showing users <strong>nearby cities</strong> instead of random
+                           ones across the globe would make the app feel more aware of their context. The "time to first
+                           successful search" would also likely improve<span style="letter-spacing: 0px;">.</span><span
+                              style="letter-spacing: 0px; color: rgb(0, 158, 24); font-size: 12.6px; vertical-align: super;">1</span>
+                        </p>
+                        <cite class="hud__callout__source"><sup>1</sup><a
+                              href="https://conversionxl.com/blog/use-ab-testing-personalization-best-together/"><em>Conversion
+                                 XL</em>, Geo Personalization AB Test (2019)</a> </cite>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="sl-block" data-block-type="snippet"
+               style="min-width: 30px; min-height: 30px; width: 46px; height: 97px; left: 629px; top: 62px;" >
+               <div class="sl-block-content fragment" data-has-custom-html="" style="z-index: 19;"
+                  data-fragment-index="2">
+                  <div class="hud__cursor--wrapper"><img class="hud__cursor--mobile" data-lazy-loaded=""
+                        data-src="https://s3.amazonaws.com/files.growth.design/media/slides-assets/cursor--mobile--dan--active.png">
+                  </div>
+               </div>
+            </div>
+            <div class="sl-block" data-block-type="image"
+               style="min-width: 1px; min-height: 1px; width: 317px; height: 217px; left: 89px; top: 256px;" >
+               <div class="sl-block-content fragment current-visible" style="z-index: 11;" data-fragment-index="0"><img
+                     data-natural-width="677" data-natural-height="464" style="" data-lazy-loaded=""
+                     data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/996460/images/6798260/map-lisbon-kuala-2.png">
+               </div>
+            </div>
+            <div class="sl-block" data-block-type="snippet" style="width: 332px; height: 123px; left: 72px; top: 475px;" >
+               <div class="sl-block-content fragment" data-has-custom-html="" style="z-index: 20;"
+                  data-fragment-index="2">
+                  <div class="speech-balloon-container speech-balloon--default" data-hud-avatar="dan--notsure--200">
+                     <div class="speech-balloon__text-wrapper">
+                        <svg class="speech-balloon__bubble" height="188" preserveaspectratio="none"
+                           viewbox="0 0 292 188" width="292" xmlns="http://www.w3.org/2000/svg">
+                           <path
+                              d="M19.68 170.25C1.1 157.65-4.87 43.4 16.98 20.32c21.85-23.06 231.95-23.13 257.6 0 23.82 21.49 14.02 129.8 0 149.93-18.51 25.68-236.33 12.6-254.9 0z"
+                              vector-effect="non-scaling-stroke"></path>
+                        </svg>
+                        <div class="speech-balloon__text comic-font--default">
+                           <p>Anyways, l<span
+                                 style='font-family: GrowthComicBasic, -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; font-size: 21px; letter-spacing: -0.02em;'>et's
+                                 search for </span><strong
+                                 style='font-family: GrowthComicBasic, -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; letter-spacing: -0.02em;'>"Porto"</strong><span
+                                 style='font-family: GrowthComicBasic, -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; font-size: 21px; letter-spacing: -0.02em;'>!
+                              </span><strong>{tap}</strong></p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="sl-block" data-block-type="image"
+               style="width: 32px; height: 40px; left: 111px; top: 583px; min-width: 1px; min-height: 1px;" >
+               <div class="sl-block-content fragment fade-out" style="z-index: 21;" data-inline-svg="true"
+                  data-fragment-index="0">
+                  <img class="balloon__tail-img" style="" data-natural-width="30" data-natural-height="37"
+                     data-lazy-loaded=""
+                     data-src="https://s3.amazonaws.com/files.growth.design/media/slides-assets/tail__regular--small.svg">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="speech-balloon__bubble" width="30" height="37"
+                     viewbox="0 0 30 37" preserveaspectratio="xMidYMid meet">
+                     <path vector-effect="non-scaling-stroke"
+                        d="M28,2 C22.9510895,17.0734069 14.2844228,28.0734069 2,35 C5.78083511,26.2051062 8.08490979,13.7037852 8.08490979,2"
+                        stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
+               </div>
+            </div>
+            <div class="sl-block" data-block-type="image"
+               style="width: 32px; height: 40px; left: 111px; top: 583px; min-width: 1px; min-height: 1px;" >
+               <div class="sl-block-content fragment current-visible" style="z-index: 22;" data-inline-svg="true"
+                  data-fragment-index="0">
+                  <img class="balloon__tail-img" data-natural-width="30" data-natural-height="37"
+                     data-lazy-loaded=""
+                     data-src="https://s3.amazonaws.com/files.growth.design/media/slides-assets/tail__regular--small.svg">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="speech-balloon__bubble" width="30" height="37"
+                     viewbox="0 0 30 37" preserveaspectratio="xMidYMid meet">
+                     <path vector-effect="non-scaling-stroke"
+                        d="M28,2 C22.9510895,17.0734069 14.2844228,28.0734069 2,35 C5.78083511,26.2051062 8.08490979,13.7037852 8.08490979,2"
+                        stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
+               </div>
+            </div>
+            <div class="sl-block" data-block-type="image"
+               style="width: 32px; height: 40px; left: 111px; top: 583px; min-width: 1px; min-height: 1px;" >
+               <div class="sl-block-content fragment current-visible" style="z-index: 23;" data-inline-svg="true"
+                  data-fragment-index="2">
+                  <img class="balloon__tail-img" style="" data-natural-width="30" data-natural-height="37"
+                     data-lazy-loaded=""
+                     data-src="https://s3.amazonaws.com/files.growth.design/media/slides-assets/tail__regular--small.svg">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="speech-balloon__bubble" width="30" height="37"
+                     viewbox="0 0 30 37" preserveaspectratio="xMidYMid meet">
+                     <path vector-effect="non-scaling-stroke"
+                        d="M28,2 C22.9510895,17.0734069 14.2844228,28.0734069 2,35 C5.78083511,26.2051062 8.08490979,13.7037852 8.08490979,2"
+                        stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
+               </div>
+            </div>
+         </section>
+         <section data-background-iframe="QA.html" data-background-interactive>
+         </section>
+      </div> <!-- end of slides div -->
+   </div> <!-- end of revealjs div -->
+
+   <script src="../revealjs/dist/reveal.js"></script>
+   <script src="../revealjs/plugin/notes/notes.js"></script>
+   <script src="../revealjs/plugin/markdown/markdown.js"></script>
+   <script src="../revealjs/plugin/highlight/highlight.js"></script>
+   <script src="../revealjs/plugin/search/search.js"></script>
+   <script src="../revealjs/plugin/zoom/zoom.js"></script>
+   <script src="assets/js/avatarhandling.js" async="async"></script>
+   <script>
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+         hash: true,
+         controls: true,
+         progress: true,
+         history: true,
+         center: true,
+         // set width and heights to 100%
+         //width: '100%',
+         //height: '100%',
+         //width:1920,
+         //height:1024,
+         //margin:0.1,
+         //width:1280,
+         //height:720,
+         //margin:0.1,
+         //theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+         //transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+         // Parallax scrolling
+         // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+         // parallaxBackgroundSize: '2100px 900px',
+         chart: {
+            defaults: {
+               global: {
+                  title: {
+                     fontColor: "#000"
+                  },
+                  legend: {
+                     position: "bottom",
+                     labels: {
+                        fontColor: "#000",
+                        fontSize: 20
+                     },
+                  },
+                  tooltips: {
+                     labels: {
+                        fontColor: "#000"
+                     },
+                  },
+               },
+               scale: {
+                  scaleLabel: {
+                     fontColor: "#000"
+                  },
+                  gridLines: {
+                     color: "#000",
+                     zeroLineColor: "#000"
+                  },
+                  ticks: {
+                     fontColor: "#000",
+                     fontSize: 20
+                  }
+               }
+            },
+            line: {
+               borderColor: ["rgba(20,220,220,.8)", "rgba(220,120,120,.8)", "rgba(20,120,220,.8)"],
+               "borderDash": [
+                  [5, 10],
+                  [0, 0]
+               ]
+            },
+            bar: {
+               backgroundColor: ["rgba(20,220,220,.8)", "rgba(220,120,120,.8)", "rgba(20,120,220,.8)"]
+            },
+            pie: {
+               backgroundColor: [
+                  ["rgba(0,0,0,.8)", "rgba(220,20,20,.8)", "rgba(20,220,20,.8)", "rgba(220,220,20,.8)",
+                     "rgba(20,20,220,.8)"
+                  ]
+               ]
+            },
+            radar: {
+               borderColor: ["rgba(20,220,220,.8)", "rgba(220,120,120,.8)", "rgba(20,120,220,.8)"]
+            },
+         },
+         // Optional libraries used to extend on reveal.js
+         plugins: [RevealMarkdown, RevealHighlight, RevealNotes, RevealSearch, RevealZoom],
+         dependencies: [{
+               src: 'lib/js/classList.js',
+               condition: function () {
+                  return !document.body.classList;
+               }
+            },
+            {
+               src: '../reveal.js-plugins/chart/Chart.min.js'
+            },
+            {
+               src: '../reveal.js-plugins/chart/csv2chart.js'
+            },
+            {
+               src: '../reveal.js-plugins/menu/menu.js'
+            }
+         ]
+      });
+   </script>
+
+<script>
+
+Reveal.addEventListener("slidechanged", (function (e) {
+    avatarJumboExpansionReset()
+})), Reveal.addEventListener("fragmentshown", (function (e) {
+    handleJumboAvatarForward()
+})), Reveal.addEventListener("fragmenthidden", (function (e) {
+    handleJumboAvatarBackward()
+}));
+</script>
+
+
+</body>
+
+</html>

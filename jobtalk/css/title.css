@@ -1,0 +1,18 @@
+.reveal .title {
+  display: flex !important;
+  flex-direction: column;
+  height: 100%;
+  top: 0;
+  left: 0;
+  justify-content: center;
+  margin-left: 75px; }
+  .reveal .title__title {
+    font-size: 3em !important;
+    font-family: "Viga", sans-serif !important;
+    width: 40%;
+    text-align: left;
+    font-size: 120px !important; }
+  .reveal .title__tagline {
+    font-size: 1.5em !important;
+    text-align: left;
+    margin-top: 50px; }

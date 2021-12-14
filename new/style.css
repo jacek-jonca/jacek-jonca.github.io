@@ -1,0 +1,73 @@
+.content, .wrapper:before {
+    box-sizing: border-box;
+    display: block;
+    font-size: 4em;
+    padding-top: 0.75em;
+    padding-right: 0.5em;
+    padding-bottom: 0.5em;
+    padding-left: 0.5em;
+    width: 6em;
+    height: 3em;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+  }
+  .content {
+    font-family: 'League Spartan Variable', sans-serif !important;
+    font-weight: 700;
+    text-align: right;
+    line-height: 0.9em;
+    z-index: 1000;
+    background: #fff;
+    color: #000;
+    mix-blend-mode: lighten;
+  }
+  section {
+    background-repeat: no-repeat;
+    background-size: cover;
+    isolation: isolate;
+    position: relative;
+    height: 100vh;
+    padding: 1em;
+  }
+  .wrapper {
+    clip: rect(auto auto auto auto);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  .wrapper:before {
+    content: " ";
+    padding: 2em 3.5em;
+    mix-blend-mode: darken;
+  }
+  .one {
+    background-image: url(https://source.unsplash.com/1920x1080?data);
+  }
+  .one .wrapper:before {
+    background: red;
+  }
+  .two {
+    background-image: url(https://source.unsplash.com/1920x1080?landscape);
+  }
+  .two .wrapper:before {
+    background: #faaa54;
+    mix-blend-mode: difference;
+  }
+  .three {
+    background-image: url(https://source.unsplash.com/1920x1080?portrait);
+  }
+  .three .wrapper:before {
+    background: #6c320a;
+    mix-blend-mode: screen;
+  }
+  .four {
+    background-image: url(https://source.unsplash.com/1920x1080?stars);
+  }
+  .four .wrapper:before {
+    background: #e4135d;
+  }
+  

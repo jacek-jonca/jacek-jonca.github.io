@@ -1,0 +1,1 @@
+{"version":3,"sources":["index.scss"],"names":[],"mappings":"AAAA,WACE,eAAA,CACA,gBAGF,iBACE,eAAA,CACA","file":"src.0013be76.css","sourceRoot":"../../reveal/src","sourcesContent":[".container {\n  max-height: 90vh;\n  overflow: scroll;\n}\n\nimg, video, iframe {\n  max-height: 80vh;\n  max-width: 80vw;\n}"]}

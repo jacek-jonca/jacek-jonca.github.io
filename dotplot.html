@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <style>
+    body { margin:20;top:0;right:0;bottom:0;left:0; font-family: Sans-serif; }
+    .tick > text { fill: Grey; font-family: monospace; }
+    line { stroke: LightGrey }
+    .domain { stroke: LightGrey }
+    .domain > text { fill: LightGrey }
+    .label { font-family: monospace; text-anchor: middle; font-size: 14px; fill: white; }
+    .legend-label { font-family: monospace; text-anchor: middle; font-size: 18px; fill: DarkSlateGrey; }
+    .chart-intro { width: 1300 ; text-align: center }
+    
+  </style>
+</head>
+
+<body>
+  <H1>#MakeoverMonday 13: Mar 27</H1>
+  <p>My attempt for the Makeover Monday which showed people's responses to what they feel is most important for success.</p>
+  <p>The data was sourced from a Russian market research company, and I could not find a methodology for the survey. Therefore, I can not comment on the validity of the data or its findings.</p>
+  <p><a href="http://visual.ly/secret-success">The original visualisation</a> used a radar chart to show the percentage of responses grouped by "poor", "middle class" and "rich people". I didn't like the chart as I found it hard to keep track of the "stratas" as I worked around the reasons. Without understanding how they grouped and named the "stratas", I am not comfortable using the same terminology in my remake.</p>
+  <p>I chose a dot plot, with the range of percentages underlaid, and I sorted the rows (reasons) from largest to smallest range. I feel this provides an easier way to compare "stratas" and see which reasons had the most variability.</p>
+  <hr>
+  <div class="chart-intro">
+  
+  <H2>Connections to the right people or hard work?</H2>
+  <p>People from different backgrounds have different conceptions about is the secret of success.</p>
+  <p>Percentage of people, per income bracket (low, medium, high), who said X is a main reason for success.</p>
+    </div>
+
+  <script>
+    
+    const data = [
+ {
+   "SocialStrata": "Rich people",
+   "Reason": "good education, high qualification",
+   "Rate": 0.28
+ },
+ {
+   "SocialStrata": "Middle class",
+   "Reason": "good education, high qualification",
+   "Rate": 0.33
+ },
+ {
+   "SocialStrata": "Poor",
+   "Reason": "good education, high qualification",
+   "Rate": 0.18
+ },
+ {
+   "SocialStrata": "Rich people",
+   "Reason": "cunning, cheating",
+   "Rate": 0.11
+ },
+ {
+   "SocialStrata": "Middle class",
+   "Reason": "cunning, cheating",
+   "Rate": 0.21
+ },
+ {
+   "SocialStrata": "Poor",
+   "Reason": "cunning, cheating",
+   "Rate": 0.32
+ },
+ {
+   "SocialStrata": "Rich people",
+   "Reason": "abilities, talents",
+   "Rate": 0.13
+ },
+ {
+   "SocialStrata": "Middle class",
+   "Reason": "abilities, talents",
+   "Rate": 0.08
+ },
+ {
+   "SocialStrata": "Poor",
+   "Reason": "abilities, talents",
+   "Rate": 0.07
+ },
+ {
+   "SocialStrata": "Rich people",
+   "Reason": "connections to the right people",
+   "Rate": 0.09
+ },
+ {
+   "SocialStrata": "Middle class",
+   "Reason": "connections to the right people",
+   "Rate": 0.32
+ },
+ {
+   "SocialStrata": "Poor",
+   "Reason": "connections to the right people",
+   "Rate": 0.39
+ },
+ {
+   "SocialStrata": "Rich people",
+   "Reason": "fortune, good luck",
+   "Rate": 0.13
+ },
+ {
+   "SocialStrata": "Middle class",
+   "Reason": "fortune, good luck",
+   "Rate": 0.15
+ },
+ {
+   "SocialStrata": "Poor",
+   "Reason": "fortune, good luck",
+   "Rate": 0.12
+ },
+ {
+   "SocialStrata": "Rich people",
+   "Reason": "hard work",
+   "Rate": 0.38
+ },
+ {
+   "SocialStrata": "Middle class",
+   "Reason": "hard work",
+   "Rate": 0.27
+ },
+ {
+   "SocialStrata": "Poor",
+   "Reason": "hard work",
+   "Rate": 0.16
+ },
+ {
+   "SocialStrata": "Rich people",
+   "Reason": "entreprenurial spirit, courage",
+   "Rate": 0.27
+ },
+ {
+   "SocialStrata": "Middle class",
+   "Reason": "entreprenurial spirit, courage",
+   "Rate": 0.16
+ },
+ {
+   "SocialStrata": "Poor",
+   "Reason": "entreprenurial spirit, courage",
+   "Rate": 0.16
+ },
+ {
+   "SocialStrata": "Rich people",
+   "Reason": "presence of initial capital",
+   "Rate": 0.15
+ },
+ {
+   "SocialStrata": "Middle class",
+   "Reason": "presence of initial capital",
+   "Rate": 0.23
+ },
+ {
+   "SocialStrata": "Poor",
+   "Reason": "presence of initial capital",
+   "Rate": 0.27
+ }
+];
+    
+    const margin = {"top": 100, "left": 250, "right": 250, "bottom": 200};
+    const width = 800;
+    const height = 500;
+    const columnPadding = 20;
+    
+    const columnWidth = width/3;
+    const scaleWidth = columnWidth - columnPadding;
+    
+    const sortOrder = ["connections to the right people","hard work","cunning, cheating","good education, high qualification","presence of initial capital","entreprenurial spirit, courage","abilities, talents","fortune, good luck"];
+    
+    const SocialStratas = ["Poor","Middle class","Rich people"];
+    
+    var scale = d3.scaleLinear()
+    .range([0,scaleWidth])
+    .domain([0,0.5])
+    
+    var xAxis = d3.axisTop(scale)
+    .tickFormat(formatPercent);
+  
+    const colour = d3.scaleOrdinal()
+    .domain(SocialStratas)
+    .range(['#66c2a5','#fc8d62','#8da0cb']);
+
+    
+    var svg = d3.select("body").append("svg")
+      .attr("width", width + margin.left + margin.right)
+      .attr("height", height + margin.top + margin.bottom)
+
+    var g = svg.append("g")
+      .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+    
+    var axisG = g.selectAll(".g-axis")
+    .data(SocialStratas)
+    .enter()
+    .append("g")
+    .attr("transform", function(d,i) { return "translate(" + (i * columnWidth) + ",0)"; });
+    
+    
+    axisG.append("text")
+    .text(function(d){
+      if ( d == "Poor" ){ return "Low income"; };
+      if ( d == "Middle class" ){ return "Mid income"; };
+      if ( d == "Rich people" ){ return "High income"; };
+    })
+    .attr("x", columnWidth/2)
+    .attr("y", -30)
+    .attr("text-anchor", "middle")
+    .style("fill", function(d){ return colour(d); })
+    .style("font-weight", "bold")
+    .style("font-size","16px");
+    
+    
+    axisG.call(xAxis);
+	       
+    var nestedData = d3.nest()
+    .key(function(d){ return d.Reason; })
+    .entries(data);
+    
+    var n = nestedData.length;
+    var rowHeight = height/n;
+    var barHeight = rowHeight * 0.6;
+    var barPadding = (rowHeight - barHeight)/2;
+    var barAddition = barHeight/2;
+    var radius = barHeight * 0.4;
+    var circleStroke = 2; //pixels
+    
+    nestedData.forEach(function(d){
+      
+      var i =  sortOrder.indexOf(d.key);
+      var extentRate = d3.extent(d.values, function(d){ return d.Rate; })
+      
+      var rowG = g.append("g")
+      .attr("transform", "translate(0," + (i * rowHeight) + ")");
+      
+      rowG.append("text")
+      .text(d.key)
+      .attr("y", rowHeight/2 + 6)
+      .style("text-anchor", "end");
+      
+      rowG.append("text")
+      .text(d.key)
+      .attr("x", width)
+      .attr("y", rowHeight/2 + 6)
+      .style("text-anchor", "start");
+      
+      var rangeBars = rowG.selectAll("g")
+      .data(SocialStratas)
+      .enter()
+      .append("g")
+      .attr("transform", function(d,i) { return "translate(" + (i * columnWidth) + ",0)"; });
+      
+      rangeBars.append("rect")
+      .attr("x", scale(extentRate[0]) - barAddition)
+      .attr("y", barPadding)
+      .attr("width", scale(extentRate[1]) - scale(extentRate[0]) + (barAddition * 2) )
+      .attr("height", barHeight)
+      .style("fill", "LightGrey")
+      .attr("rx", barAddition )
+      
+      var rangeRect = rowG.append("rect")
+      .attr("x", scale(extentRate[0]) - barAddition)
+      .attr("y", barPadding)
+      .attr("width", scale(extentRate[1]) - scale(extentRate[0]) + (barAddition * 2) )
+      .attr("height", barHeight)
+      .style("fill", "LightGrey")
+      .attr("rx", barAddition )
+      
+      var circles = rowG.selectAll(".circles")
+      .data(d.values)
+      .enter()
+			.append("g")
+      .attr("transform", function(d){ 
+        var x = (SocialStratas.indexOf(d.SocialStrata) * columnWidth) + scale(d.Rate);
+        return "translate(" + x + ",0)"
+      });
+      
+      circles.append("circle")
+      .attr("cx", 0)
+      .attr("cy", rowHeight/2)
+      .attr("r", radius)
+      .style("stroke", "white")
+      .style("stroke-width", circleStroke)
+      .style("fill", function(d){ return colour(d.SocialStrata); });
+      
+      circles.append("text")
+      .text(function(d){ return formatPercent(d.Rate) })
+      .attr("class", "label")
+      .attr("y", rowHeight/2 + 5);
+      
+      
+    })
+    
+    var legendWidth = 200;
+    
+    legend = svg.append("g")
+    .attr("transform", "translate(" + margin.left + "," + (margin.top + height + 50) + ")" );
+    
+    legend.append("rect")
+      .attr("x", 0)
+      .attr("y", barPadding)
+      .attr("width", legendWidth)
+      .attr("height", barHeight)
+      .style("fill", "LightGrey")
+      .attr("rx", barAddition );
+    
+    legend.append("text")
+    .text("range")
+    .attr("class", "legend-label")
+    .attr("x", legendWidth/2)
+    .attr("y", rowHeight/2 + 5)
+    
+    /*
+    var legendCircle = legend.append("g")
+    .attr("transform", "translate(" + 40 + ",0)");
+    
+    legendCircle.append("circle")
+     .attr("cx", 0)
+     .attr("cy", rowHeight/2)
+     .attr("r", radius)
+     .style("stroke", "white")
+     .style("stroke-width", circleStroke)
+     .style("fill", "#386cb0");
+    
+    legendCircle.append("text")
+      .text("%")
+      .attr("class", "label")
+      .attr("y", rowHeight/2 + 5)
+    	.style("font-size", "18px");
+      */
+    
+    function formatPercent(n) {
+      return Math.round(n * 100);
+    };
+
+  </script>
+</body>

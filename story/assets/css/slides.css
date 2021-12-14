@@ -1,0 +1,215 @@
+@font-face {
+    font-family: slides;
+    src: url(//assets.slid.es/assets/slides/slides-043f27b4896fb08d1c18a39e8bcc015deed72f630b55e87249a17dfb2cf3a949.woff?1) format("woff"), url(//assets.slid.es/assets/slides/slides-a63f5acb698f9720b0e3318ad431188693a237bd831dcf633e7462a3d8c592d8.ttf?1) format("truetype"), url(//assets.slid.es/assets/slides/slides-01786c16e393aac51496c498b07e275dd4770d197e5a24b5809fa64c066b9674.svg#slides) format("svg");
+    font-weight: 400;
+    font-style: normal
+}
+
+[class*=" i-"],
+[class^=i-] {
+    font-family: slides !important;
+    speak: none;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+.i-close:before {
+    content: "\e909"
+}
+
+.i-image-alt:before {
+    content: "\e906"
+}
+
+.i-add:before {
+    content: "\e904"
+}
+
+.i-search:before {
+    content: "\e903"
+}
+
+.i-x:before {
+    content: "\e00b"
+}
+
+.i-document-alt-stroke:before {
+    content: "\e01c"
+}
+
+.i-document-alt-fill:before {
+    content: "\e01d"
+}
+
+.i-plus:before {
+    content: "\e020"
+}
+
+.i-plus-alt:before {
+    content: "\e021"
+}
+
+.i-link:before {
+    content: "\e025"
+}
+
+.i-key-fill:before {
+    content: "\e027"
+}
+
+.i-key-stroke:before {
+    content: "\e029"
+}
+
+.i-new-window:before {
+    content: "\e034"
+}
+
+.i-arrow-left:before {
+    content: "\e048"
+}
+
+.i-arrow-left-alt1:before {
+    content: "\e049"
+}
+
+.i-arrow-left-alt2:before {
+    content: "\e04a"
+}
+
+.i-arrow-right:before {
+    content: "\e04b"
+}
+
+.i-arrow-right-alt1:before {
+    content: "\e04c"
+}
+
+.i-arrow-right-alt2:before {
+    content: "\e04d"
+}
+
+.i-arrow-up-alt1:before {
+    content: "\e04e"
+}
+
+.i-arrow-up:before {
+    content: "\e04f"
+}
+
+.i-arrow-up-alt2:before {
+    content: "\e050"
+}
+
+.i-arrow-down:before {
+    content: "\e051"
+}
+
+.i-arrow-down-alt1:before {
+    content: "\e052"
+}
+
+.i-arrow-down-alt2:before {
+    content: "\e053"
+}
+
+.i-first:before {
+    content: "\e05e"
+}
+
+.i-last:before {
+    content: "\e05f"
+}
+
+.i-fullscreen:before {
+    content: "\e062"
+}
+
+.i-fullscreen-alt:before {
+    content: "\e064"
+}
+
+.i-iphone:before {
+    content: "\e065"
+}
+
+.i-hash:before {
+    content: "\e073"
+}
+
+.i-right-quote-alt:before {
+    content: "\e077"
+}
+
+.i-book-alt2:before {
+    content: "\e07f"
+}
+
+.i-user:before {
+    content: "\e08b"
+}
+
+.i-home:before {
+    content: "\e090"
+}
+
+.i-image:before {
+    content: "\e097"
+}
+
+.i-tag-fill:before {
+    content: "\e0a1"
+}
+
+.i-tag-stroke:before {
+    content: "\e0a2"
+}
+
+.i-at:before {
+    content: "\e06e"
+}
+
+.i-twitter:before {
+    content: "\f099"
+}
+
+.i-google-plus:before {
+    content: "\f0d5"
+}
+
+.i-google:before {
+    content: "\e003"
+}
+
+.i-previous:before {
+    content: "\e006"
+}
+
+.i-save:before {
+    content: "\f0c7"
+}
+
+.i-globe:before {
+    content: "\f0ac"
+}
+
+.i-users:before {
+    content: "\e00e"
+}
+
+.i-mobile:before {
+    content: "\e015"
+}
+
+.i-type:before {
+    content: "\e014"
+}
+
+.i-embed:before {
+    content: "\e605"
+}

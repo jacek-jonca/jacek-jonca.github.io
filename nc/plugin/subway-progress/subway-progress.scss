@@ -1,0 +1,77 @@
+$mainColor: #d3d0d5;
+$baseColor: #fff;
+$completeColor: #5dc6cb;
+$futureColor: #5dc6cb;
+$currentColor: #ed1c24;
+$fontColor: #d3d0d5;
+
+.reveal .navigation-list{
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+  position:relative;
+  
+  .reveal .navigation-list .navigation-list-element{
+    display: table-cell;
+    text-align: center;
+    vertical-align: top;
+    overflow: visible;
+    position:relative;
+    font-size: 14px;
+    color: $fontColor;
+    font-weight: bold;
+    
+    &:not(:last-child):before{
+      content: '';
+      display:block;
+      position: absolute;
+      left: 50%;
+      top: 37px;
+      background-color: $baseColor;
+      height: 6px;
+      width: 100%;
+    }
+    
+    .node{
+      display: inline-block;
+      border: 6px solid $mainColor;
+      background-color: $futureColor;
+      border-radius: 18px;
+      height: 18px;
+      width: 18px;
+      position: absolute;
+      top: 25px;
+      left: 50%;
+      margin-left: -18px;
+    }
+    
+    &.complete{
+      &:before{
+        background-color: $mainColor;
+      }
+      .node{
+        border-color: $mainColor;
+        background-color: $completeColor;
+         }
+    }
+    
+        &.active{
+      &:before{
+        background-color: $mainColor;
+      }
+      .node{
+        border-color: $mainColor;
+        background-color: $currentColor;
+         }
+    }
+    
+    &.future{
+      &:before{
+        background: $mainColor;
+      }
+      .node{
+        border-color: $mainColor;
+      }
+    }
+  }
+}

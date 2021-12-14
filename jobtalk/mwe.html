@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+   <meta charset="utf-8">
+   <title>Student Development</title>
+   <meta name="description" content="Student Development Job Talk">
+   <meta name="author" content="Jacek Jonca-Jasinski">
+   <meta name="apple-mobile-web-app-capable" content="yes">
+   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+   <link rel="stylesheet" href="css/reveal.css">
+
+   <!--[if lt IE 9]>
+      <script src="lib/js/html5shiv.js"></script>
+      <![endif]-->
+
+</head>
+
+<body>
+   <div class="reveal">
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+               <section>
+                  <h3>Most Importants Skills for Employers</h3>
+                  <canvas class="stretch" data-chart="bar">
+                     <!-- 
+   {
+   "data":{
+   "labels":[
+   "Leadership",
+   "Communication",
+   "Collaboration",
+   "Role Specific Skills"
+   ],
+     "datasets": [
+      {
+       "data":[74, 66, 50, 50],
+       "label":"Talent Developers","backgroundColor":"rgba(233, 30, 99, 0.8)"
+      },
+      {
+       "data":[66, 66, 50, 49],
+       "label":"Managers","backgroundColor":"rgba(3, 169, 244, 0.8)"
+      },
+         {
+       "data":[65, 64, 55, 42],
+       "label":"Executives","backgroundColor":"rgba(205, 220, 57, 0.8)"
+      }
+     ]
+   },
+   "options":{
+   "responsive": true,
+   "legend": {
+      "display": true
+   },
+   "animation":{
+   "duration":2000
+   },
+   "scales":{
+   "yAxes":[
+      {
+         "display":"true",
+         "ticks":{
+         "suggestedMin":0,
+         "fontSize":20
+         },
+         "gridLines":{
+            "display":"true"
+         },
+         "pointLabels":{
+            "fontSize":20
+         },
+         "scaleLabel":{
+             "display":true,
+             "labelString":"Percent",
+             "fontColor": "#000",
+             "fontSize": "25"
+          }
+      }
+   ],
+   "xAxes":[
+      {
+         "gridLines":{
+            "display": true
+         },
+         "ticks":{
+            "fontSize":20
+         }
+      }
+   ]
+   }
+   }
+   }
+   -->
+                  </canvas>
+               </section>
+      </div>
+   </div>
+   <script data-cfasync="false" src="lib/js/head.min.js"></script>
+   <script data-cfasync="false" src="js/reveal.js"></script>
+   <script>
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+         controls: true,
+         progress: true,
+         history: true,
+         center: true,
+         theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+         transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+         // Optional libraries used to extend on reveal.js
+
+dependencies: [
+					{ src: 'https://jonca.org/jobtalk/plugin/chart/Chart.min.js' },
+					{ src: 'https://jonca.org/jobtalk/plugin/chart/csv2chart.js' }
+         ]
+      });
+   </script>
+</body>
+
+</html>

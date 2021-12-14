@@ -1,0 +1,14 @@
+<svg id="svg2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480">
+  <defs>
+    <style>
+      .cls-1 {
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <title>1</title>
+  <g id="layer1">
+    <path id="path3295" class="cls-1" d="M250,10C117.52,10,10,117.52,10,250S117.52,490,250,490,490,382.48,490,250,382.48,10,250,10Zm0,45c107.64,0,195,87.36,195,195S357.64,445,250,445,55,357.64,55,250,142.36,55,250,55Z" transform="translate(-10 -10)"/>
+  </g>
+  <path d="M218.75,218.1,189.2,232.5V177.9l62-33.9H276.8V342H218.75Z" transform="translate(-10 -10)"/>
+</svg>
