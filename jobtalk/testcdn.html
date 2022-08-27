@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+    <title>Student Development</title>
+
+    <!-- Loading standard RevealJS files from ../revealjs folder -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/theme/simple.css" id="theme">
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section class="left">
+                <!-- DIV identifying text to be rendered using Typed.js -->
+                <div id="typewriter-text">
+                    <p>Test line</p>
+                </div>
+                <!-- SPAN identifying where text is to be rendered by Typed.js -->
+                <span id="typed"></span>
+            </section>
+        </div> <!-- end of slides div -->
+    </div> <!-- end of revealjs div -->
+    <!-- Reveal.JS  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.js"></script>
+    <!-- Typed.js files -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@latest/lib/typed.min.js"></script>
+    <script>
+        window.RevealTypewriter = window.RevealTypewriter || {
+            id: 'RevealTypewriter',
+            init: function (deck) {
+                initRevealTypewriter(deck);
+            }
+        };
+
+        const initRevealTypewriter = function (Reveal) {
+            var config = Reveal.getConfig().typewriter || {};
+            var typed = new Typed('#typed', {
+                // if uncommented line below would be used to parse config options from general reveal.js config section
+                // stringsElement: '#typewriter-text', config
+                // below are hardcoded config options for testing purposes
+                stringsElement: '#typewriter-text', // identifies the HTML element where text top be parsed is stored
+                typeSpeed: 70,
+                showCursor: true,
+                cursorChar: '_',
+                autoInsertCss: true
+            });
+            return this;
+        };
+    </script>
+    <script>
+        Reveal.initialize({
+            hash: true,
+            controls: true,
+            progress: true,
+            history: true,
+            center: true,
+            // Plugin config options
+            plugins: [RevealTypewriter],
+            typewriter: {
+                typeSpeed: 70,
+                showCursor: true,
+                cursorChar: '_',
+                autoInsertCss: true
+            }
+        });  // this bracket closes Reveal.initialize settings
+    </script>
+</body>
+</html>

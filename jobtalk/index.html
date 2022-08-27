@@ -34,7 +34,10 @@
       <script src="../revealjs/plugin/zoom/zoom.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.2.0/chart.min.js"></script>
       <script src="../reveal.js-plugins/chart/plugin.js"></script>
-      <script src="../reveal.js-plugins/menu/menu.js"></script>      
+      <script src="../reveal.js-plugins/menu/menu.js"></script>
+      <script src="../reveal.js-plugins/typewriter/plugin.js"></script>
+      <script src="../reveal.js-plugins/typewriter/typed.min.js"></script>
+      <script src="../reveal.js-plugins/helpbutton/helpbutton.js"></script>  
 </head>
 
 <body>
@@ -56,7 +59,10 @@
                         </section>
 
                         <section class="left" data-menu-title="Presenter Name">
-                           <p>Jacek Jońca-Jasiński, Ph.D.</p>
+                           <div id="typewriter-text">
+                              <p>Jacek Jońca-Jasiński, Ph.D.</p>
+                           </div>
+                           <span id="typed"></span>
                            <p class="quote">Data Scientist at Nōscēmus<br>
                               Founder of the Graduate Center &<br>
                               the Office of Postdoctoral Affairs<br>
@@ -2196,28 +2202,16 @@
             },
          },
          // Optional libraries used to extend on reveal.js
-         plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealSearch, RevealChart, RevealMenu ]//,
-//         dependencies: [
-//                           { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-//                           { src: '../revealjs/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-//                           { src: '../revealjs/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-//            			        { src: '../revealjs/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-//                           { src: '../revealjs/plugin/search/search.js', async: true },
-//                           { src: '../revealjs/plugin/zoom-js/zoom.js', async: true },
-//                           { src: '../revealjs/plugin/notes/notes.js', async: true },
-//                           { src: '../reveal.js-plugins/chart/Chart.min.js' },
-//                           { src: '../reveal.js-plugins/chart/csv2chart.js' },
-// Multiplex dependencies, need updating to 4.0
-//                           { src: 'https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js', async: true },
-//                           { src: Reveal.getQueryHash().s ?
-//                                 'plugin/multiplex/master.js' :
-//                                 'plugin/multiplex/client.js', async: true },
-            //               { src: '../reveal.js-plugins/simplemenu/assets/js/revealjs/plugin/simplemenu/simplemenu.js', async: false },
-            //               { src: '../reveal.js-plugins/menu/menu.js' }
-//                        ]
+         plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealSearch, RevealChart, RevealMenu, RevealTypewriter, HelpButton ],
+         typewriter: {
+                stringsElement: '#typewriter-text',
+                typeSpeed: 70,
+                showCursor: true,
+                cursorChar: '_',
+                autoInsertCss: true
+            }
       });  // this bracket closes Reveal.initialize settings
    </script>
    		<script src="lib/js/text-animation.js"></script>
 </body>
-
 </html>
