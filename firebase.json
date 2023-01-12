@@ -14,12 +14,12 @@
       },
       {
         "source": "/gradclassliz",
-        "destination": "https://powerforms.docusign.net/79a72fc1-f41f-4bc4-ac88-2463462bb103?env=na4&acct=9387ccfc-af3c-4f3a-a4b6-3b43adba2200&accountId=9387ccfc-af3c-4f3a-a4b6-3b43adba2200&Name%20and%20email%20of%20your%20Academic%20Advisor_UserName=Liz%20Hensley&Name%20and%20email%20of%20your%20Academic%20Advisor_Email=lthomas@adams.edu&Name%20and%20email%20of%20your%20Department%27s%20Chairperson_UserName=Liz%20Hensley&Name%20and%20email%20of%20your%20Department%27s%20Chairperson_Email=lthomas@adams.edu",
+        "destination": "https://na4.docusign.net/Member/PowerFormSigning.aspx?PowerFormId=e93623b4-7e09-46ae-86a8-64e0592a20b0&env=na4&acct=9387ccfc-af3c-4f3a-a4b6-3b43adba2200&v=2&Name%20and%20email%20of%20your%20Academic%20Advisor_UserName=Liz%20Hensley&Name%20and%20email%20of%20your%20Academic%20Advisor_Email=lthomas@adams.edu&Name%20and%20email%20of%20your%20Department%27s%20Chairperson_UserName=Liz%20Hensley&Name%20and%20email%20of%20your%20Department%27s%20Chairperson_Email=lthomas@adams.edu",
         "type": 302
       },
       {
         "source": "/gradclass",
-        "destination": "https://powerforms.docusign.net/79a72fc1-f41f-4bc4-ac88-2463462bb103?env=na4&acct=9387ccfc-af3c-4f3a-a4b6-3b43adba2200&accountId=9387ccfc-af3c-4f3a-a4b6-3b43adba2200",
+        "destination": "https://na4.docusign.net/Member/PowerFormSigning.aspx?PowerFormId=e93623b4-7e09-46ae-86a8-64e0592a20b0&env=na4&acct=9387ccfc-af3c-4f3a-a4b6-3b43adba2200&v=2",
         "type": 302
       },
       {
