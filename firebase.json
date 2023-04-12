@@ -38,6 +38,11 @@
         "type": 302
       },
       {
+        "source": "/celatechange",
+        "destination": "https://na4.docusign.net/Member/PowerFormSigning.aspx?PowerFormId=ab77b2d4-8978-4d7f-880c-258a73ea8828&env=na4&acct=9387ccfc-af3c-4f3a-a4b6-3b43adba2200&v=2",
+        "type": 302
+      },
+      {
         "source": "/amnesty",
         "destination": "https://na4.docusign.net/Member/PowerFormSigning.aspx?PowerFormId=e93623b4-7e09-46ae-86a8-64e0592a20b0&env=na4&acct=9387ccfc-af3c-4f3a-a4b6-3b43adba2200&v=2",
         "type": 302
