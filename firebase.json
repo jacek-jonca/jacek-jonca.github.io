@@ -19,7 +19,7 @@
       },
       {
         "source": "/gradclass",
-        "destination": "https://na4.docusign.net/Member/PowerFormSigning.aspx?PowerFormId=e93623b4-7e09-46ae-86a8-64e0592a20b0&env=na4&acct=9387ccfc-af3c-4f3a-a4b6-3b43adba2200&v=2",
+        "destination": "https://na4.docusign.net/Member/PowerFormSigning.aspx?PowerFormId=79a72fc1-f41f-4bc4-ac88-2463462bb103&env=na4&acct=9387ccfc-af3c-4f3a-a4b6-3b43adba2200&v=2",
         "type": 302
       },
       {
