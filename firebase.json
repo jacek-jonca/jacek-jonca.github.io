@@ -58,6 +58,11 @@
         "type": 302
       },
       {
+        "source": "/ASAP-rate",
+        "destination": "https://docs.google.com/forms/d/1-al-P76tK-qCVmyoWjzMF-aLr8O3UCUFytUL5SbJEm4/",
+        "type": 302
+      },
+      {
         "source": "/amnesty",
         "destination": "https://na4.docusign.net/Member/PowerFormSigning.aspx?PowerFormId=e93623b4-7e09-46ae-86a8-64e0592a20b0&env=na4&acct=9387ccfc-af3c-4f3a-a4b6-3b43adba2200&v=2",
         "type": 302
