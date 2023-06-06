@@ -63,6 +63,11 @@
         "type": 302
       },
       {
+        "source": "/ASAP-interview",
+        "destination": "https://docs.google.com/forms/d/e/1FAIpQLSf_pk2sAgXV4akrrbyep3Bz5h3I0MRTk1z_sPzcTkBWij6uVg/viewform?usp=sf_link",
+        "type": 302
+      },
+      {
         "source": "/amnesty",
         "destination": "https://na4.docusign.net/Member/PowerFormSigning.aspx?PowerFormId=e93623b4-7e09-46ae-86a8-64e0592a20b0&env=na4&acct=9387ccfc-af3c-4f3a-a4b6-3b43adba2200&v=2",
         "type": 302
