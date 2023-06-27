@@ -69,7 +69,7 @@
       },
       {
         "source": "/rate",
-        "destination": "https://docs.google.com/forms/d/e/1FAIpQLScLzG1EbxxtLtRdr4J6SrbqeTMgI-cJ1NH2OC096bospdFneQ/viewform?usp=sharing",
+        "destination": "https://docs.google.com/forms/d/e/1FAIpQLSccFIYGALfYWOyo3soTzOIca2ZSRGf-dCfhPxMt8nGLbEqw-g/viewform?usp=sf_link",
         "type": 302
       },
       {
