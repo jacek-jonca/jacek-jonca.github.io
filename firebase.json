@@ -33,8 +33,13 @@
         "type": 302
       },
       {
-        "source": "/adventure",
-        "destination": "https://www.linkedin.com/jobs/view/3595558215",
+        "source": "/IR",
+        "destination": "https://www.linkedin.com/jobs/view/3664026175",
+        "type": 302
+      },
+      {
+        "source": "/ir",
+        "destination": "https://www.linkedin.com/jobs/view/3664026175",
         "type": 302
       },
       {
