@@ -73,8 +73,8 @@
         "type": 302
       },
       {
-        "source": "/rate",
-        "destination": "https://docs.google.com/forms/d/e/1FAIpQLSccFIYGALfYWOyo3soTzOIca2ZSRGf-dCfhPxMt8nGLbEqw-g/viewform?usp=sf_link",
+        "source": "/wd",
+        "destination": "https://i-00a9415bf81bd91b0.workdayeducation.com/unified01/login.htmld",
         "type": 302
       },
       {
