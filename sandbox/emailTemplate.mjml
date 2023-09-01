@@ -1,37 +1,56 @@
 <mjml>
-  <mj-head>
-    <mj-attributes>
-      <mj-all font-family="Montserrat, Helvetica, Arial, sans-serif"></mj-all>
-      <mj-text font-weight="400" font-size="15px" color="#000000" line-height="20px"></mj-text>
-      <mj-section padding="0px"></mj-section>
-    </mj-attributes>
-  </mj-head>
-  <mj-body background-color="#efefef">
-    <mj-section padding="10px 0 0 0"></mj-section>
-    <mj-section padding="20px 20px 10px 20px" background-color="#FFFFFF" border-top="5px solid rgb(12, 123, 179)">
-      <mj-column>
-        <mj-text align="center" font-size="20px" font-weight="600">Today @ Adams</mj-text>
-      </mj-column>
-    </mj-section>
-    <mj-raw>
-      <!-- Feed -->
-    </mj-raw>
-    <mj-section background-color="#FFFFFF">
-      <mj-column vertical-align="middle" width="75%" border-left="solid 3px #cc0000">
-        <mj-text padding="0 0 0 15px"><b>{{this.title}}</b><br />
-          {{this.description}}
-        </mj-text>
-      </mj-column>
-    </mj-section>
-    <mj-raw>
-      <!-- Item -->
-    </mj-raw>
-    <mj-section padding="10px" background-color="#FFFFFF"></mj-section>
-    <mj-section background-color="#FFFFFF">
-      <mj-column vertical-align="middle" width="75%" border-left="solid 3px #cc0000">
-        <mj-text padding="0 0 0 15px"><b><a href="{{this.link}}">{{this.title}}</a></b><br /></mj-text>
-        <mj-text>{{{this.content}}}</mj-text>
-      </mj-column>
-    </mj-section>
-  </mj-body>
-</mjml>
+    <mj-head>
+      <mj-attributes>
+        <mj-all font-family="Montserrat, Helvetica, Arial, sans-serif"></mj-all>
+        <mj-text font-weight="400" font-size="15px" color="#000000" line-height="20px"></mj-text>aa
+        <mj-section padding="0px"></mj-section>
+      </mj-attributes>
+    </mj-head>
+    <mj-body background-color="#efefef">
+      <mj-section padding="10px 0 0 0"></mj-section>
+      <mj-section padding="20px 20px 10px 20px" background-color="#FFFFFF" border-top="5px solid rgb(12, 123, 179)">
+        <mj-column>
+          <mj-text align="center" font-size="20px" font-weight="600">Today @ Adams</mj-text>
+        </mj-column>
+      </mj-section>
+      <!-- Header -->
+      <mj-section>
+        <mj-column>
+          {{#if header.banner}}
+            <mj-image href="{{header.link}}" align="center" src="{{header.banner}}" alt="{{header.title}}"></mj-image>
+          {{else}}
+            <mj-text color="{{accentColor}}" padding="30px 0 40px" align="center" font-size="24px">
+              <a href="{{header.link}}">{{header.title}}</a>
+            </mj-text>
+          {{/if}}
+        </mj-column>
+      </mj-section>
+  
+      <!-- Intro -->
+      <mj-section>
+        <mj-column>
+          <mj-text padding-top="20px" padding-bottom="20px">{{{intro}}}</mj-text>
+        </mj-column>
+      </mj-section>
+      <mj-raw>
+        <!-- Feed -->
+      </mj-raw>
+      <mj-section background-color="#FFFFFF">
+        <mj-column vertical-align="middle" width="75%" border-left="solid 3px #cc0000">
+          <mj-text padding="0 0 0 15px"><b>{{this.title}}</b><br />
+            {{this.description}}
+          </mj-text>
+        </mj-column>
+      </mj-section>
+      <mj-raw>
+        <!-- Item -->
+      </mj-raw>
+      <mj-section padding="10px" background-color="#FFFFFF"></mj-section>
+      <mj-section background-color="#FFFFFF">
+        <mj-column vertical-align="middle" width="75%" border-left="solid 3px #cc0000">
+          <mj-text padding="0 0 0 15px"><b><a href="{{this.link}}">{{this.title}}</a></b><br /></mj-text>
+          <mj-text>{{{this.content}}}</mj-text>
+        </mj-column>
+      </mj-section>
+    </mj-body>
+  </mjml>
