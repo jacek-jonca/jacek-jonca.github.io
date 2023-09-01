@@ -73,6 +73,11 @@
         "type": 302
       },
       {
+        "source": "/IR-drive",
+        "destination": "https://drive.google.com/drive/u/0/folders/0AAtQTHxJtrm9Uk9PVA",
+        "type": 302
+      },
+      {
         "source": "/wd",
         "destination": "https://i-00a9415bf81bd91b0.workdayeducation.com/unified01/login.htmld",
         "type": 302
