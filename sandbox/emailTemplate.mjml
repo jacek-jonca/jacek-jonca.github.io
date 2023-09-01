@@ -52,8 +52,7 @@
                         <mj-text padding="0 0 0 15px"><b><a href="{{this.link}}">{{this.title}}</a></b><br /></mj-text>
                         <mj-text>{{this.description}}</mj-text>
                         <mj-text>{{this.pubDate}}</mj-text>
-                        <mj-text>{{this.georss:featurename}}</mj-text>
-                        <mj-text>{{{this.content}}}</mj-text>
+                        <mj-text>{{this.georss.featurename}}</mj-text>
                     </mj-column>
                 </mj-section>
             {{/each}}
