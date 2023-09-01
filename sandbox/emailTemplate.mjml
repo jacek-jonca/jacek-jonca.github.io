@@ -25,34 +25,37 @@
           {{/if}}
         </mj-column>
       </mj-section>
-  
       <!-- Intro -->
       <mj-section background-color="#FFFFFF">
         <mj-column vertical-align="middle" width="75%" border-left="solid 3px #cc0000">
           <mj-text padding-top="20px" padding-bottom="20px">{{{intro}}}</mj-text>
         </mj-column>
       </mj-section>
-      <mj-raw>
-        <!-- Feed -->
-      </mj-raw>
-      <mj-section background-color="#FFFFFF">
-        <mj-column vertical-align="middle" width="75%" border-left="solid 3px #cc0000">
-          <mj-text padding="0 0 0 15px"><b>{{this.title}}</b><br />
-            {{this.description}}
-          </mj-text>
-        </mj-column>
-      </mj-section>
-      <mj-raw>
-        <!-- Item -->
-      </mj-raw>
-      <mj-section padding="10px" background-color="#FFFFFF"></mj-section>
-      <mj-section background-color="#FFFFFF">
-        <mj-column vertical-align="middle" width="75%" border-left="solid 3px #cc0000">
-          <mj-text padding="0 0 0 15px"><b><a href="{{this.link}}">{{this.title}}</a></b><br /></mj-text>
-          <mj-text>{{{this.description}}}</mj-text>
-        </mj-column>
-      </mj-section>
-      <mj-section background-color="#FFFFFF">
+      {{#each feeds}}
+        <mj-raw>
+            <!-- Feed -->
+        </mj-raw>
+        <mj-section background-color="#FFFFFF">
+            <mj-column vertical-align="middle" width="75%" border-left="solid 3px #cc0000">
+            <mj-text padding="0 0 0 15px"><b>{{this.title}}</b><br />
+                {{this.description}}
+            </mj-text>
+            </mj-column>
+        </mj-section>
+            {{#each items}}
+                <mj-raw>
+                    <!-- Item -->
+                </mj-raw>
+                <mj-section padding="10px" background-color="#FFFFFF"></mj-section>
+                <mj-section background-color="#FFFFFF">
+                    <mj-column vertical-align="middle" width="75%" border-left="solid 3px #cc0000">
+                        <mj-text padding="0 0 0 15px"><b><a href="{{this.link}}">{{this.title}}</a></b><br /></mj-text>
+                        <mj-text>{{{this.description}}}</mj-text>
+                    </mj-column>
+                </mj-section>
+            {{/each}}
+        {{/each}}
+        <mj-section background-color="#FFFFFF">
         <mj-column vertical-align="middle" width="75%" border-left="solid 3px #cc0000">
           <mj-text padding-top="20px" padding-bottom="20px">{{{outro}}}</mj-text>
         </mj-column>
