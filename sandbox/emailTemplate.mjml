@@ -49,7 +49,7 @@
       <mj-section background-color="#FFFFFF">
         <mj-column vertical-align="middle" width="75%" border-left="solid 3px #cc0000">
           <mj-text padding="0 0 0 15px"><b><a href="{{this.link}}">{{this.title}}</a></b><br /></mj-text>
-          <mj-text>{{{this.content}}}</mj-text>
+          <mj-text>{{{this.description}}}</mj-text>
         </mj-column>
       </mj-section>
       <mj-section background-color="#FFFFFF">
