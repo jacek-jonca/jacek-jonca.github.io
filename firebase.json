@@ -28,8 +28,8 @@
         "type": 302
       },
       {
-        "source": "/jobs",
-        "destination": "https://adams.wd1.myworkdayjobs.com/ASU",
+        "source": "/diversity",
+        "destination": "https://docs.google.com/forms/d/e/1FAIpQLSf2YrWPHuFd4WWQLSZ-TmnlMASXbvS-8P1cvTn0R51NpM_RgQ/viewform",
         "type": 302
       },
       {
@@ -53,11 +53,6 @@
         "type": 302
       },
       {
-        "source": "/ASAP-files",
-        "destination": "https://drive.google.com/drive/folders/16JscRmajmHDdwUPLxrO_9d6qvF1fSa_D?usp=share_link",
-        "type": 302
-      },
-      {
         "source": "/IR-rate",
         "destination": "https://docs.google.com/forms/d/e/1FAIpQLSds6OfnwYzGvmlZkBDx-9MimHvSGgwJvDaKmBpwzf-vCPU6Gw/viewform?usp=sf_link",
         "type": 302
@@ -70,11 +65,6 @@
       {
         "source": "/IR-drive",
         "destination": "https://drive.google.com/drive/u/0/folders/0AAtQTHxJtrm9Uk9PVA",
-        "type": 302
-      },
-      {
-        "source": "/wd",
-        "destination": "https://i-00a9415bf81bd91b0.workdayeducation.com/unified01/login.htmld",
         "type": 302
       },
       {
