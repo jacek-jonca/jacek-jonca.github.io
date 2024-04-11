@@ -53,6 +53,16 @@
         "type": 302
       },
       {
+        "source": "/MSN",
+        "destination": "https://conjointly.online/study/542578/bo9nvm0dsjmkyujaymog",
+        "type": 302
+      },
+      {
+        "source": "/msn",
+        "destination": "https://conjointly.online/study/542578/bo9nvm0dsjmkyujaymog",
+        "type": 302
+      },
+      {
         "source": "/celatechange",
         "destination": "https://na4.docusign.net/Member/PowerFormSigning.aspx?PowerFormId=ab77b2d4-8978-4d7f-880c-258a73ea8828&env=na4&acct=9387ccfc-af3c-4f3a-a4b6-3b43adba2200&v=2",
         "type": 302
