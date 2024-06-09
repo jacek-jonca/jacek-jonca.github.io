@@ -1,0 +1,66 @@
+[
+            {
+              "State": "Seperation Anxiety",
+              "values": [
+                {"value": 80, "type": "Before Treatment", "significant" : true},
+                {"value": 73, "type": "After Treatment", "significant" : false},
+                {"value": 71, "type": "Follow Up", "significant" : true}
+              ]
+            },
+            {
+              "State": "Two",
+              "values": [
+                {"value": 77, "type": "Before Treatment", "significant" : true},
+                {"value": 78, "type": "After Treatment", "significant" : true},
+                {"value": 71, "type": "Follow Up", "significant" : false}
+              ]
+            },
+            {
+              "State": "Three",
+              "values": [
+                {"value": 80, "type": "Before Treatment", "significant" : false},
+                {"value": 73, "type": "After Treatment", "significant" : true},
+                {"value": 71, "type": "Follow Up", "significant" : true}
+              ]
+            },
+            {
+              "State": "Four",
+              "values": [
+                {"value": 60, "type": "Before Treatment", "significant" : false},
+                {"value": 78, "type": "After Treatment", "significant" : false},
+                {"value": 71, "type": "Follow Up", "significant" : false}
+              ]
+            },
+            {
+              "State": "Five",
+              "values": [
+                {"value": 80, "type": "Before Treatment", "significant" : false},
+                {"value": 73, "type": "After Treatment", "significant" : true},
+                {"value": 74, "type": "Follow Up", "significant" : true}
+              ]
+            },
+            {
+              "State": "",
+              "values": [
+                {"value": null, "type": "", "significant" : false},
+                {"value": null, "type": "", "significant" : false},
+                {"value": null, "type": "", "significant" : false}
+              ]
+            },
+            {
+              "State": "Seven",
+              "values": [
+                {"value": 80, "type": "Before Treatment", "significant" : false},
+                {"value": 73, "type": "After Treatment", "significant" : false},
+                {"value": 75, "type": "Follow Up", "significant" : false}
+              ]
+            },
+            {
+              "State": "Eight",
+              "values": [
+                {"value": 80, "type": "Before Treatment", "significant" : false},
+                {"value": 73, "type": "After Treatment", "significant" : false},
+                {"value": 80, "type": "Follow Up", "significant" : false}
+              ]
+            }
+          ]
